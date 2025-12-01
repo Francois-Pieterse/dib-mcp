@@ -1,0 +1,13 @@
+[project]
+name = "dib-mcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "black>=25.11.0",
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.22.0",
+    "mysql-connector-python>=9.5.0",
+    "requests>=2.32.5",
+]
