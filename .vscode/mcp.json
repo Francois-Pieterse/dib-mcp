@@ -1,0 +1,13 @@
+{
+	"servers": {
+		"testServer": {
+			"type": "stdio",
+			"command": "uv",
+			"args": [
+				"run",
+				".\\server\\server.py"
+			]
+		},
+	},
+	"inputs": []
+}
