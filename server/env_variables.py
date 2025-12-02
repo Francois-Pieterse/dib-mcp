@@ -59,3 +59,6 @@ def get_env(name: str, default: Any | None = None, cast=str):
             "%s has invalid value %r. Falling back to default %r", name, raw, default
         )
         return default
+
+
+_load_env_file()
