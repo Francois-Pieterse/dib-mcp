@@ -1,6 +1,8 @@
 import re
 import requests
 
+from env_variables import get_env
+
 
 class DibClientAuth:
     """Handles login and session reuse against Dropinbase."""
@@ -87,3 +89,18 @@ class DibClientAuth:
             )
 
         return resp
+
+
+# Create a global instance
+dib_session_client = DibClientAuth(
+    username=get_env("DIB_USERNAME", "admin"),
+    password=get_env("DIB_PASSWORD", "test"),
+    login_page_url=get_env(
+        "DIB_LOGIN_PAGE_URL",
+        f"{get_env('BASE_URL', 'https://localhost')}/login",
+    ),
+    login_endpoint_url=get_env(
+        "DIB_LOGIN_ENDPOINT_URL",
+        f"{get_env('BASE_URL', 'https://localhost')}/dropins/dibAuthenticate/Site/login",
+    ),
+)
