@@ -34,3 +34,4 @@ Add a launch.json entry to run python -m server.server for breakpoints, or run u
 ## Notes
 - DEBUG_MODE=true triggers debug_main() instead of starting the MCP runtime, useful for step-through testing.  
 - If you encounter TLS or self-signed certificate issues when connecting to Dropinbase, the session client currently disables SSL verification for trusted local development.
+- If a new tool/resource/prompt `.py` file is added, it is important to import it in `main.py` so it gets registered.
