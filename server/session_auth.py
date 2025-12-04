@@ -34,7 +34,7 @@ class DibClientAuth:
     @property
     def has_session(self) -> bool:
         return self.session.cookies.get("PHPSESSID") is not None
-    
+
     def set_session_id(self, phpsessid: str) -> None:
         """Manually set the PHPSESSID cookie to use an existing session."""
         self.session.cookies.set("PHPSESSID", phpsessid)

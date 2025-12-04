@@ -13,6 +13,7 @@ from tools import (
 logger = logging.getLogger(__name__)
 logger.setLevel(get_env("LOG_LEVEL", "INFO"))
 
+
 def debug_main() -> None:
     """Run a debug sequence of operations."""
 

@@ -14,9 +14,9 @@ logger.setLevel(get_env("LOG_LEVEL", "INFO"))
     name="auth_with_other_credentials",
     title="Authenticate with Other Credentials",
     description=(
-        "Authenticate/login to Dropinbase with provided credentials instead of those in environment." \
-        "This allows authentication with different user accounts as needed." \
-        "The tool returns whether a valid session has been established after login based on the returned PHPSESSID." \
+        "Authenticate/login to Dropinbase with provided credentials instead of those in environment."
+        "This allows authentication with different user accounts as needed."
+        "The tool returns whether a valid session has been established after login based on the returned PHPSESSID."
     ),
     annotations=ToolAnnotations(
         readOnlyHint=False,
@@ -45,9 +45,9 @@ def auth_with_other_credentials(
     name="auth_with_env_credentials",
     title="Authenticate with Environment Credentials",
     description=(
-        "Authenticate to Dropinbase with credentials from the environment." \
-        "This uses the DIB_USERNAME and DIB_PASSWORD environment variables for authentication." \
-        "The tool returns whether a valid session has been established after login based on the returned PHPSESSID."       
+        "Authenticate to Dropinbase with credentials from the environment."
+        "This uses the DIB_USERNAME and DIB_PASSWORD environment variables for authentication."
+        "The tool returns whether a valid session has been established after login based on the returned PHPSESSID."
     ),
     annotations=ToolAnnotations(
         readOnlyHint=False,
@@ -73,9 +73,9 @@ def auth_with_env_credentials():
     name="auth_with_existing_session",
     title="Authenticate with Existing Session",
     description=(
-        "Authenticate/login to Dropinbase using an existing PHPSESSID cookie value." \
-        "This allows reuse of an existing session without needing to provide username and password." \
-        "The tool returns whether a valid session has been established based on the provided PHPSESSID."       
+        "Authenticate/login to Dropinbase using an existing PHPSESSID cookie value."
+        "This allows reuse of an existing session without needing to provide username and password."
+        "The tool returns whether a valid session has been established based on the provided PHPSESSID."
     ),
     annotations=ToolAnnotations(
         readOnlyHint=False,
