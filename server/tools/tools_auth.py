@@ -88,6 +88,9 @@ def auth_with_existing_session(phpsessid: str):
     """
     Authenticate to Dropinbase with an existing PHPSESSID cookie value.
     """
+    # Clear any existing session
+    dib_session_client.session.cookies.clear()
+
     dib_session_client.set_session_id(phpsessid)
 
     return {
