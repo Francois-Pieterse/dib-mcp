@@ -34,8 +34,13 @@ class DibClientAuth:
     @property
     def has_session(self) -> bool:
         return self.session.cookies.get("PHPSESSID") is not None
+    
+    def set_session_id(self, phpsessid: str) -> None:
+        """Manually set the PHPSESSID cookie to use an existing session."""
+        self.session.cookies.set("PHPSESSID", phpsessid)
 
     def _fetch_form_token(self) -> str:
+        """Fetch the form_token from the login page HTML."""
         response = self.session.get(self.login_page_url, timeout=self.TIMEOUT_SECONDS)
         response.raise_for_status()
 
@@ -47,6 +52,7 @@ class DibClientAuth:
         return match.group(1)
 
     def login(self) -> None:
+        """Perform login to obtain a valid session."""
         form_token = self._fetch_form_token()
 
         payload = {
@@ -65,6 +71,7 @@ class DibClientAuth:
             raise RuntimeError("Login succeeded but PHPSESSID cookie was not set")
 
     def ensure_logged_in(self) -> None:
+        """Ensure that there is a valid logged-in session."""
         if not self.has_session:
             self.login()
 
