@@ -1,0 +1,588 @@
+{
+    "resources": [
+        {
+            "title": "Layout Using the Flex API",
+            "enabled": true,
+            "name": "layout_flex",
+            "uri": "dib://docs/learn_by_example/layout/flex",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexLayoutFlex"
+        },
+        {
+            "title": "Layout Using Grid List",
+            "enabled": true,
+            "name": "layout_grid_list",
+            "uri": "dib://docs/learn_by_example/layout/grid_list",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexLayoutGridList"
+        },
+        {
+            "title": "Side Navigation Panels",
+            "enabled": true,
+            "name": "layout_side_navigation_panels",
+            "uri": "dib://docs/learn_by_example/layout/side_navigation_panels",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexSideNav"
+        },
+        {
+            "title": "Application Menu & Layout",
+            "enabled": true,
+            "name": "layout_application_menu_layout",
+            "uri": "dib://docs/learn_by_example/layout/application_menu_layout",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexSideNavMenu"
+        },
+        {
+            "title": "Splitter",
+            "enabled": true,
+            "name": "layout_splitter",
+            "uri": "dib://docs/learn_by_example/layout/splitter",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexSplitter"
+        },
+        {
+            "title": "Data Components - Check",
+            "enabled": true,
+            "name": "built_in_data_check",
+            "uri": "dib://docs/learn_by_example/built_in_components/data_check",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsCheck"
+        },
+        {
+            "title": "Data Components - Selects",
+            "enabled": true,
+            "name": "built_in_data_selects",
+            "uri": "dib://docs/learn_by_example/built_in_components/data_selects",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsSelects"
+        },
+        {
+            "title": "Data Components - Date/Time",
+            "enabled": true,
+            "name": "built_in_data_datetime",
+            "uri": "dib://docs/learn_by_example/built_in_components/data_datetime",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsDatesTimes"
+        },
+        {
+            "title": "Data Components - Files",
+            "enabled": true,
+            "name": "built_in_data_files",
+            "uri": "dib://docs/learn_by_example/built_in_components/data_files",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsFiles"
+        },
+        {
+            "title": "Data Components - Inputs",
+            "enabled": true,
+            "name": "built_in_data_inputs",
+            "uri": "dib://docs/learn_by_example/built_in_components/data_inputs",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsInputs"
+        },
+        {
+            "title": "Layout - Application",
+            "enabled": true,
+            "name": "built_in_layout_application",
+            "uri": "dib://docs/learn_by_example/built_in_components/layout_application",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsApplicationLayout"
+        },
+        {
+            "title": "Layout - Component",
+            "enabled": true,
+            "name": "built_in_layout_component",
+            "uri": "dib://docs/learn_by_example/built_in_components/layout_component",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsLayout"
+        },
+        {
+            "title": "Buttons",
+            "enabled": true,
+            "name": "built_in_buttons",
+            "uri": "dib://docs/learn_by_example/built_in_components/buttons",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsButtons"
+        },
+        {
+            "title": "Buttons - Data",
+            "enabled": true,
+            "name": "built_in_buttons_data",
+            "uri": "dib://docs/learn_by_example/built_in_components/buttons_data",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsButtonsData"
+        },
+        {
+            "title": "Calendar",
+            "enabled": true,
+            "name": "built_in_calendar",
+            "uri": "dib://docs/learn_by_example/built_in_components/calendar",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexCalendar"
+        },
+        {
+            "title": "Other Components",
+            "enabled": true,
+            "name": "built_in_other_components",
+            "uri": "dib://docs/learn_by_example/built_in_components/other_components",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsOther"
+        },
+        {
+            "title": "SelectMulti Component on Forms",
+            "enabled": false,
+            "name": "built_in_selectmulti_forms",
+            "uri": "dib://docs/learn_by_example/built_in_components/selectmulti_forms",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsSelectMulti"
+        },
+        {
+            "title": "Typography",
+            "enabled": false,
+            "name": "built_in_typography",
+            "uri": "dib://docs/learn_by_example/built_in_components/typography",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsTypography"
+        },
+        {
+            "title": "Grid Basics",
+            "enabled": false,
+            "name": "container_grids_basics",
+            "uri": "dib://docs/learn_by_example/container_types/grids/basics",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridBasics"
+        },
+        {
+            "title": "SQL Grid",
+            "enabled": false,
+            "name": "container_grids_sql_grid",
+            "uri": "dib://docs/learn_by_example/container_types/grids/sql_grid",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridSql"
+        },
+        {
+            "title": "Parent and Other Fields on Grids",
+            "enabled": false,
+            "name": "container_grids_parent_fields",
+            "uri": "dib://docs/learn_by_example/container_types/grids/parent_fields",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridParentSqlFields"
+        },
+        {
+            "title": "Table Grid Custom Columns",
+            "enabled": false,
+            "name": "container_grids_table_custom_columns",
+            "uri": "dib://docs/learn_by_example/container_types/grids/table_custom_columns",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridCustomColumns"
+        },
+        {
+            "title": "SQL Grid Custom Columns",
+            "enabled": false,
+            "name": "container_grids_sql_custom_columns",
+            "uri": "dib://docs/learn_by_example/container_types/grids/sql_custom_columns",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridSqlCustomColumns"
+        },
+        {
+            "title": "Grid Headers And Styling",
+            "enabled": false,
+            "name": "container_grids_headers_styling",
+            "uri": "dib://docs/learn_by_example/container_types/grids/headers_styling",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridHeadersAndStyling"
+        },
+        {
+            "title": "Grid Freeze Columns",
+            "enabled": false,
+            "name": "container_grids_freeze_columns",
+            "uri": "dib://docs/learn_by_example/container_types/grids/freeze_columns",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridFreezeColumns"
+        },
+        {
+            "title": "Row Selection and Values",
+            "enabled": false,
+            "name": "container_grids_row_selection_values",
+            "uri": "dib://docs/learn_by_example/container_types/grids/row_selection_values",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridRowValues"
+        },
+        {
+            "title": "Batch Edit Grid",
+            "enabled": false,
+            "name": "container_grids_batch_edit",
+            "uri": "dib://docs/learn_by_example/container_types/grids/batch_edit",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridBatchEdit"
+        },
+        {
+            "title": "Batch Toggle Edit Grid",
+            "enabled": false,
+            "name": "container_grids_batch_toggle_edit",
+            "uri": "dib://docs/learn_by_example/container_types/grids/batch_toggle_edit",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridBatchToggleEdit"
+        },
+        {
+            "title": "Single Edit Grid",
+            "enabled": false,
+            "name": "container_grids_single_edit",
+            "uri": "dib://docs/learn_by_example/container_types/grids/single_edit",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridSingleEdit"
+        },
+        {
+            "title": "Grid Height",
+            "enabled": false,
+            "name": "container_grids_height",
+            "uri": "dib://docs/learn_by_example/container_types/grids/height",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridHeight"
+        },
+        {
+            "title": "Dynamic Columns",
+            "enabled": false,
+            "name": "container_grids_dynamic_columns",
+            "uri": "dib://docs/learn_by_example/container_types/grids/dynamic_columns",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridDynamicColumns"
+        },
+        {
+            "title": "Form Basics",
+            "enabled": false,
+            "name": "container_forms_basics",
+            "uri": "dib://docs/learn_by_example/container_types/forms/basics",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexFormBasics"
+        },
+        {
+            "title": "Parent and Other Fields on Forms",
+            "enabled": false,
+            "name": "container_forms_parent_fields",
+            "uri": "dib://docs/learn_by_example/container_types/forms/parent_fields",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexFormParentSqlFields"
+        },
+        {
+            "title": "Plain Container",
+            "enabled": true,
+            "name": "container_plain",
+            "uri": "dib://docs/learn_by_example/container_types/plain",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPlainBasics"
+        },
+        {
+            "title": "iFrame with Eleutheria",
+            "enabled": false,
+            "name": "container_iframes_eleutheria",
+            "uri": "dib://docs/learn_by_example/container_types/iframes/eleutheria",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexiFrameEleutheria"
+        },
+        {
+            "title": "iFrame with PHP",
+            "enabled": false,
+            "name": "container_iframes_php",
+            "uri": "dib://docs/learn_by_example/container_types/iframes/php",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexiFramePhp"
+        },
+        {
+            "title": "iFrame Dropinbase Functions",
+            "enabled": false,
+            "name": "container_iframes_dib_functions",
+            "uri": "dib://docs/learn_by_example/container_types/iframes/dib_functions",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexiFrameDropinbaseFunctions"
+        },
+        {
+            "title": "Tree (Custom Controller)",
+            "enabled": false,
+            "name": "container_trees_custom_controller",
+            "uri": "dib://docs/learn_by_example/container_types/trees/custom_controller",
+            "description": "",
+            "endpoint": "/nav/dibDocs?area=example&doc=dibexTreeCustom"
+        },
+        {
+            "title": "Grid Tree (Custom Controller)",
+            "enabled": false,
+            "name": "container_grid_trees_custom_controller",
+            "uri": "dib://docs/learn_by_example/container_types/grid_trees/custom_controller",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridTree"
+        },
+        {
+            "title": "Client-side Validation",
+            "enabled": false,
+            "name": "validation_client_side",
+            "uri": "dib://docs/learn_by_example/validation/client_side",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexValidationClientSide"
+        },
+        {
+            "title": "Server-side Validation",
+            "enabled": false,
+            "name": "validation_server_side",
+            "uri": "dib://docs/learn_by_example/validation/server_side",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexValidationServerSide"
+        },
+        {
+            "title": "Ports and Subcontainer Basics",
+            "enabled": false,
+            "name": "ports_basics",
+            "uri": "dib://docs/learn_by_example/ports_and_subcontainers/basics",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPorts"
+        },
+        {
+            "title": "Port Windows",
+            "enabled": false,
+            "name": "ports_windows",
+            "uri": "dib://docs/learn_by_example/ports_and_subcontainers/windows",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPortsWindow"
+        },
+        {
+            "title": "Port Dialogs",
+            "enabled": false,
+            "name": "ports_dialogs",
+            "uri": "dib://docs/learn_by_example/ports_and_subcontainers/dialogs",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPortsDialog"
+        },
+        {
+            "title": "Navigation Basics",
+            "enabled": false,
+            "name": "navigation_basics",
+            "uri": "dib://docs/learn_by_example/navigation/basics",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexNavigation"
+        },
+        {
+            "title": "SQL Parameters",
+            "enabled": false,
+            "name": "sql_parameters",
+            "uri": "dib://docs/learn_by_example/sql_parameters/sql",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexSqlParams"
+        },
+        {
+            "title": "PHP Parameters",
+            "enabled": false,
+            "name": "php_parameters",
+            "uri": "dib://docs/learn_by_example/sql_parameters/php",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexSqlParamsPhp"
+        },
+        {
+            "title": "Client Data Basics",
+            "enabled": false,
+            "name": "client_data_basics",
+            "uri": "dib://docs/learn_by_example/client_data/basics",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexClientData"
+        },
+        {
+            "title": "Event Basics",
+            "enabled": true,
+            "name": "events_basics",
+            "uri": "dib://docs/learn_by_example/events/basics",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexEventBasics"
+        },
+        {
+            "title": "Queues - for Long Running Events",
+            "enabled": false,
+            "name": "events_queues_long_running",
+            "uri": "dib://docs/learn_by_example/events/queues",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexQueue"
+        },
+        {
+            "title": "*ngIf",
+            "enabled": false,
+            "name": "conditional_ng_if",
+            "uri": "dib://docs/learn_by_example/conditional_directives/ng_if",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexNgIf"
+        },
+        {
+            "title": "[hidden]",
+            "enabled": true,
+            "name": "conditional_hidden",
+            "uri": "dib://docs/learn_by_example/conditional_directives/hidden",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexHidden"
+        },
+        {
+            "title": "[dibDisabled]",
+            "enabled": true,
+            "name": "conditional_dib_disabled",
+            "uri": "dib://docs/learn_by_example/conditional_directives/dib_disabled",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexDibDisabled"
+        },
+        {
+            "title": "[ngStyle]",
+            "enabled": true,
+            "name": "conditional_ng_style",
+            "uri": "dib://docs/learn_by_example/conditional_directives/ng_style",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexNgStyle"
+        },
+        {
+            "title": "Dropinbase Services",
+            "enabled": true,
+            "name": "dropinbase_services",
+            "uri": "dib://docs/learn_by_example/dropinbase_services/services",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexDropinbaseServices"
+        },
+        {
+            "title": "Client-Side Default Values",
+            "enabled": false,
+            "name": "defaults_client_side",
+            "uri": "dib://docs/learn_by_example/default_values/client",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexDefaultValuesClient"
+        },
+        {
+            "title": "Server-Side Default Values",
+            "enabled": false,
+            "name": "defaults_server_side",
+            "uri": "dib://docs/learn_by_example/default_values/server",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexDefaultValuesServer"
+        },
+        {
+            "title": "Filter Grids and Forms",
+            "enabled": false,
+            "name": "filters_grids_forms",
+            "uri": "dib://docs/learn_by_example/filters/filter_grids_forms",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexContainerFilterGridAndForm"
+        },
+        {
+            "title": "Filtering Forms",
+            "enabled": false,
+            "name": "filters_filtering_forms",
+            "uri": "dib://docs/learn_by_example/filters/filtering_forms",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexContainerFilterForm"
+        },
+        {
+            "title": "Using Filters with Ports",
+            "enabled": false,
+            "name": "filters_with_ports",
+            "uri": "dib://docs/learn_by_example/filters/using_filters_with_ports",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexContainerFilterPort"
+        },
+        {
+            "title": "Data Components - Selects",
+            "enabled": false,
+            "name": "filter_dropdown_selects",
+            "uri": "dib://docs/learn_by_example/filters/dropdowns/selects",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexFilterDropdown"
+        },
+        {
+            "title": "Custom Ng Component In Grid",
+            "enabled": false,
+            "name": "custom_component_ng_grid",
+            "uri": "dib://docs/learn_by_example/custom_components/ng_component_grid",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexCustomNgComponentInGrid"
+        },
+        {
+            "title": "PHP Basics",
+            "enabled": false,
+            "name": "php_basics",
+            "uri": "dib://docs/learn_by_example/php/basics",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPhpBasics"
+        },
+        {
+            "title": "PHP Database Functions",
+            "enabled": false,
+            "name": "php_database_functions",
+            "uri": "dib://docs/learn_by_example/php/database_functions",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPhpDatabase"
+        },
+        {
+            "title": "PHP Files - DibExcel Dropin",
+            "enabled": false,
+            "name": "php_files_dibexcel",
+            "uri": "dib://docs/learn_by_example/php/files/dibexcel",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPhpFilesDibExcel"
+        },
+        {
+            "title": "PHP Files - DPdf Class",
+            "enabled": false,
+            "name": "php_files_dpdf",
+            "uri": "dib://docs/learn_by_example/php/files/dpdf",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPhpFilesDpdf"
+        },
+        {
+            "title": "PHP Files - Eleutheria Class",
+            "enabled": false,
+            "name": "php_files_eleutheria",
+            "uri": "dib://docs/learn_by_example/php/files/eleutheria",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPhpFilesEleutheria"
+        },
+        {
+            "title": "PHP - Concurrent Asynchronous Threads",
+            "enabled": false,
+            "name": "php_concurrent_threads",
+            "uri": "dib://docs/learn_by_example/php/concurrent_threads",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPhpAsync"
+        },
+        {
+            "title": "PHP - Send Emails",
+            "enabled": false,
+            "name": "php_send_emails",
+            "uri": "dib://docs/learn_by_example/php/send_emails",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPhpEmail"
+        },
+        {
+            "title": "Container Permissions",
+            "enabled": false,
+            "name": "permissions_container",
+            "uri": "dib://docs/learn_by_example/permissions/container_permissions",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPermsContainer"
+        },
+        {
+            "title": "Item Permissions",
+            "enabled": true,
+            "name": "permissions_item",
+            "uri": "dib://docs/learn_by_example/permissions/item_permissions",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPermsItem"
+        },
+        {
+            "title": "Segmenting Data By User",
+            "enabled": false,
+            "name": "permissions_segment_by_user",
+            "uri": "dib://docs/learn_by_example/permissions/segmenting_data_by_user",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPermSegmentDataByUser"
+        },
+        {
+            "title": "Report Basics",
+            "enabled": false,
+            "name": "reports_basics",
+            "uri": "dib://docs/learn_by_example/reports/basics",
+            "description": "",
+            "endpoint": "/nav/dibDocs/?area=example&doc=dibexReportBasics"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "enabled": {
+        "start_here": false,
+        "introduction": false,
+        "setup_dropinbase": false,
+        "learn_by_example": true,
+        "build_my_apps": false,
+        "understanding_dropinbase": false,
+        "administering_dropinbase": false,
+        "user_help": false,
+        "developer_topics": false,
+        "eleutheria": false,
+        "troubleshooting_and_debugging": false,
+        "tables_reference": false,
+        "server_functions_reference": false,
+        "migrating_from_other_applications": false,
+        "docs_from_old_dropinbase_versions": false
+    }
+}
