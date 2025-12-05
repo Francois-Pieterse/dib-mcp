@@ -1,7 +1,7 @@
 import logging
 
 from mcp.types import ToolAnnotations
-from typing import Literal
+from typing import Literal, Any
 
 from env_variables import get_env, _to_bool
 from mcp_instance import mcp
@@ -323,6 +323,235 @@ def move_node_in_designer_tree(
         "dropNodeId": node_id_stationary,
         "nodeId": node_id_to_move,
         "parentId": parent_id,
+    }
+
+    response = dib_session_client.request("POST", url, headers=headers, json=payload)
+
+    try:
+        data = response.json()
+    except ValueError:
+        data = response.text
+
+    return {
+        "status_code": response.status_code,
+        "ok": response.ok,
+        "response": data,
+    }
+
+
+@mcp.tool(
+    name="get_avail_components_to_add",
+    title="Get Available Components to Add",
+    description=(
+        "Retrieve available components that can be added to a specific container in the Dropinbase designer."
+        "This tool returns a list of components that can be added to the specified container, identified by its container ID."
+        "The returned components include a property 'leaf', if it is set to 1, the component can be added directly;"
+        "if set to 0, the component is actually a group with nested components inside and cannot be added directly."
+    ),
+    annotations=ToolAnnotations(
+        readOnlyHint=True,
+        destructiveHint=False,
+        idempotentHint=True,
+        openWorldHint=False,
+    ),
+)
+def get_avail_components_to_add(
+    container_id: str,
+    request_verification_token: str = get_env("REQUEST_VERIFICATION_TOKEN"),
+):
+    """
+    Retrieve available components that can be added to a specific container in the designer.
+    """
+    url: str = (
+        f"{get_env('BASE_URL', 'https://localhost')}"
+        "/dropins/dibAdmin/DDesignerComponentStore/read"
+        "containerName=dibDesignerHtml&node=root"
+    )
+
+    headers: dict[str, str] = {
+        "Content-Type": "application/json",
+        "RequestVerificationToken": request_verification_token,
+    }
+
+    payload: dict[str, Any] = {
+        "clientData": {"treeData": {"containerId": container_id, "filterString": ""}}
+    }
+
+    response = dib_session_client.request("POST", url, headers=headers, json=payload)
+
+    try:
+        return {"data": response.json()}
+    except ValueError:
+        return {
+            "status_code": response.status_code,
+            "response": response.text,
+        }
+
+
+@mcp.tool(
+    name="add_component_in_designer_tree",
+    title="Add Component in Designer Tree",
+    description=(
+        "Add a component in the designer project tree either before or after another node in the designer view hierarchy."
+        "The stationary node and parent is identified by their node IDs which can be obtained using the get_project_tree tool."
+        "The component to add is identified by its component ID which can be obtained using the get_avail_components_to_add tool."
+        "Adding containers are not supported by this tool."
+    ),
+    annotations=ToolAnnotations(
+        readOnlyHint=False,
+        destructiveHint=False,
+        idempotentHint=False,
+        openWorldHint=False,
+    ),
+)
+def add_component_in_designer_tree(
+    node_id_stationary: str,
+    component_id_to_add: str,
+    parent_id: str,
+    drop_position: Literal["before", "after"],
+    request_verification_token: str = get_env("REQUEST_VERIFICATION_TOKEN"),
+):
+    """
+    Add a component in the designer project tree.
+    """
+    url: str = (
+        f"{get_env('BASE_URL', 'https://localhost')}"
+        "/dropins/dibAdmin/DDesignerItemStore/drop"
+        "?containerName=dibDesignerHtml"
+    )
+
+    headers: dict[str, str] = {
+        "Content-Type": "application/json",
+        "RequestVerificationToken": request_verification_token,
+    }
+
+    payload: dict[str, Any] = {
+        "clientData": {
+            "alias_parent": {},
+            "selected": [],
+        },
+        "sourceTreeId": "treeH",
+        "dropPosition": drop_position,
+        "dropNodeId": node_id_stationary,
+        "nodeId": component_id_to_add,
+        "parentId": parent_id,
+    }
+
+    response = dib_session_client.request("POST", url, headers=headers, json=payload)
+
+    try:
+        data = response.json()
+    except ValueError:
+        data = response.text
+
+    return {
+        "status_code": response.status_code,
+        "ok": response.ok,
+        "response": data,
+    }
+
+
+@mcp.tool(
+    name="delete_node_in_designer_tree",
+    title="Delete Node in Designer Tree",
+    description=(
+        "Delete a node in the designer project tree using its node ID."
+        "This tool removes the specified node from the designer view hierarchy."
+        "Confirmation from the user is required as this action is destructive and cannot be undone."
+    ),
+    annotations=ToolAnnotations(
+        readOnlyHint=False,
+        destructiveHint=True,
+        idempotentHint=True,
+        openWorldHint=False,
+    ),
+)
+def delete_node_in_designer_tree(
+    node_id: str,
+    request_verification_token: str = get_env("REQUEST_VERIFICATION_TOKEN"),
+):
+    """
+    Delete a node in the designer project tree.
+    """
+
+    url: str = (
+        f"{get_env('BASE_URL', 'https://localhost')}"
+        "/dropins/dibAdmin/DibTasks/dibDesignerDeleteItem"
+        "?containerName=dibDesignerHtml&itemEventId=ie178-dib"
+    )
+
+    headers: dict[str, str] = {
+        "Content-Type": "application/json",
+        "RequestVerificationToken": request_verification_token,
+    }
+
+    payload: dict[str, Any] = {
+        "clientData": {
+            "selected_self": [
+                {
+                    "id": node_id,
+                }
+            ]
+        }
+    }
+
+    response = dib_session_client.request("POST", url, headers=headers, json=payload)
+
+    try:
+        data = response.json()
+    except ValueError:
+        data = response.text
+
+    return {
+        "status_code": response.status_code,
+        "ok": response.ok,
+        "response": data,
+    }
+
+
+@mcp.tool(
+    name="delete_nested_nodes_in_designer_tree",
+    title="Delete Nested Nodes in Designer Tree",
+    description=(
+        "Delete all nested nodes under and including a parent node in the designer project tree."
+        "This tool removes the specified parent node and all its child nodes from the designer view hierarchy."
+        "When a delete confirmation action is required from the server, it is most likely a nested node - in such a case use this tool."
+        "Confirmation from the user is required as this action is destructive and cannot be undone."
+    ),
+    annotations=ToolAnnotations(
+        readOnlyHint=False,
+        destructiveHint=True,
+        idempotentHint=True,
+        openWorldHint=False,
+    ),
+)
+def delete_nested_nodes_in_designer_tree(
+    parent_node_id: str,
+    request_verification_token: str = get_env("REQUEST_VERIFICATION_TOKEN"),
+):
+    """
+    Delete all nested nodes under and including a parent node in the designer project tree.
+    """
+
+    url: str = (
+        f"{get_env('BASE_URL', 'https://localhost')}"
+        "/dropins/dibAdmin/DibTasks/dibDesignerDeleteItemMany"
+        "?containerName=dibDesignerHtml&itemEventId=ie21-dib"
+    )
+
+    headers: dict[str, str] = {
+        "Content-Type": "application/json",
+        "RequestVerificationToken": request_verification_token,
+    }
+
+    payload: dict[str, Any] = {
+        "clientData": {
+            "selected_self": [
+                {
+                    "id": parent_node_id,
+                }
+            ],
+        }
     }
 
     response = dib_session_client.request("POST", url, headers=headers, json=payload)
