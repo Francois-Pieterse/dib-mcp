@@ -5,6 +5,7 @@ from resources.dib_docs.docs_resource_factory import fetch_endpoint_content
 
 from mcp_instance import mcp
 
+
 @mcp.tool(
     name="list_dib_doc_topics",
     title="List Dropinbase documentation topics",
