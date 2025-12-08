@@ -9,6 +9,8 @@ from mcp_instance import mcp
 from resources.dib_docs.docs_resource_factory import register_dib_docs
 
 # Very important to import all tool/resource/prompt files so they get registered
+
+# Tools
 from tools import (
     tools_auth,
     tools_designer,
@@ -17,13 +19,16 @@ from tools import (
 if get_env("EXPOSE_DIB_DOCS_VIA_TOOLS", False, _to_bool):
     from tools import tools_docs_resource
 
-
-resources_root = Path("server/resources")
+# Resources
+RESOURCES_ROOT = Path("server/resources")
 
 register_dib_docs(
     mcp,
-    resources_root=resources_root,
+    resources_root=RESOURCES_ROOT,
 )
+
+# Prompts
+from prompts import system_prompt
 
 
 logger = logging.getLogger(__name__)
