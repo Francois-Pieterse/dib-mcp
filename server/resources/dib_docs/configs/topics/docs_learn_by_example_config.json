@@ -6,7 +6,12 @@
             "name": "layout_flex",
             "uri": "dib://docs/learn_by_example/layout/flex",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexLayoutFlex"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexLayoutFlex",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Layout Using Grid List",
@@ -14,7 +19,12 @@
             "name": "layout_grid_list",
             "uri": "dib://docs/learn_by_example/layout/grid_list",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexLayoutGridList"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexLayoutGridList",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Side Navigation Panels",
@@ -22,7 +32,12 @@
             "name": "layout_side_navigation_panels",
             "uri": "dib://docs/learn_by_example/layout/side_navigation_panels",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexSideNav"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexSideNav",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Application Menu & Layout",
@@ -30,7 +45,12 @@
             "name": "layout_application_menu_layout",
             "uri": "dib://docs/learn_by_example/layout/application_menu_layout",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexSideNavMenu"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexSideNavMenu",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Splitter",
@@ -38,7 +58,12 @@
             "name": "layout_splitter",
             "uri": "dib://docs/learn_by_example/layout/splitter",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexSplitter"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexSplitter",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Data Components - Check",
@@ -46,7 +71,12 @@
             "name": "built_in_data_check",
             "uri": "dib://docs/learn_by_example/built_in_components/data_check",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsCheck"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexComponentsCheck",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Data Components - Selects",
@@ -54,7 +84,12 @@
             "name": "built_in_data_selects",
             "uri": "dib://docs/learn_by_example/built_in_components/data_selects",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsSelects"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexComponentsSelects",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Data Components - Date/Time",
@@ -62,7 +97,12 @@
             "name": "built_in_data_datetime",
             "uri": "dib://docs/learn_by_example/built_in_components/data_datetime",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsDatesTimes"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexComponentsDatesTimes",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Data Components - Files",
@@ -70,7 +110,12 @@
             "name": "built_in_data_files",
             "uri": "dib://docs/learn_by_example/built_in_components/data_files",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsFiles"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexComponentsFiles",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Data Components - Inputs",
@@ -78,7 +123,12 @@
             "name": "built_in_data_inputs",
             "uri": "dib://docs/learn_by_example/built_in_components/data_inputs",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsInputs"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexComponentsInputs",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Layout - Application",
@@ -86,7 +136,12 @@
             "name": "built_in_layout_application",
             "uri": "dib://docs/learn_by_example/built_in_components/layout_application",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsApplicationLayout"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexComponentsApplicationLayout",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Layout - Component",
@@ -94,7 +149,12 @@
             "name": "built_in_layout_component",
             "uri": "dib://docs/learn_by_example/built_in_components/layout_component",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsLayout"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexComponentsLayout",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Buttons",
@@ -102,7 +162,12 @@
             "name": "built_in_buttons",
             "uri": "dib://docs/learn_by_example/built_in_components/buttons",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsButtons"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexComponentsButtons",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Buttons - Data",
@@ -110,7 +175,12 @@
             "name": "built_in_buttons_data",
             "uri": "dib://docs/learn_by_example/built_in_components/buttons_data",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsButtonsData"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexComponentsButtonsData",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Calendar",
@@ -118,7 +188,12 @@
             "name": "built_in_calendar",
             "uri": "dib://docs/learn_by_example/built_in_components/calendar",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexCalendar"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexCalendar",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Other Components",
@@ -126,7 +201,12 @@
             "name": "built_in_other_components",
             "uri": "dib://docs/learn_by_example/built_in_components/other_components",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsOther"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexComponentsOther",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "SelectMulti Component on Forms",
@@ -134,7 +214,12 @@
             "name": "built_in_selectmulti_forms",
             "uri": "dib://docs/learn_by_example/built_in_components/selectmulti_forms",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsSelectMulti"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexComponentsSelectMulti",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Typography",
@@ -142,7 +227,12 @@
             "name": "built_in_typography",
             "uri": "dib://docs/learn_by_example/built_in_components/typography",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexComponentsTypography"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexComponentsTypography",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Grid Basics",
@@ -150,7 +240,12 @@
             "name": "container_grids_basics",
             "uri": "dib://docs/learn_by_example/container_types/grids/basics",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridBasics"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexGridBasics",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "SQL Grid",
@@ -158,7 +253,12 @@
             "name": "container_grids_sql_grid",
             "uri": "dib://docs/learn_by_example/container_types/grids/sql_grid",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridSql"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexGridSql",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Parent and Other Fields on Grids",
@@ -166,7 +266,12 @@
             "name": "container_grids_parent_fields",
             "uri": "dib://docs/learn_by_example/container_types/grids/parent_fields",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridParentSqlFields"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexGridParentSqlFields",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Table Grid Custom Columns",
@@ -174,7 +279,12 @@
             "name": "container_grids_table_custom_columns",
             "uri": "dib://docs/learn_by_example/container_types/grids/table_custom_columns",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridCustomColumns"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexGridCustomColumns",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "SQL Grid Custom Columns",
@@ -182,7 +292,12 @@
             "name": "container_grids_sql_custom_columns",
             "uri": "dib://docs/learn_by_example/container_types/grids/sql_custom_columns",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridSqlCustomColumns"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexGridSqlCustomColumns",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Grid Headers And Styling",
@@ -190,7 +305,12 @@
             "name": "container_grids_headers_styling",
             "uri": "dib://docs/learn_by_example/container_types/grids/headers_styling",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridHeadersAndStyling"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexGridHeadersAndStyling",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Grid Freeze Columns",
@@ -198,7 +318,12 @@
             "name": "container_grids_freeze_columns",
             "uri": "dib://docs/learn_by_example/container_types/grids/freeze_columns",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridFreezeColumns"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexGridFreezeColumns",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Row Selection and Values",
@@ -206,7 +331,12 @@
             "name": "container_grids_row_selection_values",
             "uri": "dib://docs/learn_by_example/container_types/grids/row_selection_values",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridRowValues"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexGridRowValues",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Batch Edit Grid",
@@ -214,7 +344,12 @@
             "name": "container_grids_batch_edit",
             "uri": "dib://docs/learn_by_example/container_types/grids/batch_edit",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridBatchEdit"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexGridBatchEdit",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Batch Toggle Edit Grid",
@@ -222,7 +357,12 @@
             "name": "container_grids_batch_toggle_edit",
             "uri": "dib://docs/learn_by_example/container_types/grids/batch_toggle_edit",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridBatchToggleEdit"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexGridBatchToggleEdit",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Single Edit Grid",
@@ -230,7 +370,12 @@
             "name": "container_grids_single_edit",
             "uri": "dib://docs/learn_by_example/container_types/grids/single_edit",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridSingleEdit"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexGridSingleEdit",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Grid Height",
@@ -238,7 +383,12 @@
             "name": "container_grids_height",
             "uri": "dib://docs/learn_by_example/container_types/grids/height",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridHeight"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexGridHeight",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Dynamic Columns",
@@ -246,7 +396,12 @@
             "name": "container_grids_dynamic_columns",
             "uri": "dib://docs/learn_by_example/container_types/grids/dynamic_columns",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridDynamicColumns"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexGridDynamicColumns",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Form Basics",
@@ -254,7 +409,12 @@
             "name": "container_forms_basics",
             "uri": "dib://docs/learn_by_example/container_types/forms/basics",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexFormBasics"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexFormBasics",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Parent and Other Fields on Forms",
@@ -262,7 +422,12 @@
             "name": "container_forms_parent_fields",
             "uri": "dib://docs/learn_by_example/container_types/forms/parent_fields",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexFormParentSqlFields"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexFormParentSqlFields",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Plain Container",
@@ -270,7 +435,12 @@
             "name": "container_plain",
             "uri": "dib://docs/learn_by_example/container_types/plain",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPlainBasics"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexPlainBasics",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "iFrame with Eleutheria",
@@ -278,7 +448,12 @@
             "name": "container_iframes_eleutheria",
             "uri": "dib://docs/learn_by_example/container_types/iframes/eleutheria",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexiFrameEleutheria"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexiFrameEleutheria",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "iFrame with PHP",
@@ -286,7 +461,12 @@
             "name": "container_iframes_php",
             "uri": "dib://docs/learn_by_example/container_types/iframes/php",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexiFramePhp"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexiFramePhp",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "iFrame Dropinbase Functions",
@@ -294,7 +474,12 @@
             "name": "container_iframes_dib_functions",
             "uri": "dib://docs/learn_by_example/container_types/iframes/dib_functions",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexiFrameDropinbaseFunctions"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexiFrameDropinbaseFunctions",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Tree (Custom Controller)",
@@ -302,7 +487,12 @@
             "name": "container_trees_custom_controller",
             "uri": "dib://docs/learn_by_example/container_types/trees/custom_controller",
             "description": "",
-            "endpoint": "/nav/dibDocs?area=example&doc=dibexTreeCustom"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexTreeCustom",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Grid Tree (Custom Controller)",
@@ -310,7 +500,12 @@
             "name": "container_grid_trees_custom_controller",
             "uri": "dib://docs/learn_by_example/container_types/grid_trees/custom_controller",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexGridTree"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexGridTree",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Client-side Validation",
@@ -318,7 +513,12 @@
             "name": "validation_client_side",
             "uri": "dib://docs/learn_by_example/validation/client_side",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexValidationClientSide"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexValidationClientSide",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Server-side Validation",
@@ -326,7 +526,12 @@
             "name": "validation_server_side",
             "uri": "dib://docs/learn_by_example/validation/server_side",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexValidationServerSide"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexValidationServerSide",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Ports and Subcontainer Basics",
@@ -334,7 +539,12 @@
             "name": "ports_basics",
             "uri": "dib://docs/learn_by_example/ports_and_subcontainers/basics",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPorts"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexPorts",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Port Windows",
@@ -342,7 +552,12 @@
             "name": "ports_windows",
             "uri": "dib://docs/learn_by_example/ports_and_subcontainers/windows",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPortsWindow"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexPortsWindow",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Port Dialogs",
@@ -350,7 +565,12 @@
             "name": "ports_dialogs",
             "uri": "dib://docs/learn_by_example/ports_and_subcontainers/dialogs",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPortsDialog"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexPortsDialog",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Navigation Basics",
@@ -358,7 +578,12 @@
             "name": "navigation_basics",
             "uri": "dib://docs/learn_by_example/navigation/basics",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexNavigation"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexNavigation",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "SQL Parameters",
@@ -366,7 +591,12 @@
             "name": "sql_parameters",
             "uri": "dib://docs/learn_by_example/sql_parameters/sql",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexSqlParams"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexSqlParams",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "PHP Parameters",
@@ -374,7 +604,12 @@
             "name": "php_parameters",
             "uri": "dib://docs/learn_by_example/sql_parameters/php",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexSqlParamsPhp"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexSqlParamsPhp",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Client Data Basics",
@@ -382,7 +617,12 @@
             "name": "client_data_basics",
             "uri": "dib://docs/learn_by_example/client_data/basics",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexClientData"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexClientData",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Event Basics",
@@ -390,7 +630,12 @@
             "name": "events_basics",
             "uri": "dib://docs/learn_by_example/events/basics",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexEventBasics"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexEventBasics",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Queues - for Long Running Events",
@@ -398,7 +643,12 @@
             "name": "events_queues_long_running",
             "uri": "dib://docs/learn_by_example/events/queues",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexQueue"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexQueue",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "*ngIf",
@@ -406,7 +656,12 @@
             "name": "conditional_ng_if",
             "uri": "dib://docs/learn_by_example/conditional_directives/ng_if",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexNgIf"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexNgIf",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "[hidden]",
@@ -414,7 +669,12 @@
             "name": "conditional_hidden",
             "uri": "dib://docs/learn_by_example/conditional_directives/hidden",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexHidden"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexHidden",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "[dibDisabled]",
@@ -422,7 +682,12 @@
             "name": "conditional_dib_disabled",
             "uri": "dib://docs/learn_by_example/conditional_directives/dib_disabled",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexDibDisabled"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexDibDisabled",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "[ngStyle]",
@@ -430,7 +695,12 @@
             "name": "conditional_ng_style",
             "uri": "dib://docs/learn_by_example/conditional_directives/ng_style",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexNgStyle"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexNgStyle",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Dropinbase Services",
@@ -438,7 +708,12 @@
             "name": "dropinbase_services",
             "uri": "dib://docs/learn_by_example/dropinbase_services/services",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexDropinbaseServices"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexDropinbaseServices",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Client-Side Default Values",
@@ -446,7 +721,12 @@
             "name": "defaults_client_side",
             "uri": "dib://docs/learn_by_example/default_values/client",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexDefaultValuesClient"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexDefaultValuesClient",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Server-Side Default Values",
@@ -454,7 +734,12 @@
             "name": "defaults_server_side",
             "uri": "dib://docs/learn_by_example/default_values/server",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexDefaultValuesServer"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexDefaultValuesServer",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Filter Grids and Forms",
@@ -462,7 +747,12 @@
             "name": "filters_grids_forms",
             "uri": "dib://docs/learn_by_example/filters/filter_grids_forms",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexContainerFilterGridAndForm"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexContainerFilterGridAndForm",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Filtering Forms",
@@ -470,7 +760,12 @@
             "name": "filters_filtering_forms",
             "uri": "dib://docs/learn_by_example/filters/filtering_forms",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexContainerFilterForm"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexContainerFilterForm",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Using Filters with Ports",
@@ -478,7 +773,12 @@
             "name": "filters_with_ports",
             "uri": "dib://docs/learn_by_example/filters/using_filters_with_ports",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexContainerFilterPort"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexContainerFilterPort",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Data Components - Selects",
@@ -486,7 +786,12 @@
             "name": "filter_dropdown_selects",
             "uri": "dib://docs/learn_by_example/filters/dropdowns/selects",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexFilterDropdown"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexFilterDropdown",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Custom Ng Component In Grid",
@@ -494,7 +799,12 @@
             "name": "custom_component_ng_grid",
             "uri": "dib://docs/learn_by_example/custom_components/ng_component_grid",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexCustomNgComponentInGrid"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexCustomNgComponentInGrid",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "PHP Basics",
@@ -502,7 +812,12 @@
             "name": "php_basics",
             "uri": "dib://docs/learn_by_example/php/basics",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPhpBasics"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexPhpBasics",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "PHP Database Functions",
@@ -510,7 +825,12 @@
             "name": "php_database_functions",
             "uri": "dib://docs/learn_by_example/php/database_functions",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPhpDatabase"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexPhpDatabase",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "PHP Files - DibExcel Dropin",
@@ -518,7 +838,12 @@
             "name": "php_files_dibexcel",
             "uri": "dib://docs/learn_by_example/php/files/dibexcel",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPhpFilesDibExcel"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexPhpFilesDibExcel",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "PHP Files - DPdf Class",
@@ -526,7 +851,12 @@
             "name": "php_files_dpdf",
             "uri": "dib://docs/learn_by_example/php/files/dpdf",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPhpFilesDpdf"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexPhpFilesDpdf",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "PHP Files - Eleutheria Class",
@@ -534,7 +864,12 @@
             "name": "php_files_eleutheria",
             "uri": "dib://docs/learn_by_example/php/files/eleutheria",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPhpFilesEleutheria"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexPhpFilesEleutheria",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "PHP - Concurrent Asynchronous Threads",
@@ -542,7 +877,12 @@
             "name": "php_concurrent_threads",
             "uri": "dib://docs/learn_by_example/php/concurrent_threads",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPhpAsync"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexPhpAsync",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "PHP - Send Emails",
@@ -550,7 +890,12 @@
             "name": "php_send_emails",
             "uri": "dib://docs/learn_by_example/php/send_emails",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPhpEmail"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexPhpEmail",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Container Permissions",
@@ -558,7 +903,12 @@
             "name": "permissions_container",
             "uri": "dib://docs/learn_by_example/permissions/container_permissions",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPermsContainer"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexPermsContainer",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Item Permissions",
@@ -566,7 +916,12 @@
             "name": "permissions_item",
             "uri": "dib://docs/learn_by_example/permissions/item_permissions",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPermsItem"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexPermsItem",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Segmenting Data By User",
@@ -574,7 +929,12 @@
             "name": "permissions_segment_by_user",
             "uri": "dib://docs/learn_by_example/permissions/segmenting_data_by_user",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexPermSegmentDataByUser"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexPermSegmentDataByUser",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         },
         {
             "title": "Report Basics",
@@ -582,7 +942,12 @@
             "name": "reports_basics",
             "uri": "dib://docs/learn_by_example/reports/basics",
             "description": "",
-            "endpoint": "/nav/dibDocs/?area=example&doc=dibexReportBasics"
+            "endpoint": "/dropins/dibDocs/Template/exampleContent",
+            "payload": {
+                "parentContainerName": "dibexReportBasics",
+                "containerName": "dibDocsExampleHtml",
+                "itemEventId": "ie451-dib"
+            }
         }
     ]
 }
