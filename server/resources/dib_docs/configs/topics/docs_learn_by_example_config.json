@@ -5,7 +5,7 @@
             "enabled": true,
             "name": "layout_flex",
             "uri": "dib://docs/learn_by_example/layout/flex",
-            "description": "",
+            "description": "Documentation and examples for using the Flex layout API in Dropinbase. Use this resource whenever a user asks about flex based layout or when you design or build containers, pages or components that rely on Flex layout behaviour.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexLayoutFlex",
@@ -18,7 +18,7 @@
             "enabled": true,
             "name": "layout_grid_list",
             "uri": "dib://docs/learn_by_example/layout/grid_list",
-            "description": "",
+            "description": "Documentation for the Grid List layout pattern in Dropinbase. Use this resource whenever a user asks about grid based page layout or when you design or build views that arrange content in grid lists.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexLayoutGridList",
@@ -31,7 +31,7 @@
             "enabled": true,
             "name": "layout_side_navigation_panels",
             "uri": "dib://docs/learn_by_example/layout/side_navigation_panels",
-            "description": "",
+            "description": "Documentation for side navigation panels in Dropinbase layouts. Use this resource whenever a user asks about side menus, navigation drawers or panel behaviour or when you design or build layouts that include side navigation.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexSideNav",
@@ -44,7 +44,7 @@
             "enabled": true,
             "name": "layout_application_menu_layout",
             "uri": "dib://docs/learn_by_example/layout/application_menu_layout",
-            "description": "",
+            "description": "Documentation for the overall application menu and layout structure in Dropinbase. Use this resource whenever a user asks about global navigation, app shells or menu layout or when you design a project level layout for an application.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexSideNavMenu",
@@ -57,7 +57,7 @@
             "enabled": true,
             "name": "layout_splitter",
             "uri": "dib://docs/learn_by_example/layout/splitter",
-            "description": "",
+            "description": "Documentation for splitter layouts that resize panels in Dropinbase. Use this resource whenever a user asks about resizable panes or split views or when you build layouts that allow users to drag and resize sections.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexSplitter",
@@ -70,7 +70,7 @@
             "enabled": true,
             "name": "built_in_data_check",
             "uri": "dib://docs/learn_by_example/built_in_components/data_check",
-            "description": "",
+            "description": "Documentation for check based data components such as checkboxes in Dropinbase. Use this resource whenever a user asks about check controls or when you design forms, grids or filters that use check style inputs.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexComponentsCheck",
@@ -83,7 +83,7 @@
             "enabled": true,
             "name": "built_in_data_selects",
             "uri": "dib://docs/learn_by_example/built_in_components/data_selects",
-            "description": "",
+            "description": "Documentation for select style data components in Dropinbase, including drop downs and similar selectors. Use this resource whenever a user asks about select fields or when you design components that require choosing values from a list.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexComponentsSelects",
@@ -96,7 +96,7 @@
             "enabled": true,
             "name": "built_in_data_datetime",
             "uri": "dib://docs/learn_by_example/built_in_components/data_datetime",
-            "description": "",
+            "description": "Documentation for date and time data components in Dropinbase. Use this resource whenever a user asks how to capture or display dates and times or when you design forms or grids that work with temporal data.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexComponentsDatesTimes",
@@ -109,7 +109,7 @@
             "enabled": true,
             "name": "built_in_data_files",
             "uri": "dib://docs/learn_by_example/built_in_components/data_files",
-            "description": "",
+            "description": "Documentation for file upload and file related data components in Dropinbase. Use this resource whenever a user asks about file handling or when you build features that upload, attach or manage files.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexComponentsFiles",
@@ -122,7 +122,7 @@
             "enabled": true,
             "name": "built_in_data_inputs",
             "uri": "dib://docs/learn_by_example/built_in_components/data_inputs",
-            "description": "",
+            "description": "Documentation for standard input data components such as text and numeric fields in Dropinbase. Use this resource whenever a user asks about input fields or when you design data entry screens using these components.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexComponentsInputs",
@@ -135,7 +135,7 @@
             "enabled": true,
             "name": "built_in_layout_application",
             "uri": "dib://docs/learn_by_example/built_in_components/layout_application",
-            "description": "",
+            "description": "Documentation for application level layout components in Dropinbase. Use this resource whenever a user asks about structuring the whole app view or when you design top level application containers.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexComponentsApplicationLayout",
@@ -148,7 +148,7 @@
             "enabled": true,
             "name": "built_in_layout_component",
             "uri": "dib://docs/learn_by_example/built_in_components/layout_component",
-            "description": "",
+            "description": "Documentation for component level layout patterns in Dropinbase. Use this resource whenever a user asks about arranging elements within a component or when you design reusable component layouts.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexComponentsLayout",
@@ -161,7 +161,7 @@
             "enabled": true,
             "name": "built_in_buttons",
             "uri": "dib://docs/learn_by_example/built_in_components/buttons",
-            "description": "",
+            "description": "Documentation for standard button components in Dropinbase. Use this resource whenever a user asks about button styles or actions or when you design interaction flows that rely on buttons.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexComponentsButtons",
@@ -174,7 +174,7 @@
             "enabled": true,
             "name": "built_in_buttons_data",
             "uri": "dib://docs/learn_by_example/built_in_components/buttons_data",
-            "description": "",
+            "description": "Documentation for data aware buttons such as save, delete or row actions in Dropinbase. Use this resource whenever a user asks about buttons that manipulate data or when you design data workflows triggered by buttons.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexComponentsButtonsData",
@@ -187,7 +187,7 @@
             "enabled": true,
             "name": "built_in_calendar",
             "uri": "dib://docs/learn_by_example/built_in_components/calendar",
-            "description": "",
+            "description": "Documentation for calendar components in Dropinbase. Use this resource whenever a user asks about calendar views or scheduling or when you design interfaces that show events on a calendar.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexCalendar",
@@ -200,7 +200,7 @@
             "enabled": true,
             "name": "built_in_other_components",
             "uri": "dib://docs/learn_by_example/built_in_components/other_components",
-            "description": "",
+            "description": "Documentation for additional built in components in Dropinbase that do not fall under a specific category. Use this resource whenever a user asks about miscellaneous components or when you design features that use these extra elements.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexComponentsOther",
@@ -213,7 +213,7 @@
             "enabled": false,
             "name": "built_in_selectmulti_forms",
             "uri": "dib://docs/learn_by_example/built_in_components/selectmulti_forms",
-            "description": "",
+            "description": "Documentation for the SelectMulti component when used on forms in Dropinbase. Use this resource whenever a user asks about multi value selection on forms or when you design forms that require selecting multiple records.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexComponentsSelectMulti",
@@ -226,7 +226,7 @@
             "enabled": false,
             "name": "built_in_typography",
             "uri": "dib://docs/learn_by_example/built_in_components/typography",
-            "description": "",
+            "description": "Documentation for typography and text styling in Dropinbase components. Use this resource whenever a user asks about text appearance or when you design layouts that rely heavily on headings, labels and body text.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexComponentsTypography",
@@ -239,7 +239,7 @@
             "enabled": false,
             "name": "container_grids_basics",
             "uri": "dib://docs/learn_by_example/container_types/grids/basics",
-            "description": "",
+            "description": "Introductory documentation for grid containers in Dropinbase. Use this resource whenever a user asks about how grids work or when you start designing data views based on grid containers.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexGridBasics",
@@ -252,7 +252,7 @@
             "enabled": false,
             "name": "container_grids_sql_grid",
             "uri": "dib://docs/learn_by_example/container_types/grids/sql_grid",
-            "description": "",
+            "description": "Documentation for SQL based grid containers that load data directly from SQL in Dropinbase. Use this resource whenever a user asks about SQL grids or when you design data views backed by SQL queries.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexGridSql",
@@ -265,7 +265,7 @@
             "enabled": false,
             "name": "container_grids_parent_fields",
             "uri": "dib://docs/learn_by_example/container_types/grids/parent_fields",
-            "description": "",
+            "description": "Documentation for parent fields and related columns on grid containers in Dropinbase. Use this resource whenever a user asks how to show parent information on grids or when you design relational data views in grids.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexGridParentSqlFields",
@@ -278,7 +278,7 @@
             "enabled": false,
             "name": "container_grids_table_custom_columns",
             "uri": "dib://docs/learn_by_example/container_types/grids/table_custom_columns",
-            "description": "",
+            "description": "Documentation for adding custom columns to table grids in Dropinbase. Use this resource whenever a user asks about computed or custom grid columns or when you design grids that show derived values.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexGridCustomColumns",
@@ -291,7 +291,7 @@
             "enabled": false,
             "name": "container_grids_sql_custom_columns",
             "uri": "dib://docs/learn_by_example/container_types/grids/sql_custom_columns",
-            "description": "",
+            "description": "Documentation for creating custom columns in SQL grids in Dropinbase. Use this resource whenever a user asks about extending SQL based grids with extra columns or when you design advanced SQL grid layouts.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexGridSqlCustomColumns",
@@ -304,7 +304,7 @@
             "enabled": false,
             "name": "container_grids_headers_styling",
             "uri": "dib://docs/learn_by_example/container_types/grids/headers_styling",
-            "description": "",
+            "description": "Documentation for grid header configuration and styling in Dropinbase. Use this resource whenever a user asks about header appearance or when you design grids that need custom header layouts.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexGridHeadersAndStyling",
@@ -317,7 +317,7 @@
             "enabled": false,
             "name": "container_grids_freeze_columns",
             "uri": "dib://docs/learn_by_example/container_types/grids/freeze_columns",
-            "description": "",
+            "description": "Documentation for freezing columns in grid containers so they stay visible while scrolling. Use this resource whenever a user asks about frozen columns or when you design wide grids where key columns must stay fixed.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexGridFreezeColumns",
@@ -330,7 +330,7 @@
             "enabled": false,
             "name": "container_grids_row_selection_values",
             "uri": "dib://docs/learn_by_example/container_types/grids/row_selection_values",
-            "description": "",
+            "description": "Documentation for row selection behaviour and selected value handling in Dropinbase grids. Use this resource whenever a user asks how selection works or when you design workflows that depend on selected grid rows.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexGridRowValues",
@@ -343,7 +343,7 @@
             "enabled": false,
             "name": "container_grids_batch_edit",
             "uri": "dib://docs/learn_by_example/container_types/grids/batch_edit",
-            "description": "",
+            "description": "Documentation for batch editing capabilities on grid containers in Dropinbase. Use this resource whenever a user asks about editing multiple records at once or when you design bulk update experiences.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexGridBatchEdit",
@@ -356,7 +356,7 @@
             "enabled": false,
             "name": "container_grids_batch_toggle_edit",
             "uri": "dib://docs/learn_by_example/container_types/grids/batch_toggle_edit",
-            "description": "",
+            "description": "Documentation for batch toggle editing on grids in Dropinbase. Use this resource whenever a user asks about toggling flags or statuses in bulk or when you design grids that support many simultaneous changes.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexGridBatchToggleEdit",
@@ -369,7 +369,7 @@
             "enabled": false,
             "name": "container_grids_single_edit",
             "uri": "dib://docs/learn_by_example/container_types/grids/single_edit",
-            "description": "",
+            "description": "Documentation for single record editing within grid containers in Dropinbase. Use this resource whenever a user asks about inline editing rows or when you design grids that support editing one row at a time.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexGridSingleEdit",
@@ -382,7 +382,7 @@
             "enabled": false,
             "name": "container_grids_height",
             "uri": "dib://docs/learn_by_example/container_types/grids/height",
-            "description": "",
+            "description": "Documentation for controlling grid height and scroll behaviour in Dropinbase. Use this resource whenever a user asks about grid sizing or when you design layouts where grid height must be tuned carefully.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexGridHeight",
@@ -395,7 +395,7 @@
             "enabled": false,
             "name": "container_grids_dynamic_columns",
             "uri": "dib://docs/learn_by_example/container_types/grids/dynamic_columns",
-            "description": "",
+            "description": "Documentation for dynamic grid columns whose visibility or definition changes at runtime in Dropinbase. Use this resource whenever a user asks about configurable columns or when you design highly flexible grid views.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexGridDynamicColumns",
@@ -408,7 +408,7 @@
             "enabled": false,
             "name": "container_forms_basics",
             "uri": "dib://docs/learn_by_example/container_types/forms/basics",
-            "description": "",
+            "description": "Introductory documentation for form containers in Dropinbase. Use this resource whenever a user asks how forms are structured or when you design basic data capture forms.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexFormBasics",
@@ -421,7 +421,7 @@
             "enabled": false,
             "name": "container_forms_parent_fields",
             "uri": "dib://docs/learn_by_example/container_types/forms/parent_fields",
-            "description": "",
+            "description": "Documentation for using parent and related fields on forms in Dropinbase. Use this resource whenever a user asks about showing parent data on forms or when you design relational forms connected to other containers.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexFormParentSqlFields",
@@ -434,7 +434,7 @@
             "enabled": true,
             "name": "container_plain",
             "uri": "dib://docs/learn_by_example/container_types/plain",
-            "description": "",
+            "description": "Documentation for plain containers in Dropinbase that provide flexible layout with minimal behaviour. Use this resource whenever a user asks about simple container types or when you design lightweight views without grid or form behaviour.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexPlainBasics",
@@ -447,7 +447,7 @@
             "enabled": false,
             "name": "container_iframes_eleutheria",
             "uri": "dib://docs/learn_by_example/container_types/iframes/eleutheria",
-            "description": "",
+            "description": "Documentation for iFrame containers that integrate with Eleutheria in Dropinbase. Use this resource whenever a user asks about embedding Eleutheria content or when you design projects that show Eleutheria pages inside Dropinbase.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexiFrameEleutheria",
@@ -460,7 +460,7 @@
             "enabled": false,
             "name": "container_iframes_php",
             "uri": "dib://docs/learn_by_example/container_types/iframes/php",
-            "description": "",
+            "description": "Documentation for iFrame containers that host PHP driven content in Dropinbase. Use this resource whenever a user asks about embedding PHP pages or when you design hybrid solutions that mix PHP and Dropinbase.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexiFramePhp",
@@ -473,7 +473,7 @@
             "enabled": false,
             "name": "container_iframes_dib_functions",
             "uri": "dib://docs/learn_by_example/container_types/iframes/dib_functions",
-            "description": "",
+            "description": "Documentation for iFrame containers that make use of Dropinbase functions from embedded content. Use this resource whenever a user asks about iFrame to Dropinbase interaction or when you design advanced integrations using iFrames.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexiFrameDropinbaseFunctions",
@@ -486,7 +486,7 @@
             "enabled": false,
             "name": "container_trees_custom_controller",
             "uri": "dib://docs/learn_by_example/container_types/trees/custom_controller",
-            "description": "",
+            "description": "Documentation for tree containers that use a custom controller in Dropinbase. Use this resource whenever a user asks about tree structures managed by custom logic or when you design hierarchical views with specialised behaviour.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexTreeCustom",
@@ -499,7 +499,7 @@
             "enabled": false,
             "name": "container_grid_trees_custom_controller",
             "uri": "dib://docs/learn_by_example/container_types/grid_trees/custom_controller",
-            "description": "",
+            "description": "Documentation for grid tree containers with custom controllers in Dropinbase. Use this resource whenever a user asks about combined grid and tree views or when you design hierarchical data grids controlled by custom logic.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexGridTree",
@@ -512,7 +512,7 @@
             "enabled": false,
             "name": "validation_client_side",
             "uri": "dib://docs/learn_by_example/validation/client_side",
-            "description": "",
+            "description": "Documentation for client side validation techniques in Dropinbase. Use this resource whenever a user asks about validating input in the browser or when you design forms that must give immediate feedback to users.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexValidationClientSide",
@@ -525,7 +525,7 @@
             "enabled": false,
             "name": "validation_server_side",
             "uri": "dib://docs/learn_by_example/validation/server_side",
-            "description": "",
+            "description": "Documentation for server side validation in Dropinbase. Use this resource whenever a user asks about validating data on the server or when you design workflows that must enforce rules beyond the browser.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexValidationServerSide",
@@ -538,7 +538,7 @@
             "enabled": false,
             "name": "ports_basics",
             "uri": "dib://docs/learn_by_example/ports_and_subcontainers/basics",
-            "description": "",
+            "description": "Introductory documentation for ports and subcontainers in Dropinbase. Use this resource whenever a user asks what ports are or when you design architectures that route data or views through ports.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexPorts",
@@ -551,7 +551,7 @@
             "enabled": false,
             "name": "ports_windows",
             "uri": "dib://docs/learn_by_example/ports_and_subcontainers/windows",
-            "description": "",
+            "description": "Documentation for port windows in Dropinbase which display content in separate windows triggered by ports. Use this resource whenever a user asks about window based navigation or when you design multi window flows using ports.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexPortsWindow",
@@ -564,7 +564,7 @@
             "enabled": false,
             "name": "ports_dialogs",
             "uri": "dib://docs/learn_by_example/ports_and_subcontainers/dialogs",
-            "description": "",
+            "description": "Documentation for port driven dialogs in Dropinbase. Use this resource whenever a user asks about opening dialogs from ports or when you design modal interactions triggered by navigation or actions.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexPortsDialog",
@@ -577,7 +577,7 @@
             "enabled": false,
             "name": "navigation_basics",
             "uri": "dib://docs/learn_by_example/navigation/basics",
-            "description": "",
+            "description": "Introductory documentation for navigation in Dropinbase applications. Use this resource whenever a user asks how navigation works or when you design menu structures and navigation flows.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexNavigation",
@@ -590,7 +590,7 @@
             "enabled": false,
             "name": "sql_parameters",
             "uri": "dib://docs/learn_by_example/sql_parameters/sql",
-            "description": "",
+            "description": "Documentation for SQL parameters in Dropinbase such as passing values into SQL queries. Use this resource whenever a user asks about parameterised SQL or when you design data flows that depend on SQL parameters.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexSqlParams",
@@ -603,7 +603,7 @@
             "enabled": false,
             "name": "php_parameters",
             "uri": "dib://docs/learn_by_example/sql_parameters/php",
-            "description": "",
+            "description": "Documentation for PHP parameters used with Dropinbase integrations. Use this resource whenever a user asks how PHP receives or sends parameters or when you design features that call PHP code from Dropinbase.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexSqlParamsPhp",
@@ -616,7 +616,7 @@
             "enabled": false,
             "name": "client_data_basics",
             "uri": "dib://docs/learn_by_example/client_data/basics",
-            "description": "",
+            "description": "Introductory documentation for client data in Dropinbase and how it is passed between components. Use this resource whenever a user asks about clientData or when you design flows that depend on passing context between screens.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexClientData",
@@ -629,7 +629,7 @@
             "enabled": true,
             "name": "events_basics",
             "uri": "dib://docs/learn_by_example/events/basics",
-            "description": "",
+            "description": "Documentation for the basic event model in Dropinbase including how events are defined and triggered. Use this resource whenever a user asks about events or when you design actions that run on user interaction or data changes.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexEventBasics",
@@ -642,7 +642,7 @@
             "enabled": false,
             "name": "events_queues_long_running",
             "uri": "dib://docs/learn_by_example/events/queues",
-            "description": "",
+            "description": "Documentation for queues that handle long running events in Dropinbase. Use this resource whenever a user asks about background processing or when you design workflows that need queued or asynchronous execution.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexQueue",
@@ -655,7 +655,7 @@
             "enabled": false,
             "name": "conditional_ng_if",
             "uri": "dib://docs/learn_by_example/conditional_directives/ng_if",
-            "description": "",
+            "description": "Documentation for the *ngIf conditional directive in Dropinbase examples. Use this resource whenever a user asks about conditionally showing or hiding content with *ngIf or when you design components that depend on Angular style conditions.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexNgIf",
@@ -668,7 +668,7 @@
             "enabled": true,
             "name": "conditional_hidden",
             "uri": "dib://docs/learn_by_example/conditional_directives/hidden",
-            "description": "",
+            "description": "Documentation for using the [hidden] directive to hide or show elements in Dropinbase examples. Use this resource whenever a user asks about [hidden] behaviour or when you design layouts where visibility is controlled through this directive.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexHidden",
@@ -681,7 +681,7 @@
             "enabled": true,
             "name": "conditional_dib_disabled",
             "uri": "dib://docs/learn_by_example/conditional_directives/dib_disabled",
-            "description": "",
+            "description": "Documentation for the [dibDisabled] directive that controls disabled state in Dropinbase components. Use this resource whenever a user asks about conditionally disabling controls or when you design forms and buttons that must enable or disable based on logic.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexDibDisabled",
@@ -694,7 +694,7 @@
             "enabled": true,
             "name": "conditional_ng_style",
             "uri": "dib://docs/learn_by_example/conditional_directives/ng_style",
-            "description": "",
+            "description": "Documentation for using [ngStyle] to apply dynamic styles in Dropinbase examples. Use this resource whenever a user asks about styling elements based on data or when you design components whose appearance changes at runtime.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexNgStyle",
@@ -707,7 +707,7 @@
             "enabled": true,
             "name": "dropinbase_services",
             "uri": "dib://docs/learn_by_example/dropinbase_services/services",
-            "description": "",
+            "description": "Documentation for Dropinbase services and how they are used from components and events. Use this resource whenever a user asks about built in services or when you design features that call Dropinbase service functions.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexDropinbaseServices",
@@ -720,7 +720,7 @@
             "enabled": false,
             "name": "defaults_client_side",
             "uri": "dib://docs/learn_by_example/default_values/client",
-            "description": "",
+            "description": "Documentation for client side default values in Dropinbase and how they are initialised. Use this resource whenever a user asks about defaults applied in the browser or when you design forms that prefill values on the client.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexDefaultValuesClient",
@@ -733,7 +733,7 @@
             "enabled": false,
             "name": "defaults_server_side",
             "uri": "dib://docs/learn_by_example/default_values/server",
-            "description": "",
+            "description": "Documentation for server side default values in Dropinbase and how they are applied on the backend. Use this resource whenever a user asks about defaults enforced on the server or when you design flows that depend on backend initialisation.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexDefaultValuesServer",
@@ -746,7 +746,7 @@
             "enabled": false,
             "name": "filters_grids_forms",
             "uri": "dib://docs/learn_by_example/filters/filter_grids_forms",
-            "description": "",
+            "description": "Documentation for filtering both grids and forms in Dropinbase. Use this resource whenever a user asks about applying filters to data containers or when you design search and filter behaviour across views.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexContainerFilterGridAndForm",
@@ -759,7 +759,7 @@
             "enabled": false,
             "name": "filters_filtering_forms",
             "uri": "dib://docs/learn_by_example/filters/filtering_forms",
-            "description": "",
+            "description": "Documentation for filtering form containers in Dropinbase. Use this resource whenever a user asks about filter forms or when you design dedicated filter interfaces that drive other containers.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexContainerFilterForm",
@@ -772,7 +772,7 @@
             "enabled": false,
             "name": "filters_with_ports",
             "uri": "dib://docs/learn_by_example/filters/using_filters_with_ports",
-            "description": "",
+            "description": "Documentation for using filters together with ports in Dropinbase. Use this resource whenever a user asks about passing filter values via ports or when you design navigation flows that depend on filter state.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexContainerFilterPort",
@@ -785,7 +785,7 @@
             "enabled": false,
             "name": "filter_dropdown_selects",
             "uri": "dib://docs/learn_by_example/filters/dropdowns/selects",
-            "description": "",
+            "description": "Documentation for using select based filter drop downs in Dropinbase. Use this resource whenever a user asks about dropdown filters or when you design filter bars that use select components.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexFilterDropdown",
@@ -798,7 +798,7 @@
             "enabled": false,
             "name": "custom_component_ng_grid",
             "uri": "dib://docs/learn_by_example/custom_components/ng_component_grid",
-            "description": "",
+            "description": "Documentation for embedding custom Angular components inside Dropinbase grids. Use this resource whenever a user asks about custom cell renderers or when you design grids that host bespoke Angular components.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexCustomNgComponentInGrid",
@@ -811,7 +811,7 @@
             "enabled": false,
             "name": "php_basics",
             "uri": "dib://docs/learn_by_example/php/basics",
-            "description": "",
+            "description": "Introductory documentation for using PHP together with Dropinbase. Use this resource whenever a user asks about PHP integration or when you design solutions that rely on PHP scripts alongside Dropinbase containers.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexPhpBasics",
@@ -824,7 +824,7 @@
             "enabled": false,
             "name": "php_database_functions",
             "uri": "dib://docs/learn_by_example/php/database_functions",
-            "description": "",
+            "description": "Documentation for PHP database helper functions used with Dropinbase. Use this resource whenever a user asks about PHP side database access or when you design features that query data from PHP code.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexPhpDatabase",
@@ -837,7 +837,7 @@
             "enabled": false,
             "name": "php_files_dibexcel",
             "uri": "dib://docs/learn_by_example/php/files/dibexcel",
-            "description": "",
+            "description": "Documentation for the DibExcel PHP dropin that works with Dropinbase. Use this resource whenever a user asks about Excel export or when you design reporting or data extract features that use DibExcel.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexPhpFilesDibExcel",
@@ -850,7 +850,7 @@
             "enabled": false,
             "name": "php_files_dpdf",
             "uri": "dib://docs/learn_by_example/php/files/dpdf",
-            "description": "",
+            "description": "Documentation for the DPdf PHP class used to generate PDFs in Dropinbase solutions. Use this resource whenever a user asks about PDF generation or when you design features that create PDF output.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexPhpFilesDpdf",
@@ -863,7 +863,7 @@
             "enabled": false,
             "name": "php_files_eleutheria",
             "uri": "dib://docs/learn_by_example/php/files/eleutheria",
-            "description": "",
+            "description": "Documentation for the Eleutheria PHP class used with Dropinbase integrations. Use this resource whenever a user asks about Eleutheria related PHP logic or when you design back end code that works with Eleutheria.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexPhpFilesEleutheria",
@@ -876,7 +876,7 @@
             "enabled": false,
             "name": "php_concurrent_threads",
             "uri": "dib://docs/learn_by_example/php/concurrent_threads",
-            "description": "",
+            "description": "Documentation for concurrent asynchronous PHP threads used with Dropinbase. Use this resource whenever a user asks about running PHP tasks in parallel or when you design high performance background processing.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexPhpAsync",
@@ -889,7 +889,7 @@
             "enabled": false,
             "name": "php_send_emails",
             "uri": "dib://docs/learn_by_example/php/send_emails",
-            "description": "",
+            "description": "Documentation for sending emails from PHP in Dropinbase based solutions. Use this resource whenever a user asks about email sending or when you design notification features driven by PHP scripts.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexPhpEmail",
@@ -902,7 +902,7 @@
             "enabled": false,
             "name": "permissions_container",
             "uri": "dib://docs/learn_by_example/permissions/container_permissions",
-            "description": "",
+            "description": "Documentation for container level permissions in Dropinbase. Use this resource whenever a user asks about controlling access to containers or when you design security for views at container level.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexPermsContainer",
@@ -915,7 +915,7 @@
             "enabled": true,
             "name": "permissions_item",
             "uri": "dib://docs/learn_by_example/permissions/item_permissions",
-            "description": "",
+            "description": "Documentation for item level permissions in Dropinbase such as row or record access. Use this resource whenever a user asks about fine grained permissions or when you design solutions that restrict access per item.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexPermsItem",
@@ -928,7 +928,7 @@
             "enabled": false,
             "name": "permissions_segment_by_user",
             "uri": "dib://docs/learn_by_example/permissions/segmenting_data_by_user",
-            "description": "",
+            "description": "Documentation for segmenting data by user in Dropinbase. Use this resource whenever a user asks about per user data visibility or when you design multi tenant like solutions where users only see their own data.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexPermSegmentDataByUser",
@@ -941,7 +941,7 @@
             "enabled": false,
             "name": "reports_basics",
             "uri": "dib://docs/learn_by_example/reports/basics",
-            "description": "",
+            "description": "Introductory documentation for reports in Dropinbase. Use this resource whenever a user asks about creating or running reports or when you design reporting features for a project.",
             "endpoint": "/dropins/dibDocs/Template/exampleContent",
             "payload": {
                 "parentContainerName": "dibexReportBasics",
