@@ -6,6 +6,7 @@ from typing import Any
 
 STATE_FILE = Path("server/tools/application_wizard/state/wizard_state.json")
 
+
 @dataclass
 class WizardState:
     current_step_id: str | None = None

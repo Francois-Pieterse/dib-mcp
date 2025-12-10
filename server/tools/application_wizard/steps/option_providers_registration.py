@@ -70,9 +70,7 @@ def get_avail_databases(
 
 @register_option_provider("get_avail_base_container_templates")
 def get_avail_base_container_templates(
-    *,
-    context: dict[str, Any] | None = None,
-    include_descriptions: bool
+    *, context: dict[str, Any] | None = None, include_descriptions: bool
 ) -> list:
 
     def _get_base_templates() -> list:
@@ -189,6 +187,7 @@ def get_avail_base_container_templates(
 
     return options
 
+
 @register_option_provider("get_avail_form_design_definitions")
 def get_avail_form_design_definitions(
     *,
@@ -214,12 +213,16 @@ def get_avail_form_design_definitions(
 
         # Check for success
         if not data.get("success"):
-            raise ValueError("Failed to fetch form design definitions: Unsuccessful response")
+            raise ValueError(
+                "Failed to fetch form design definitions: Unsuccessful response"
+            )
 
         records = data.get("records", [])
 
         if records is None:
-            raise ValueError("Failed to fetch form design definitions: No records field found")
+            raise ValueError(
+                "Failed to fetch form design definitions: No records field found"
+            )
 
     except ValueError:
         raise ValueError("Failed to parse response JSON for form design definitions")
@@ -251,7 +254,9 @@ def get_avail_form_design_definitions(
                 "Form OverFlow Fieldsets": "Description unavailable.",
             }
 
-            option["description"] = STATIC_DESCRIPTIONS.get(str(fd_name), "No description available.")
+            option["description"] = STATIC_DESCRIPTIONS.get(
+                str(fd_name), "No description available."
+            )
 
         options.append(option)
 
@@ -264,7 +269,7 @@ def get_avail_grid_design_definitions(
     context: dict[str, Any] | None = None,
     add_static_descriptions: bool = False,
 ) -> list:
-    
+
     url = (
         f"{get_env('BASE_URL', 'https://localhost')}"
         "/peff/Crud/componentlist"
@@ -283,12 +288,16 @@ def get_avail_grid_design_definitions(
 
         # Check for success
         if not data.get("success"):
-            raise ValueError("Failed to fetch grid design definitions: Unsuccessful response")
+            raise ValueError(
+                "Failed to fetch grid design definitions: Unsuccessful response"
+            )
 
         records = data.get("records", [])
 
         if records is None:
-            raise ValueError("Failed to fetch grid design definitions: No records field found")
+            raise ValueError(
+                "Failed to fetch grid design definitions: No records field found"
+            )
 
     except ValueError:
         raise ValueError("Failed to parse response JSON for grid design definitions")
@@ -322,8 +331,9 @@ def get_avail_grid_design_definitions(
                 ),
             }
 
-            
-            option["description"] = STATIC_DESCRIPTIONS.get(str(gd_name), "No description available.")
+            option["description"] = STATIC_DESCRIPTIONS.get(
+                str(gd_name), "No description available."
+            )
 
         options.append(option)
 

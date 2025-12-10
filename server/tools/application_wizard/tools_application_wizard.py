@@ -9,6 +9,7 @@ from tools.application_wizard.state.state_model import WizardState
 
 STEPS_FILE = Path("server/tools/application_wizard/steps/new_base_wizard_steps.json")
 
+
 def _validate_step_answers(
     step_cfg: dict[str, Any], answers: dict[str, Any]
 ) -> list[dict[str, str]]:
