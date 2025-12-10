@@ -1,0 +1,178 @@
+{
+  "steps": [
+    {
+      "id": "choose_db",
+      "title": "Choose a Database to Import Tables From",
+      "required_inputs": [
+        {
+          "name": "db_name",
+          "type": "enum",
+          "prompt": "Which database should this application use to import tables from? If your database is not listed here, it is not in the Databases table and should first be added.",
+          "options_source": {
+            "type": "function",
+            "name": "get_avail_databases"
+          }
+        }
+      ]
+    },
+    {
+      "id": "choose_base_container_template",
+      "title": "Choose a Base Container Template",
+      "required_inputs": [
+        {
+          "name": "base_container_template",
+          "type": "enum",
+          "prompt": "Which base container template should this application use?",
+          "options_source": {
+            "type": "function",
+            "name": "get_avail_base_container_templates",
+            "args": {
+              "include_descriptions": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "set_base_container_name",
+      "title": "Name for new Base Container",
+      "required_inputs": [
+        {
+          "name": "base_container_name",
+          "type": "string",
+          "prompt": "Enter a name for your new base container. The name must be alphanumeric, no spaces and the first letter must be lowercase:"
+        }
+      ]
+    },
+    {
+      "id": "info_on_default_design_values",
+      "title": "Information on Default Design Values",
+      "info": "In the next section you will edit the default design values for new containers."
+    },
+    {
+      "id": "grid_forms_for_all_tables",
+      "title": "Grid Forms for All Tables",
+      "required_inputs": [
+        {
+          "name": "grids_for_all_tables",
+          "type": "boolean",
+          "prompt": "Do you want to create grids for all tables imported from the database?"
+        },
+        {
+          "name": "forms_for_all_tables",
+          "type": "boolean",
+          "prompt": "Do you want to create forms for all tables imported from the database?"
+        }
+      ]
+    },
+    {
+      "id": "table_display_options_on_forms",
+      "title": "Table Display Options on Forms",
+      "required_inputs": [
+        {
+          "name": "table_display_on_forms",
+          "type": "enum",
+          "prompt": "How should the related records of each table be displayed on forms?",
+          "options_source": {
+            "type": "static",
+            "values": [
+              {
+                "value": "none",
+                "description": "No related records displayed"
+              },
+              {
+                "value": "grids",
+                "description": "Related records displayed as grids available on tabs. The form is on the 1st tab."
+              },
+              {
+                "value": "forms",
+                "description": "Related records displayed as forms that may each have their own related forms on tabs."
+              },
+              {
+                "value": "both",
+                "description": "Related records displayed as both grids and forms available on tabs."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "design_definitions_for_forms_and_grids",
+      "title": "Design Definitions for Forms and Grids",
+      "required_inputs": [
+        {
+          "name": "form_design_definition",
+          "type": "enum",
+          "prompt": "Forms are built based on fully customizable templates and design configurations. Which design definition should be used for forms?",
+          "options_source": {
+            "type": "function",
+            "name": "get_avail_form_design_definitions",
+            "args": {
+              "add_static_descriptions": true
+            }
+          }
+        },
+        {
+          "name": "grid_design_definition",
+          "type": "enum",
+          "prompt": "Grids are built based on fully customizable templates and design configurations. Which design definition should be used for grids based on tables?",
+          "options_source": {
+            "type": "function",
+            "name": "get_avail_grid_design_definitions",
+            "args": {
+              "add_static_descriptions": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "info_on_regular_expressions",
+      "title": "Regular Expression Conversions for Names and Captions.",
+      "prompt": "Dropinbase derives names and captions of new containers(pages) and their items, from database table and field names, using sets of regular expression replacements. \nSpecify a set of regular expression  replacements for each of the subsequent four fields. Either accept the defaults, or modify them as needed. \n More info on the format is available on request.",
+      "info": "Note, the use of non-alphanumeric characters and spaces in database table and field names will cause problems. \n\n GUIDE \nA set contains one or more parts.\n Each part of a set contains a regular expression to match, and a replacement value.\nEg. #^tb_#i=>;#\\W#=>;#_#=> ;#.*#=>upwords;#\\s#=>;#^.#=>fit$0 means:\n- Replace tb_ at the start with nothing (case-insensitive match).\n- Then replace any non-\"word character\" (ie. not in [A-Za-z0-9_]) with nothing.\n- Then replace underscores(_) with a space.\n- Then match whatever is left and convert it to Sentence Case (see special functions below).\n- Then replace all spaces with nothing.\n- Finally match the first character and replace it with fit and itself.\n\nSpecial DIB functions (implemented via preg_replace_callback):\nlower => convert matched characters to lowercase\nupper => convert matched characters to UPPERCASE\nupwords => convert matched characters containing spaces\nto Sentence Case (eg hello my friend => Hello My Friend)\n\n SYNTAX:\n[REG EXPR 1]=>[REPLACE WITH CHARS 1];\n[REG EXPR 2]=>[REPLACE WITH CHARS 2];"
+    },
+    {
+      "id": "regular_expression_conversions",
+      "title": "Regular Expression Conversions for Names and Captions",
+      "required_inputs": [
+        {
+          "name": "regex_for_container_names",
+          "type": "string",
+          "prompt": "Enter the set of regular expression replacements to be used for deriving container names from database table names:",
+          "default": "#tb_#A=>;\r\n#\\W#=>;\r\n#_#=> ;\r\n#.*#=>upwords;\r\n#\\s#=>"
+        },
+        {
+          "name": "regex_for_container_captions",
+          "type": "string",
+          "prompt": "Enter the set of regular expression replacements to be used for deriving container captions from database table names:",
+          "default": "#tb_#A=>;\r\n#\\W#=>;\r\n#\\s#=>;\r\n#_#=> ;\r\n#.*#=>upwords"
+        },
+        {
+          "name": "regex_for_item_names",
+          "type": "string",
+          "prompt": "Enter the set of regular expression replacements to be used for deriving item names from database field names (leave \"as is\" excpet to remove spaces etc.):",
+          "default": ""
+        },
+        {
+          "name": "regex_for_field_captions",
+          "type": "string",
+          "prompt": "Enter the set of regular expression replacements to be used for deriving field captions from field names:",
+          "default": "#tb_#iA=>;\r\n#_id#iD=>;\r\n#\\W#=>;\r\n#\\s#=>;\r\n#_#=> ;\r\n#.*#=>upwords"
+        }
+      ]
+    },
+    {
+      "id": "confirm_creation",
+      "title": "Confirm Application Creation",
+      "required_inputs": [
+        {
+          "name": "confirm_creation",
+          "type": "boolean",
+          "prompt": "Do you want to create the application with the provided settings?"
+        }
+      ]
+    }
+  ]
+}
