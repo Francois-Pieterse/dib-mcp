@@ -1,0 +1,12 @@
+{
+    "resources": [
+        {
+            "title": "Microsoft Access",
+            "enabled": true,
+            "name": "microsoft_access",
+            "uri": "dib://docs/migrating_from_other_applications/microsoft_access",
+            "description": "Instructions on migrating a Microsoft Access database into Dropinbase, including preparing tables, exporting schema, and importing data.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Microsoft-Access"
+        }
+    ]
+}

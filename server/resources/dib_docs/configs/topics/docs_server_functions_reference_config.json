@@ -1,0 +1,12 @@
+{
+    "resources": [
+        {
+            "title": "EvalCriteria",
+            "enabled": true,
+            "name": "evalcriteria",
+            "uri": "dib://docs/server_functions_reference/evalcriteria",
+            "description": "Overview of the EvalCriteria class, including its three public functions used to evaluate criteria expressions on the server.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=EvalCriteria"
+        }
+    ]
+}

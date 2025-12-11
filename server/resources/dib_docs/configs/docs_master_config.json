@@ -13,7 +13,6 @@
         "troubleshooting_and_debugging": false,
         "tables_reference": false,
         "server_functions_reference": false,
-        "migrating_from_other_applications": false,
-        "docs_from_old_dropinbase_versions": false
+        "migrating_from_other_applications": false
     }
 }
