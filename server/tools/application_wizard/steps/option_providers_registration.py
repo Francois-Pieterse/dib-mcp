@@ -340,65 +340,67 @@ def get_avail_grid_design_definitions(
     return options
 
 
-# Examples
+@register_option_provider("get_tables_for_selected_db")
+def get_tables_for_selected_db(*, context: dict[str, Any] | None = None) -> list:
+    wizard_state = (context or {}).get("wizard_state", {})
+    answers = wizard_state.get("answers", {})
 
+    db_answer = answers.get("choose_db", {})
+    db_id_str = db_answer.get("db_name")
+    if not db_id_str:
+        raise ValueError("Database must be selected before configuring tables.")
 
-@register_option_provider("get_db_types")
-def get_db_types(
-    *,
-    context: dict[str, Any] | None = None,
-    include_deprecated: bool = False,
-) -> list[dict[str, str]]:
-    """
-    Example option provider.
+    db_id = int(db_id_str)
 
-    In a real implementation this could:
-      - call a Dropinbase endpoint (via context["client"])
-      - query a configuration store
-      - apply custom logic based on wizard state
-    """
-    # Static example list
-    options: list[dict[str, str]] = [
-        {"value": "postgres", "label": "PostgreSQL"},
-        {"value": "mysql", "label": "MySQL"},
-        {"value": "sqlserver", "label": "SQL Server"},
-        {"value": "sqlite", "label": "SQLite"},
-        {"value": "oracle", "label": "Oracle"},
-    ]
+    url = (
+        f"{get_env('BASE_URL', 'https://localhost')}" "/peff/Crud/read/wizBuildAppGrid"
+    )
 
-    if not include_deprecated:
-        # Pretend Oracle is deprecated
-        options = [opt for opt in options if opt["value"] != "oracle"]
+    headers: dict[str, str] = {
+        "Content-Type": "application/json",
+        "RequestVerificationToken": get_env("REQUEST_VERIFICATION_TOKEN"),
+    }
+
+    payload = {
+        "clientData": {
+            "alias_self": {},
+            "alias_parent": {
+                "id": db_id,
+            },
+            "query_params": {},
+            "activeFilter_self": "wizBuildAppGrid",
+        },
+        "activeFilter": "wizBuildAppGrid",
+    }
+
+    response = dib_session_client.request("POST", url, headers=headers, json=payload)
+
+    try:
+        data = response.json()
+
+        # Check for success
+        if not data.get("success"):
+            raise ValueError("Failed to fetch tables for DB: Unsuccessful response")
+
+        records = data.get("records", [])
+
+        if records is None:
+            raise ValueError("Failed to fetch tables for DB: No records field found")
+    except ValueError:
+        raise ValueError("Failed to parse response JSON for tables for DB")
+
+    options: list[dict[str, Any]] = []
+    for record in records:
+        options.append(
+            {
+                "id": record["id"],
+                "name": record["name"],
+                "caption": record.get("caption") or record["name"].title(),
+                "field_count": record.get("field_count", 0),
+                "create_grid": True,
+                "create_form": True,
+                "ignore": False,
+            }
+        )
 
     return options
-
-
-@register_option_provider("get_boolean_yes_no")
-def get_boolean_yes_no(
-    *,
-    context: dict[str, Any] | None = None,
-) -> list[dict[str, str]]:
-    """
-    Simple yes or no options.
-    """
-    return [
-        {"value": "yes", "label": "Yes"},
-        {"value": "no", "label": "No"},
-    ]
-
-
-@register_option_provider("get_environments")
-def get_environments(
-    *,
-    context: dict[str, Any] | None = None,
-) -> list[dict[str, str]]:
-    """
-    Example environment options.
-
-    Could be extended to inspect context["wizard_state"] or call a backend.
-    """
-    return [
-        {"value": "dev", "label": "Development"},
-        {"value": "test", "label": "Test"},
-        {"value": "prod", "label": "Production"},
-    ]
