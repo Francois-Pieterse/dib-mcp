@@ -40,7 +40,8 @@ def list_dib_doc_topics() -> dict:
         "Use this to see which docs exist before choosing one. "
         "If a user asks what documentation is available, or which examples exist "
         "for a component or layout, call this tool."
-        "After getting the list, use `load_dib_doc` to fetch the content of a specific doc by its `name`."
+        "After getting the list, use `load_dib_doc` to fetch the content of a specific doc by its `name`." \
+        "If a topic returns an error check if the topic exist/is enabled by calling `list_dib_doc_topics` first."
     ),
     annotations=ToolAnnotations(
         readOnlyHint=True,
