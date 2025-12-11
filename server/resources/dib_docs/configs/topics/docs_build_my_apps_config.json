@@ -1,0 +1,60 @@
+{
+  "resources": [
+    {
+      "title": "Prime the Database Design",
+      "enabled": true,
+      "name": "prime_the_database_design",
+      "uri": "dib://docs/build_my_apps/prime_the_database_design",
+      "description": "Guidance on preparing a clean and well-structured database design before generating your application. These recommendations help Dropinbase produce a clean and predictable outcome.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Prime-the-Database-Design"
+    },
+    {
+      "title": "Configure Database Connections",
+      "enabled": true,
+      "name": "configure_database_connections",
+      "uri": "dib://docs/build_my_apps/configure_database_connections",
+      "description": "Learn how to configure the connections Dropinbase uses to read and interact with your database.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Configure-Database-Connections"
+    },
+    {
+      "title": "Use the App Wizard",
+      "enabled": true,
+      "name": "use_the_app_wizard",
+      "uri": "dib://docs/build_my_apps/use_the_app_wizard",
+      "description": "An overview of how to use the App Wizard to generate applications from your database design.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Use-the-App-Wizard"
+    },
+    {
+      "title": "Delete and Rebuild My App",
+      "enabled": true,
+      "name": "delete_and_rebuild_my_app",
+      "uri": "dib://docs/build_my_apps/delete_and_rebuild_my_app",
+      "description": "A complete rebuild option for when substantial design changes are needed or when you simply want to start fresh. Helpful if major redesigns occur or unexpected interruptions happen during generation.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Delete-and-Rebuild-My-App"
+    },
+    {
+      "title": "Applying Subsequent Database Changes",
+      "enabled": true,
+      "name": "applying_subsequent_database_changes",
+      "uri": "dib://docs/build_my_apps/applying_subsequent_database_changes",
+      "description": "Dropinbase detects when new tables or fields are added to the database and when obsolete ones are removed. Learn how to apply these differences to your generated application.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Applying-Subsequent-Database-Changes"
+    },
+    {
+      "title": "Basic Steps after Importing Tables",
+      "enabled": true,
+      "name": "basic_steps_after_importing_tables",
+      "uri": "dib://docs/build_my_apps/basic_steps_after_importing_tables",
+      "description": "Recommended next steps after importing tables, including structuring forms, views, and workflows for your newly generated application.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Basic-Steps-after-Importing-Tables"
+    },
+    {
+      "title": "Technical Look at Creating Applications",
+      "enabled": true,
+      "name": "technical_look_at_creating_applications",
+      "uri": "dib://docs/build_my_apps/technical_look_at_creating_applications",
+      "description": "A deeper technical explanation of how Dropinbase interprets database structure and converts it into a functioning application.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Technical-Look-at-Creating-Applications"
+    }
+  ]
+}

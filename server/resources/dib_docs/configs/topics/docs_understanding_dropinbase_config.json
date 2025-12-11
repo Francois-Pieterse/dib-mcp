@@ -1,0 +1,252 @@
+{
+  "resources": [
+    {
+      "title": "Basic Concepts",
+      "enabled": true,
+      "name": "basic_concepts",
+      "uri": "dib://docs/understanding_dropinbase/basic_concepts",
+      "description": "Fundamental concepts that explain how Dropinbase structures applications and processes data.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Basic-Concepts"
+    },
+    {
+      "title": "Base Containers",
+      "enabled": true,
+      "name": "base_containers",
+      "uri": "dib://docs/understanding_dropinbase/base_containers",
+      "description": "Overview of Base Containers, their purpose, and how they provide structure for applications.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Base-Containers"
+    },
+    {
+      "title": "Authentication",
+      "enabled": true,
+      "name": "authentication",
+      "uri": "dib://docs/understanding_dropinbase/authentication",
+      "description": "Authentication workflows and mechanisms used in Dropinbase applications.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Authentication"
+    },
+    {
+      "title": "Ports",
+      "enabled": true,
+      "name": "ports",
+      "uri": "dib://docs/understanding_dropinbase/ports",
+      "description": "Explanation of Dropinbase communication ports and their roles in system interaction.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Ports"
+    },
+    {
+      "title": "Navigation and Menus",
+      "enabled": true,
+      "name": "navigation_and_menus",
+      "uri": "dib://docs/understanding_dropinbase/navigation_and_menus",
+      "description": "How menus, navigation groups, and routes are structured in Dropinbase applications.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Navigation-and-Menus"
+    },
+    {
+      "title": "Get and Set User Interface Values",
+      "enabled": true,
+      "name": "get_and_set_user_interface_values",
+      "uri": "dib://docs/understanding_dropinbase/get_and_set_user_interface_values",
+      "description": "Methods for retrieving and updating user interface values within containers and scripts.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Get-and-Set-User-Interface-Values"
+    },
+    {
+      "title": "Dropdown Display Expressions",
+      "enabled": true,
+      "name": "dropdown_display_expressions",
+      "uri": "dib://docs/understanding_dropinbase/dropdown_display_expressions",
+      "description": "Rules and expressions that determine how dropdown list items are displayed.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Dropdown-Display-Expressions"
+    },
+    {
+      "title": "Naming and URL Conventions",
+      "enabled": true,
+      "name": "naming_and_url_conventions",
+      "uri": "dib://docs/understanding_dropinbase/naming_and_url_conventions",
+      "description": "Standards for naming containers, actions, and generating clean URLs in Dropinbase.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Naming-and-URL-Conventions"
+    },
+    {
+      "title": "Filters on Containers and Dropdowns",
+      "enabled": true,
+      "name": "filters_on_containers_and_dropdowns",
+      "uri": "dib://docs/understanding_dropinbase/filters_on_containers_and_dropdowns",
+      "description": "Techniques for filtering dataset results within containers and dropdown controls.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Filters-on-Containers-and-Dropdowns"
+    },
+    {
+      "title": "Excluding Items",
+      "enabled": true,
+      "name": "excluding_items",
+      "uri": "dib://docs/understanding_dropinbase/excluding_items",
+      "description": "How to exclude items from menus, dropdowns, and system-wide components.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Excluding-Items"
+    },
+    {
+      "title": "Dropinbase Folder Structure",
+      "enabled": true,
+      "name": "dropinbase_folder_structure",
+      "uri": "dib://docs/understanding_dropinbase/dropinbase_folder_structure",
+      "description": "A breakdown of the Dropinbase folder layout and the role of each directory.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Dropinbase-Folder-Structure"
+    },
+    {
+      "title": "Common API Requests",
+      "enabled": true,
+      "name": "common_api_requests",
+      "uri": "dib://docs/understanding_dropinbase/common_api_requests",
+      "description": "Examples and explanations of frequently used API requests within Dropinbase.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Common-API-Requests"
+    },
+    {
+      "title": "Dropins Overview",
+      "enabled": true,
+      "name": "dropins_overview",
+      "uri": "dib://docs/understanding_dropinbase/dropins/dropins_overview",
+      "description": "Introduction to Dropins, modular components that extend Dropinbase functionality.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Dropins-Overview"
+    },
+    {
+      "title": "Dropin Sets",
+      "enabled": true,
+      "name": "dropin_sets",
+      "uri": "dib://docs/understanding_dropinbase/dropins/dropin_sets",
+      "description": "Explanation of Dropin Sets and how grouped modules operate together.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Dropin-Sets"
+    },
+    {
+      "title": "Reusables",
+      "enabled": true,
+      "name": "reusables",
+      "uri": "dib://docs/understanding_dropinbase/dropins/reusables",
+      "description": "Reusable Dropins that allow shared functionality across multiple areas of an application.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Reusables"
+    },
+    {
+      "title": "Distributing Module Dropins",
+      "enabled": true,
+      "name": "distributing_module_dropins",
+      "uri": "dib://docs/understanding_dropinbase/dropins/distributing_module_dropins",
+      "description": "Guidance on packaging and distributing Dropins for use in other projects.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Distributing-Module-Dropins"
+    },
+    {
+      "title": "Activating and Using Dropins",
+      "enabled": true,
+      "name": "activating_and_using_dropins",
+      "uri": "dib://docs/understanding_dropinbase/dropins/activating_and_using_dropins",
+      "description": "How to enable Dropins and integrate their functionality within applications.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Activating-and-Using-Dropins"
+    },
+    {
+      "title": "Users and Permission Groups",
+      "enabled": true,
+      "name": "users_and_permission_groups",
+      "uri": "dib://docs/understanding_dropinbase/users_and_permission_groups",
+      "description": "Overview of user accounts and permission group structures in Dropinbase.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Users-and-Permission-Groups"
+    },
+    {
+      "title": "Permissions Overview",
+      "enabled": true,
+      "name": "permissions_overview",
+      "uri": "dib://docs/understanding_dropinbase/permissions_and_business_rules/permissions_overview",
+      "description": "High-level explanation of Dropinbase permissions and how access rules are applied.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Permissions-Overview"
+    },
+    {
+      "title": "Permgroups",
+      "enabled": true,
+      "name": "permgroups",
+      "uri": "dib://docs/understanding_dropinbase/permissions_and_business_rules/permgroups",
+      "description": "Details on permission groups and how they organise access levels within applications.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Permgroups"
+    },
+    {
+      "title": "Permission Checks",
+      "enabled": true,
+      "name": "permission_checks",
+      "uri": "dib://docs/understanding_dropinbase/permissions_and_business_rules/permission_checks",
+      "description": "How permission checks are evaluated when users interact with containers, actions, and fields.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Permission-Checks"
+    },
+    {
+      "title": "Container Permissions",
+      "enabled": true,
+      "name": "container_permissions",
+      "uri": "dib://docs/understanding_dropinbase/permissions_and_business_rules/container_permissions",
+      "description": "How permissions control access to containers and determine allowed operations.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Container-Permissions"
+    },
+    {
+      "title": "Item Permissions",
+      "enabled": true,
+      "name": "item_permissions",
+      "uri": "dib://docs/understanding_dropinbase/permissions_and_business_rules/item_permissions",
+      "description": "Rules determining access to individual items or records inside containers.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Item-Permissions"
+    },
+    {
+      "title": "Event Permissions",
+      "enabled": true,
+      "name": "event_permissions",
+      "uri": "dib://docs/understanding_dropinbase/permissions_and_business_rules/event_permissions",
+      "description": "Event-level access control that defines which users may trigger specific actions.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Event-Permissions"
+    },
+    {
+      "title": "Implement Conditional Permissions",
+      "enabled": true,
+      "name": "implement_conditional_permissions",
+      "uri": "dib://docs/understanding_dropinbase/permissions_and_business_rules/implement_conditional_permissions",
+      "description": "How to introduce conditional logic to dynamically determine permissions.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Implement-Conditional-Permissions"
+    },
+    {
+      "title": "Enable Certain Users to Assign Roles",
+      "enabled": true,
+      "name": "enable_certain_users_to_assign_roles",
+      "uri": "dib://docs/understanding_dropinbase/permissions_and_business_rules/enable_certain_users_to_assign_roles",
+      "description": "How to allow specific users to assign or change user roles within Dropinbase.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Enable-Certain-Users-to-Assign-Roles"
+    },
+    {
+      "title": "Overview of Permission Tables",
+      "enabled": true,
+      "name": "overview_of_permission_tables",
+      "uri": "dib://docs/understanding_dropinbase/permissions_and_business_rules/overview_of_permission_tables",
+      "description": "Insight into database tables that drive permission logic in Dropinbase.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Overview-of-Permission-Tables"
+    },
+    {
+      "title": "Criteria Evaluation",
+      "enabled": true,
+      "name": "criteria_evaluation",
+      "uri": "dib://docs/understanding_dropinbase/criteria_evaluation",
+      "description": "How criteria expressions are evaluated within actions, filters, and conditions.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Criteria-Evaluation"
+    },
+    {
+      "title": "Security",
+      "enabled": true,
+      "name": "security",
+      "uri": "dib://docs/understanding_dropinbase/security",
+      "description": "A security overview covering authentication, authorisation, and data protection strategies.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Security"
+    },
+    {
+      "title": "Cross Database Server Compatibility",
+      "enabled": true,
+      "name": "cross_database_server_compatibility",
+      "uri": "dib://docs/understanding_dropinbase/cross_database_server_compatibility",
+      "description": "Compatibility considerations when running Dropinbase across multiple database server types.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Cross-Database-Server-Compatibility"
+    },
+    {
+      "title": "Angular Compiling and the Watcher",
+      "enabled": true,
+      "name": "angular_compiling_and_the_watcher",
+      "uri": "dib://docs/understanding_dropinbase/angular_compiling_and_the_watcher",
+      "description": "Explains Angular compilation processes and the watcher system used during development.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Angular-Compiling-and-the-Watcher"
+    }
+  ]
+}

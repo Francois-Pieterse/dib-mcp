@@ -1,0 +1,92 @@
+{
+  "resources": [
+    {
+      "title": "Basics For Any Container",
+      "enabled": true,
+      "name": "basics_for_any_container",
+      "uri": "dib://docs/administering_dropinbase/create_new_containers/basics_for_any_container",
+      "description": "Fundamentals shared by all container types, including structure, fields, and behaviours.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Basics-For-Any-Container"
+    },
+    {
+      "title": "Create New Grids",
+      "enabled": true,
+      "name": "create_new_grids",
+      "uri": "dib://docs/administering_dropinbase/create_new_containers/create_new_grids",
+      "description": "Instructions for creating Grid containers to display table data in list format.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Create-New-Grids"
+    },
+    {
+      "title": "Create New Forms",
+      "enabled": true,
+      "name": "create_new_forms",
+      "uri": "dib://docs/administering_dropinbase/create_new_containers/create_new_forms",
+      "description": "How to create Form containers for editing, adding, or viewing detailed record information.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Create-New-Forms"
+    },
+    {
+      "title": "Generating and Clearing Generated Code",
+      "enabled": true,
+      "name": "generating_and_clearing_generated_code",
+      "uri": "dib://docs/administering_dropinbase/generating_and_clearing_generated_code",
+      "description": "How Dropinbase generates container code and how to clear or refresh generated files safely.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Generating-and-Clearing-Generated-Code"
+    },
+    {
+      "title": "Handle Changes to Table and Query Designs",
+      "enabled": true,
+      "name": "handle_changes_to_table_and_query_designs",
+      "uri": "dib://docs/administering_dropinbase/handle_changes_to_table_and_query_designs",
+      "description": "Guidance on updating containers and generated files after modifying table structures or queries.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Handle-Changes-to-Table-and-Query-Designs"
+    },
+    {
+      "title": "Customize Containers",
+      "enabled": true,
+      "name": "customize_containers",
+      "uri": "dib://docs/administering_dropinbase/customize_containers",
+      "description": "Instructions for customising containers through scripts, layout changes, and behavioural adjustments.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Customize-Containers"
+    },
+    {
+      "title": "Deploying Applications",
+      "enabled": true,
+      "name": "deploying_applications",
+      "uri": "dib://docs/administering_dropinbase/deploying_apps_and_generating_files/deploying_applications",
+      "description": "Instructions for deploying Dropinbase applications to development, staging, or production environments.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Deploying-Applications"
+    },
+    {
+      "title": "Generating Files",
+      "enabled": true,
+      "name": "generating_files",
+      "uri": "dib://docs/administering_dropinbase/deploying_apps_and_generating_files/generating_files",
+      "description": "How to generate application code and resource files from Dropinbase design metadata.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Generating-Files"
+    },
+    {
+      "title": "Remove Unneeded Design Records",
+      "enabled": true,
+      "name": "remove_unneeded_design_records",
+      "uri": "dib://docs/administering_dropinbase/deploying_apps_and_generating_files/remove_unneeded_design_records",
+      "description": "How to safely remove obsolete design metadata to keep your applications clean and efficient.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Remove-Unneeded-Design-Records"
+    },
+    {
+      "title": "Enable Maintenance Mode",
+      "enabled": true,
+      "name": "enable_maintenance_mode",
+      "uri": "dib://docs/administering_dropinbase/enable_maintenance_mode",
+      "description": "Enable maintenance mode to temporarily restrict user access while performing updates.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Enable-Maintenance-Mode"
+    },
+    {
+      "title": "Hotfixing Production",
+      "enabled": true,
+      "name": "hotfixing_production",
+      "uri": "dib://docs/administering_dropinbase/hotfixing_production",
+      "description": "Guidance on applying urgent fixes directly to production environments safely and correctly.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Hotfixing-Production"
+    }
+  ]
+}
