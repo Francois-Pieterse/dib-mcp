@@ -1,0 +1,548 @@
+{
+    "resources": [
+        {
+            "title": "pef_activity_log",
+            "enabled": true,
+            "name": "pef_activity_log",
+            "uri": "dib://docs/tables_reference/pef_activity_log",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_activity_log"
+        },
+        {
+            "title": "pef_ai",
+            "enabled": true,
+            "name": "pef_ai",
+            "uri": "dib://docs/tables_reference/pef_ai",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_ai"
+        },
+        {
+            "title": "pef_ai_chat",
+            "enabled": true,
+            "name": "pef_ai_chat",
+            "uri": "dib://docs/tables_reference/pef_ai_chat",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_ai_chat"
+        },
+        {
+            "title": "pef_audit_trail",
+            "enabled": true,
+            "name": "pef_audit_trail",
+            "uri": "dib://docs/tables_reference/pef_audit_trail",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_audit_trail"
+        },
+        {
+            "title": "pef_component",
+            "enabled": true,
+            "name": "pef_component",
+            "uri": "dib://docs/tables_reference/pef_component",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_component"
+        },
+        {
+            "title": "pef_container",
+            "enabled": true,
+            "name": "pef_container",
+            "uri": "dib://docs/tables_reference/pef_container",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_container"
+        },
+        {
+            "title": "pef_container_event",
+            "enabled": true,
+            "name": "pef_container_event",
+            "uri": "dib://docs/tables_reference/pef_container_event",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_container_event"
+        },
+        {
+            "title": "pef_container_filter",
+            "enabled": true,
+            "name": "pef_container_filter",
+            "uri": "dib://docs/tables_reference/pef_container_filter",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_container_filter"
+        },
+        {
+            "title": "pef_container_group",
+            "enabled": true,
+            "name": "pef_container_group",
+            "uri": "dib://docs/tables_reference/pef_container_group",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table?id=pef_container_group"
+        },
+        {
+            "title": "pef_container_setting",
+            "enabled": true,
+            "name": "pef_container_setting",
+            "uri": "dib://docs/tables_reference/pef_container_setting",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_container_setting"
+        },
+        {
+            "title": "pef_content_type",
+            "enabled": true,
+            "name": "pef_content_type",
+            "uri": "dib://docs/tables_reference/pef_content_type",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_content_type"
+        },
+        {
+            "title": "pef_database",
+            "enabled": true,
+            "name": "pef_database",
+            "uri": "dib://docs/tables_reference/pef_database",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_database"
+        },
+        {
+            "title": "pef_datatype",
+            "enabled": true,
+            "name": "pef_datatype",
+            "uri": "dib://docs/tables_reference/pef_datatype",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_datatype"
+        },
+        {
+            "title": "pef_design",
+            "enabled": true,
+            "name": "pef_design",
+            "uri": "dib://docs/tables_reference/pef_design",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_design"
+        },
+        {
+            "title": "pef_design_feature",
+            "enabled": true,
+            "name": "pef_design_feature",
+            "uri": "dib://docs/tables_reference/pef_design_feature",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_design_feature"
+        },
+        {
+            "title": "pef_design_values",
+            "enabled": true,
+            "name": "pef_design_values",
+            "uri": "dib://docs/tables_reference/pef_design_values",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_design_values"
+        },
+        {
+            "title": "pef_diagram",
+            "enabled": true,
+            "name": "pef_diagram",
+            "uri": "dib://docs/tables_reference/pef_diagram",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_diagram"
+        },
+        {
+            "title": "pef_diagram_table",
+            "enabled": true,
+            "name": "pef_diagram_table",
+            "uri": "dib://docs/tables_reference/pef_diagram_table",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_diagram_table"
+        },
+        {
+            "title": "pef_docs",
+            "enabled": true,
+            "name": "pef_docs",
+            "uri": "dib://docs/tables_reference/pef_docs",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_docs"
+        },
+        {
+            "title": "pef_docs_component",
+            "enabled": true,
+            "name": "pef_docs_component",
+            "uri": "dib://docs/tables_reference/pef_docs_component",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_docs_component"
+        },
+        {
+            "title": "pef_docs_dropin",
+            "enabled": true,
+            "name": "pef_docs_dropin",
+            "uri": "dib://docs/tables_reference/pef_docs_dropin",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_docs_dropin"
+        },
+        {
+            "title": "pef_docs_example",
+            "enabled": true,
+            "name": "pef_docs_example",
+            "uri": "dib://docs/tables_reference/pef_docs_example",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_docs_example"
+        },
+        {
+            "title": "pef_dropin",
+            "enabled": true,
+            "name": "pef_dropin",
+            "uri": "dib://docs/tables_reference/pef_dropin",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_dropin"
+        },
+        {
+            "title": "pef_error_log",
+            "enabled": true,
+            "name": "pef_error_log",
+            "uri": "dib://docs/tables_reference/pef_error_log",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_error_log"
+        },
+        {
+            "title": "pef_field",
+            "enabled": true,
+            "name": "pef_field",
+            "uri": "dib://docs/tables_reference/pef_field",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_field"
+        },
+        {
+            "title": "pef_file_setting",
+            "enabled": true,
+            "name": "pef_file_setting",
+            "uri": "dib://docs/tables_reference/pef_file_setting",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_file_setting"
+        },
+        {
+            "title": "pef_fk",
+            "enabled": true,
+            "name": "pef_fk",
+            "uri": "dib://docs/tables_reference/pef_fk",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_fk"
+        },
+        {
+            "title": "pef_generate",
+            "enabled": true,
+            "name": "pef_generate",
+            "uri": "dib://docs/tables_reference/pef_generate",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_generate"
+        },
+        {
+            "title": "pef_group",
+            "enabled": true,
+            "name": "pef_group",
+            "uri": "dib://docs/tables_reference/pef_group",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_group"
+        },
+        {
+            "title": "pef_import",
+            "enabled": true,
+            "name": "pef_import",
+            "uri": "dib://docs/tables_reference/pef_import",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_import"
+        },
+        {
+            "title": "pef_import_item",
+            "enabled": true,
+            "name": "pef_import_item",
+            "uri": "dib://docs/tables_reference/pef_import_item",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_import_item"
+        },
+        {
+            "title": "pef_item",
+            "enabled": true,
+            "name": "pef_item",
+            "uri": "dib://docs/tables_reference/pef_item",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_item"
+        },
+        {
+            "title": "pef_item_event",
+            "enabled": true,
+            "name": "pef_item_event",
+            "uri": "dib://docs/tables_reference/pef_item_event",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_item_event"
+        },
+        {
+            "title": "pef_item_filter",
+            "enabled": true,
+            "name": "pef_item_filter",
+            "uri": "dib://docs/tables_reference/pef_item_filter",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_item_filter"
+        },
+        {
+            "title": "pef_item_setting",
+            "enabled": true,
+            "name": "pef_item_setting",
+            "uri": "dib://docs/tables_reference/pef_item_setting",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_item_setting"
+        },
+        {
+            "title": "pef_localization",
+            "enabled": true,
+            "name": "pef_localization",
+            "uri": "dib://docs/tables_reference/pef_localization",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_localization"
+        },
+        {
+            "title": "pef_login",
+            "enabled": true,
+            "name": "pef_login",
+            "uri": "dib://docs/tables_reference/pef_login",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_login"
+        },
+        {
+            "title": "pef_login_group",
+            "enabled": true,
+            "name": "pef_login_group",
+            "uri": "dib://docs/tables_reference/pef_login_group",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_login_group"
+        },
+        {
+            "title": "pef_migrate_name_map",
+            "enabled": true,
+            "name": "pef_migrate_name_map",
+            "uri": "dib://docs/tables_reference/pef_migrate_name_map",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_migrate_name_map"
+        },
+        {
+            "title": "pef_param",
+            "enabled": true,
+            "name": "pef_param",
+            "uri": "dib://docs/tables_reference/pef_param",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_param"
+        },
+        {
+            "title": "pef_perm_active",
+            "enabled": true,
+            "name": "pef_perm_active",
+            "uri": "dib://docs/tables_reference/pef_perm_active",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_perm_active"
+        },
+        {
+            "title": "pef_perm_container",
+            "enabled": true,
+            "name": "pef_perm_container",
+            "uri": "dib://docs/tables_reference/pef_perm_container",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_perm_container"
+        },
+        {
+            "title": "pef_perm_container_event",
+            "enabled": true,
+            "name": "pef_perm_container_event",
+            "uri": "dib://docs/tables_reference/pef_perm_container_event",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_perm_container_event"
+        },
+        {
+            "title": "pef_perm_field_active",
+            "enabled": true,
+            "name": "pef_perm_field_active",
+            "uri": "dib://docs/tables_reference/pef_perm_field_active",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_perm_field_active"
+        },
+        {
+            "title": "pef_perm_group",
+            "enabled": true,
+            "name": "pef_perm_group",
+            "uri": "dib://docs/tables_reference/pef_perm_group",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_perm_group"
+        },
+        {
+            "title": "pef_perm_item",
+            "enabled": true,
+            "name": "pef_perm_item",
+            "uri": "dib://docs/tables_reference/pef_perm_item",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_perm_item"
+        },
+        {
+            "title": "pef_perm_item_event",
+            "enabled": true,
+            "name": "pef_perm_item_event",
+            "uri": "dib://docs/tables_reference/pef_perm_item_event",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_perm_item_event"
+        },
+        {
+            "title": "pef_perm_item_list_active",
+            "enabled": true,
+            "name": "pef_perm_item_list_active",
+            "uri": "dib://docs/tables_reference/pef_perm_item_list_active",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_perm_item_list_active"
+        },
+        {
+            "title": "pef_perm_tooltip",
+            "enabled": true,
+            "name": "pef_perm_tooltip",
+            "uri": "dib://docs/tables_reference/pef_perm_tooltip",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_perm_tooltip"
+        },
+        {
+            "title": "pef_port",
+            "enabled": true,
+            "name": "pef_port",
+            "uri": "dib://docs/tables_reference/pef_port",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_port"
+        },
+        {
+            "title": "pef_script",
+            "enabled": true,
+            "name": "pef_script",
+            "uri": "dib://docs/tables_reference/pef_script",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_script"
+        },
+        {
+            "title": "pef_security_policy",
+            "enabled": true,
+            "name": "pef_security_policy",
+            "uri": "dib://docs/tables_reference/pef_security_policy",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_security_policy"
+        },
+        {
+            "title": "pef_setting",
+            "enabled": true,
+            "name": "pef_setting",
+            "uri": "dib://docs/tables_reference/pef_setting",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_setting"
+        },
+        {
+            "title": "pef_sql",
+            "enabled": true,
+            "name": "pef_sql",
+            "uri": "dib://docs/tables_reference/pef_sql",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_sql"
+        },
+        {
+            "title": "pef_sql_item",
+            "enabled": true,
+            "name": "pef_sql_item",
+            "uri": "dib://docs/tables_reference/pef_sql_item",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_sql_item"
+        },
+        {
+            "title": "pef_sql_log",
+            "enabled": true,
+            "name": "pef_sql_log",
+            "uri": "dib://docs/tables_reference/pef_sql_log",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_sql_log"
+        },
+        {
+            "title": "pef_sync_clash",
+            "enabled": true,
+            "name": "pef_sync_clash",
+            "uri": "dib://docs/tables_reference/pef_sync_clash",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_sync_clash"
+        },
+        {
+            "title": "pef_table",
+            "enabled": true,
+            "name": "pef_table",
+            "uri": "dib://docs/tables_reference/pef_table",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_table"
+        },
+        {
+            "title": "pef_table_fk",
+            "enabled": true,
+            "name": "pef_table_fk",
+            "uri": "dib://docs/tables_reference/pef_table_fk",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_table_fk"
+        },
+        {
+            "title": "pef_table_option",
+            "enabled": true,
+            "name": "pef_table_option",
+            "uri": "dib://docs/tables_reference/pef_table_option",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_table_option"
+        },
+        {
+            "title": "pef_table_option_field",
+            "enabled": true,
+            "name": "pef_table_option_field",
+            "uri": "dib://docs/tables_reference/pef_table_option_field",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_table_option_field"
+        },
+        {
+            "title": "pef_temp_data",
+            "enabled": true,
+            "name": "pef_temp_data",
+            "uri": "dib://docs/tables_reference/pef_temp_data",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_temp_data"
+        },
+        {
+            "title": "pef_temp_field",
+            "enabled": true,
+            "name": "pef_temp_field",
+            "uri": "dib://docs/tables_reference/pef_temp_field",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_temp_field"
+        },
+        {
+            "title": "pef_temp_rel",
+            "enabled": true,
+            "name": "pef_temp_rel",
+            "uri": "dib://docs/tables_reference/pef_temp_rel",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_temp_rel"
+        },
+        {
+            "title": "pef_tooltip",
+            "enabled": true,
+            "name": "pef_tooltip",
+            "uri": "dib://docs/tables_reference/pef_tooltip",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_tooltip"
+        },
+        {
+            "title": "pef_twofactor",
+            "enabled": true,
+            "name": "pef_twofactor",
+            "uri": "dib://docs/tables_reference/pef_twofactor",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_twofactor"
+        },
+        {
+            "title": "pef_unit_test",
+            "enabled": true,
+            "name": "pef_unit_test",
+            "uri": "dib://docs/tables_reference/pef_unit_test",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_unit_test"
+        },
+        {
+            "title": "pef_validation_type",
+            "enabled": true,
+            "name": "pef_validation_type",
+            "uri": "dib://docs/tables_reference/pef_validation_type",
+            "description": "Table reference documentation.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=table&id=pef_validation_type"
+        }
+    ]
+}
