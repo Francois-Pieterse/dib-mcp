@@ -120,7 +120,7 @@ def register_dib_docs(
             title = str(resource_config["title"])
             description = str(resource_config["description"])
             endpoint = str(resource_config["endpoint"])
-            payload: Any | None = resource_config["payload"] or None
+            payload: Any | None = resource_config["payload"] if "payload" in resource_config else None
 
             # Record in global registry
             DOCS_BY_NAME[name] = DocResourceMeta(
@@ -133,6 +133,8 @@ def register_dib_docs(
                 endpoint=endpoint,
                 payload=payload or {},
             )
+
+            # docs_content = fetch_endpoint_content(endpoint, payload) # Used for debugging purposes
 
             # Create the MCP resource
             def make_resource(
