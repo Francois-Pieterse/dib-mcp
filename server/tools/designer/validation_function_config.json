@@ -1,0 +1,43 @@
+[
+    {
+        "fields": ["width", "height"],
+        "function": "_pos_int",
+        "nullable": true
+    },
+    {
+        "field": "caption",
+        "function": "_str",
+        "nullable": true
+    },
+    {
+        "fields": [
+            "item_alias",
+            "ui_include",
+            "crud_include",
+            "hidden",
+            "disabled",
+            "read_only",
+            "nav_item_alias",
+            "enable_ts_vars",
+            "clear_dropdown_on_reload",
+            "freeze_column",
+            "icon_font_awesome",
+            "cross_db_compat",
+            "keep_in_memory",
+            "has_filter_boxes",
+            "filter_any_part"
+        ],
+        "function": "_bool",
+        "nullable": false
+    },
+    {
+        "fields": ["fx_wrap"],
+        "function": "_wrap",
+        "nullable": true
+    },
+    {
+        "fields": ["fx_align_content"],
+        "function": "_align_content",
+        "nullable": true
+    }
+]
