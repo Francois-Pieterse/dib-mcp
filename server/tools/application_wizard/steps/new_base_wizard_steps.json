@@ -164,6 +164,26 @@
       ]
     },
     {
+      "id": "info_table_setup",
+      "title": "Information on Table Setup Options",
+      "info": "In the next section you will set up the basic options for how tables from the database should be handled in the application. This includes specify which tables to create grids and/or forms for. Use Ignore/Exclude to avoid importing or detecting changes in specific tables. Note, excluding tables can affect display values in dropdowns. More detailed setup is not yet available through the MCP server, please refer to the GUI interface."
+    },
+    {
+      "id": "configure_tables_for_db",
+      "title": "Select Tables and Grid/Form Options",
+      "required_inputs": [
+        {
+          "name": "table_settings",
+          "type": "table_settings",
+          "prompt": "For each table in the selected database choose whether to ignore/exclude the table optionally global defaults can be overwritten to create a grid and a form for the table. The caption can also be modified here.",
+          "options_source": {
+            "type": "function",
+            "name": "get_tables_for_selected_db"
+          }
+        }
+      ]
+    },
+    {
       "id": "confirm_creation",
       "title": "Confirm Application Creation",
       "required_inputs": [
