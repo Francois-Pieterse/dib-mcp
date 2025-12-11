@@ -1,0 +1,12 @@
+{
+  "resources": [
+    {
+      "title": "Filtering Grid Records",
+      "enabled": true,
+      "name": "filtering_grid_records",
+      "uri": "dib://docs/user_help/filtering_grid_records",
+      "description": "Instructions and tips for filtering records displayed in grid containers.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Filtering-Grid-Records"
+    }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "resources": [
+        {
+            "title": "Eleutheria Basics",
+            "enabled": true,
+            "name": "eleutheria_basics",
+            "uri": "dib://docs/eleutheria/eleutheria_basics",
+            "description": "An introduction to the Eleutheria templating engine, covering how templates work, how record sources are merged, and how basic expressions, loops, and conditions are used within templates.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Eleutheria-Basics"
+        },
+        {
+            "title": "Recordset Domains",
+            "enabled": true,
+            "name": "recordset_domains",
+            "uri": "dib://docs/eleutheria/recordset_domains",
+            "description": "Explains how Eleutheria resolves values from recordsets using domains, allowing templates to reference fields from different data scopes. Includes details on how multiple record sources can be accessed within a single template.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Recordset-Domains"
+        },
+        {
+            "title": "Workings of encode function",
+            "enabled": true,
+            "name": "workings_of_encode_function",
+            "uri": "dib://docs/eleutheria/workings_of_encode_function",
+            "description": "Eleutheria HTML-encodes all expression output by default to protect against injection attacks. The encode() function allows safe control over how expressions are encoded. This section explains how default encoding works, how to override it when needed, and why caution is required when allowing raw HTML in user-generated content.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Workings-of-encode-function"
+        },
+        {
+            "title": "Special Directives",
+            "enabled": true,
+            "name": "special_directives",
+            "uri": "dib://docs/eleutheria/special_directives",
+            "description": "Describes Eleutheria's special directives that influence template behaviour, expression evaluation, and template inclusion logic. Useful for advanced template building and complex generation workflows.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Special-Directives"
+        },
+        {
+            "title": "Extend Eleutheria with Custom Functions",
+            "enabled": true,
+            "name": "extend_eleutheria_with_custom_functions",
+            "uri": "dib://docs/eleutheria/extend_eleutheria_with_custom_functions",
+            "description": "Eleutheria can be extended with your own custom functions, allowing you to add reusable logic directly into templates. This guide covers registration, function signatures, and best practices for extending Eleutheria responsibly.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Extend-Eleutheria-with-Custom-Functions"
+        }
+    ]
+}

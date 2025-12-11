@@ -1,0 +1,260 @@
+{
+    "resources": [
+        {
+            "title": "Create a Development Environment",
+            "enabled": true,
+            "name": "create_a_development_environment",
+            "uri": "dib://docs/developer_topics/create_a_development_environment",
+            "description": "Learn how to prepare a proper Dropinbase development environment, including required tools and recommended workflow setup.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Create-a-Development-Environment"
+        },
+        {
+            "title": "Build a Winning Solution",
+            "enabled": true,
+            "name": "build_a_winning_solution",
+            "uri": "dib://docs/developer_topics/system_development_basics/build_a_winning_solution",
+            "description": "Guidelines for designing solutions that meet user needs, maintain clarity, and support long-term growth.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Build-a-Winning-Solution"
+        },
+        {
+            "title": "Strict Naming Conventions",
+            "enabled": true,
+            "name": "strict_naming_conventions",
+            "uri": "dib://docs/developer_topics/system_development_basics/strict_naming_conventions",
+            "description": "Recommended naming conventions to ensure consistency across your database, components, and application code.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Strict-Naming-Conventions"
+        },
+        {
+            "title": "Kickstart a Career in System Development",
+            "enabled": true,
+            "name": "kickstart_a_career_in_system_development",
+            "uri": "dib://docs/developer_topics/system_development_basics/kickstart_a_career_in_system_development",
+            "description": "A beginner-friendly overview of the skills, mindset, and practices that help developers grow into successful system architects.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Kickstart-a-Career-in-System-Development"
+        },
+        {
+            "title": "Relational Database Theory",
+            "enabled": true,
+            "name": "relational_database_theory",
+            "uri": "dib://docs/developer_topics/system_development_basics/relational_database_theory",
+            "description": "Core concepts behind relational databases, including keys, normalisation, relationships, and table design patterns.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Relational-Database-Theory"
+        },
+        {
+            "title": "Information Gathering",
+            "enabled": true,
+            "name": "information_gathering",
+            "uri": "dib://docs/developer_topics/system_development_basics/information_gathering",
+            "description": "Techniques for gathering user requirements and system information to guide strong application and database design.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Information-Gathering"
+        },
+        {
+            "title": "Build a Database",
+            "enabled": true,
+            "name": "build_a_database",
+            "uri": "dib://docs/developer_topics/system_development_basics/build_a_database",
+            "description": "Step-by-step guidance for designing and constructing database structures that support robust applications.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Build-a-Database"
+        },
+        {
+            "title": "How the Internet Works",
+            "enabled": true,
+            "name": "how_the_internet_works",
+            "uri": "dib://docs/developer_topics/system_development_basics/how_the_internet_works",
+            "description": "An approachable explanation of core Internet technologies including HTTP, DNS, security, and server communication.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=How-the-Internet-Works"
+        },
+        {
+            "title": "Customize Login and Authentication",
+            "enabled": true,
+            "name": "customize_login_and_authentication",
+            "uri": "dib://docs/developer_topics/customize_login_and_authentication",
+            "description": "Learn how to customise login behaviour, authentication flows, and user access logic in Dropinbase.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Customize-Login-and-Authentication"
+        },
+        {
+            "title": "Create Custom HTML and Angular Components",
+            "enabled": true,
+            "name": "create_custom_html_and_angular_components",
+            "uri": "dib://docs/developer_topics/create_custom_html_and_angular_components",
+            "description": "Guidance for extending Dropinbase using custom HTML elements and Angular components for enhanced user experiences.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Create-Custom-HTML-and-Angular-Components"
+        },
+        {
+            "title": "Server API Call Stack",
+            "enabled": true,
+            "name": "server_api_call_stack",
+            "uri": "dib://docs/developer_topics/server_api_call_stack",
+            "description": "Understand how server calls are processed, including routing, validation, execution, and response handling.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Server-API-Call-Stack"
+        },
+        {
+            "title": "Event Execution",
+            "enabled": true,
+            "name": "event_execution",
+            "uri": "dib://docs/developer_topics/event_execution",
+            "description": "Explains the Dropinbase event lifecycle and how to implement custom logic at key execution points.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Event-Execution"
+        },
+        {
+            "title": "Styling with CSS",
+            "enabled": true,
+            "name": "styling_with_css",
+            "uri": "dib://docs/developer_topics/styling_with_css",
+            "description": "How to style Dropinbase containers and applications using CSS, themes, and custom styling strategies.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Styling-with-CSS"
+        },
+        {
+            "title": "Getting started with SCSS",
+            "enabled": true,
+            "name": "getting_started_with_scss",
+            "uri": "dib://docs/developer_topics/styling_with_scss/getting_started_with_scss",
+            "description": "A quick introduction to setting up SCSS in your Dropinbase projects and compiling it into CSS.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Getting-Started-with-SCSS"
+        },
+        {
+            "title": "SCSS Introduction",
+            "enabled": true,
+            "name": "scss_introduction",
+            "uri": "dib://docs/developer_topics/styling_with_scss/scss_introduction",
+            "description": "Covers the basic concepts of SCSS, including variables, nesting, and partials.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=SCSS-Introduction"
+        },
+        {
+            "title": "File Structure",
+            "enabled": true,
+            "name": "file_structure",
+            "uri": "dib://docs/developer_topics/styling_with_scss/file_structure",
+            "description": "Recommended SCSS file and folder layout for organising themes and shared styles.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=File-Structure"
+        },
+        {
+            "title": "SCSS Reference",
+            "enabled": true,
+            "name": "scss_reference",
+            "uri": "dib://docs/developer_topics/styling_with_scss/scss_reference",
+            "description": "Reference material for SCSS features used in Dropinbase styling.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=SCSS-Reference"
+        },
+        {
+            "title": "Compile SCSS",
+            "enabled": true,
+            "name": "compile_scss",
+            "uri": "dib://docs/developer_topics/styling_with_scss/compile_scss",
+            "description": "How to compile SCSS into CSS using the Dropinbase toolchain or your own build process.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Compile-SCSS"
+        },
+        {
+            "title": "Component Styling",
+            "enabled": true,
+            "name": "component_styling",
+            "uri": "dib://docs/developer_topics/styling_with_scss/scss_examples/component_styling",
+            "description": "Examples of structuring SCSS to style individual UI components cleanly and consistently.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Component-Styling"
+        },
+        {
+            "title": "Tag Selectors",
+            "enabled": true,
+            "name": "tag_selectors",
+            "uri": "dib://docs/developer_topics/styling_with_scss/scss_examples/tag_selectors",
+            "description": "Using HTML tag selectors in SCSS and when to favour them over classes.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Tag-Selectors"
+        },
+        {
+            "title": "make-file",
+            "enabled": true,
+            "name": "make_file",
+            "uri": "dib://docs/developer_topics/styling_with_scss/scss_examples/make_file",
+            "description": "Example make-file or build script setup used to compile SCSS assets.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=make__file"
+        },
+        {
+            "title": "Attribute Selectors",
+            "enabled": true,
+            "name": "attribute_selectors",
+            "uri": "dib://docs/developer_topics/styling_with_scss/scss_examples/attribute_selectors",
+            "description": "How to target elements using attribute selectors for flexible component styling.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Attribute-Selectors"
+        },
+        {
+            "title": "Combinators",
+            "enabled": true,
+            "name": "combinators",
+            "uri": "dib://docs/developer_topics/styling_with_scss/scss_examples/combinators",
+            "description": "Using CSS combinators in SCSS to describe relationships between elements.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Combinators"
+        },
+        {
+            "title": "Class Selectors",
+            "enabled": true,
+            "name": "class_selectors",
+            "uri": "dib://docs/developer_topics/styling_with_scss/scss_examples/class_selectors",
+            "description": "Examples of structuring class-based selectors for reusable, maintainable styles.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Class-Selectors"
+        },
+        {
+            "title": "Theme files",
+            "enabled": true,
+            "name": "theme_files",
+            "uri": "dib://docs/developer_topics/styling_with_scss/scss_examples/theme_files",
+            "description": "How to organise SCSS theme files to support multiple themes or colour schemes.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Theme-files"
+        },
+        {
+            "title": "ID Selectors",
+            "enabled": true,
+            "name": "id_selectors",
+            "uri": "dib://docs/developer_topics/styling_with_scss/scss_examples/id_selectors",
+            "description": "When and how to use ID selectors in SCSS without creating overly specific styles.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=ID-Selectors"
+        },
+        {
+            "title": "SQL Overview",
+            "enabled": true,
+            "name": "sql_overview",
+            "uri": "dib://docs/developer_topics/database_functions/sql_overview",
+            "description": "A quick overview of SQL concepts relevant to Dropinbase scripts and server logic.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=SQL-Overview"
+        },
+        {
+            "title": "Database - execute",
+            "enabled": true,
+            "name": "database_execute",
+            "uri": "dib://docs/developer_topics/database_functions/database_execute",
+            "description": "How to use the database execute helper to run SQL statements from Dropinbase code.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Database-__-execute"
+        },
+        {
+            "title": "Database - update create delete",
+            "enabled": true,
+            "name": "database_update_create_delete",
+            "uri": "dib://docs/developer_topics/database_functions/database_update_create_delete",
+            "description": "Using helper functions to perform update, create, and delete operations safely.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Database-__-update-create-delete"
+        },
+        {
+            "title": "Why Not An ORM",
+            "enabled": true,
+            "name": "why_not_an_orm",
+            "uri": "dib://docs/developer_topics/database_functions/why_not_an_orm",
+            "description": "Discussion of why Dropinbase favours direct SQL and metadata-driven design over a traditional ORM.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Why-Not-An-ORM"
+        },
+        {
+            "title": "Loading Dropin Classes",
+            "enabled": true,
+            "name": "loading_dropin_classes",
+            "uri": "dib://docs/developer_topics/loading_dropin_classes",
+            "description": "How Dropin classes are loaded and how to reference them correctly in your code.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Loading-Dropin-Classes"
+        },
+        {
+            "title": "Adding Components",
+            "enabled": true,
+            "name": "adding_components",
+            "uri": "dib://docs/developer_topics/adding_components",
+            "description": "Steps for adding new components into your Dropinbase application and wiring them into existing screens.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Adding-Components"
+        }
+    ]
+}

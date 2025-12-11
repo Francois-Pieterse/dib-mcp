@@ -1,0 +1,68 @@
+{
+    "resources": [
+        {
+            "title": "TroubleShooting Setup",
+            "enabled": true,
+            "name": "troubleshooting_setup",
+            "uri": "dib://docs/troubleshooting_and_debugging/troubleshooting_setup",
+            "description": "How to prepare your environment for effective troubleshooting, including enabling logs and diagnostic features.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=TroubleShooting-Setup"
+        },
+        {
+            "title": "Reset Dropinbase",
+            "enabled": true,
+            "name": "reset_dropinbase",
+            "uri": "dib://docs/troubleshooting_and_debugging/reset_dropinbase",
+            "description": "Steps for resetting Dropinbase when configuration or system issues arise. Useful when the platform needs a clean internal state.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Reset-Dropinbase"
+        },
+        {
+            "title": "General Troubleshooting Tips",
+            "enabled": true,
+            "name": "general_troubleshooting_tips",
+            "uri": "dib://docs/troubleshooting_and_debugging/general_troubleshooting_tips",
+            "description": "A collection of practical troubleshooting tips that address common issues and improve debugging workflows.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=General-Troubleshooting-Tips"
+        },
+        {
+            "title": "Debug PHP",
+            "enabled": true,
+            "name": "debug_php",
+            "uri": "dib://docs/troubleshooting_and_debugging/debug_php",
+            "description": "Guidance on debugging PHP within Dropinbase, including logging, breakpoints, and recommended tools.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Debug-PHP"
+        },
+        {
+            "title": "Container Compile Error",
+            "enabled": true,
+            "name": "container_compile_error",
+            "uri": "dib://docs/troubleshooting_and_debugging/common_error_list/container_compile_error",
+            "description": "Explains the causes of container compilation failures and how to resolve issues within generated components.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Container-Compile-Error"
+        },
+        {
+            "title": "Release Manager is not creating UI files",
+            "enabled": true,
+            "name": "release_manager_not_creating_ui_files",
+            "uri": "dib://docs/troubleshooting_and_debugging/common_error_list/release_manager_not_creating_ui_files",
+            "description": "Describes troubleshooting steps for when the Release Manager fails to generate required UI files.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Release-Manager-is-not-creating-UI-files"
+        },
+        {
+            "title": "Dropdownlists where Foreign Keys Point to Non-Primary Keys",
+            "enabled": true,
+            "name": "dropdownlists_foreign_keys_non_primary",
+            "uri": "dib://docs/troubleshooting_and_debugging/common_error_list/dropdownlists_foreign_keys_non_primary",
+            "description": "Explains why dropdowns referencing non-primary key fields may behave unexpectedly and how to fix incorrect foreign key relationships.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Dropdownlists-where-Foreign-Keys-Point-to-Non__Primary-Keys"
+        },
+        {
+            "title": "I forgot my password",
+            "enabled": true,
+            "name": "i_forgot_my_password",
+            "uri": "dib://docs/troubleshooting_and_debugging/common_error_list/i_forgot_my_password",
+            "description": "Instructions for recovering or resetting a lost Dropinbase password and restoring access to the system.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=I-forgot-my-password"
+        }
+    ]
+}
