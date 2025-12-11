@@ -6,7 +6,6 @@ from pathlib import Path
 from env_variables import get_env, _to_bool
 from mcp_instance import mcp
 
-from resources.dib_docs.docs_resource_factory import register_dib_docs
 
 # Very important to import all tool/resource/prompt files so they get registered
 
@@ -23,8 +22,9 @@ if get_env("EXPOSE_DIB_DOCS_VIA_TOOLS", False, _to_bool):
     from tools import tools_docs_resource
 
 # Resources
-RESOURCES_ROOT = Path("server/resources")
+from resources.dib_docs.docs_resource_factory import register_dib_docs
 
+RESOURCES_ROOT = Path("server/resources")
 register_dib_docs(
     mcp,
     resources_root=RESOURCES_ROOT,
@@ -33,20 +33,12 @@ register_dib_docs(
 # Prompts
 from prompts import system_prompt
 
-
-# from tools.application_wizard.tools_application_wizard import step_application_wizard
-
 logger = logging.getLogger(__name__)
 logger.setLevel(get_env("LOG_LEVEL", "INFO"))
 
 
 def debug_main() -> None:
     """Run a debug sequence of operations."""
-
-    # step_application_wizard(
-    #     step_id="choose_db",
-    #     answers={"db_name": "6"},
-    # )
 
     # Additional debug operations can be before this
     # ----------------------------------------------
