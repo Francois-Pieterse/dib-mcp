@@ -7,6 +7,8 @@ from env_variables import get_env, _to_bool
 from mcp_instance import mcp
 from session_auth import dib_session_client
 
+from tools.designer.validate import validator
+
 logger = logger = logging.getLogger(__name__)
 logger.setLevel(get_env("LOG_LEVEL", "INFO"))
 
@@ -236,6 +238,17 @@ def update_node_info(
     # been a problem when fields were set via the UI, it could lead to issues when the LLM
     # is setting fields programmatically. This becomes especially relevant for fields which
     # no example values are available when the get_node_info_from_id tool is used.
+    valid_ok, validation_error = validator.validate(field_name, value)
+
+    if not valid_ok:
+        return {
+            "status_code": 400,
+            "ok": False,
+            "response": {
+                "error": "Validation failed",
+                "details": validation_error,
+            },
+        }
 
     url = (
         f"{get_env('BASE_URL', 'https://localhost')}"
@@ -345,6 +358,7 @@ def move_node_in_designer_tree(
     description=(
         "Retrieve available components that can be added to a specific container in the Dropinbase designer."
         "This tool returns a list of components that can be added to the specified container, identified by its container ID."
+        "Ideally the base or aprent container ID should be used, not the target container id."
         "The returned components include a property 'leaf', if it is set to 1, the component can be added directly;"
         "if set to 0, the component is actually a group with nested components inside and cannot be added directly."
     ),
@@ -365,7 +379,7 @@ def get_avail_components_to_add(
     url: str = (
         f"{get_env('BASE_URL', 'https://localhost')}"
         "/dropins/dibAdmin/DDesignerComponentStore/read"
-        "containerName=dibDesignerHtml&node=root"
+        "?containerName=dibDesignerHtml&node=root"
     )
 
     headers: dict[str, str] = {
@@ -395,6 +409,7 @@ def get_avail_components_to_add(
         "Add a component in the designer project tree either before or after another node in the designer view hierarchy."
         "The stationary node and parent is identified by their node IDs which can be obtained using the get_project_tree tool."
         "The component to add is identified by its component ID which can be obtained using the get_avail_components_to_add tool."
+        "Where multiple possible components are probable for a given use case, the user should confirm the exact component to add."
         "Adding containers are not supported by this tool."
     ),
     annotations=ToolAnnotations(
