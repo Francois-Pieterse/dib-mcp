@@ -1,0 +1,156 @@
+{
+  "resources": [
+    {
+      "title": "Technology and Requirements",
+      "enabled": true,
+      "name": "technology_and_requirements",
+      "uri": "dib://docs/setup_dropinbase/technology_and_requirements",
+      "description": "Overview of the technology stack and requirements for running Dropinbase.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Technology-and-Requirements"
+    },
+    {
+      "title": "Installation Steps",
+      "enabled": true,
+      "name": "installation_steps",
+      "uri": "dib://docs/setup_dropinbase/installation_steps",
+      "description": "High-level steps for installing Dropinbase.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Installation-Steps"
+    },
+    {
+      "title": "Installation Checklist",
+      "enabled": true,
+      "name": "installation_checklist",
+      "uri": "dib://docs/setup_dropinbase/installation_steps/installation_checklist",
+      "description": "A complete checklist to follow before and during the installation of Dropinbase.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Installation-Checklist"
+    },
+    {
+      "title": "Manual Installation Help",
+      "enabled": true,
+      "name": "manual_installation_help",
+      "uri": "dib://docs/setup_dropinbase/installation_steps/manual_installation_help",
+      "description": "Step-by-step guidance for manually installing Dropinbase without automation tools.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Manual-Installation-Help"
+    },
+    {
+      "title": "Troubleshooting Installation",
+      "enabled": true,
+      "name": "troubleshooting_installation",
+      "uri": "dib://docs/setup_dropinbase/troubleshooting_installation",
+      "description": "Solutions and diagnostic tips for resolving installation issues.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Troubleshooting-Installation"
+    },
+    {
+      "title": "Move the Login and Other Tables",
+      "enabled": true,
+      "name": "move_login_and_other_tables",
+      "uri": "dib://docs/setup_dropinbase/move_login_and_other_tables",
+      "description": "Instructions for relocating core Dropinbase tables when setting up your environment.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Move-the-Login-and-Other-Tables"
+    },
+    {
+      "title": "Apache Settings",
+      "enabled": true,
+      "name": "apache_settings",
+      "uri": "dib://docs/setup_dropinbase/apache_settings",
+      "description": "Recommended Apache configuration settings for running Dropinbase.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Apache-Settings"
+    },
+    {
+      "title": "PHP Settings",
+      "enabled": true,
+      "name": "php_settings",
+      "uri": "dib://docs/setup_dropinbase/php_settings",
+      "description": "Required and recommended PHP configuration values for optimal performance.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=PHP-Settings"
+    },
+    {
+      "title": "Database Server Settings",
+      "enabled": true,
+      "name": "database_server_settings",
+      "uri": "dib://docs/setup_dropinbase/database_server_settings",
+      "description": "Configuration guidance for database servers used with Dropinbase.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Database-Server-Settings"
+    },
+    {
+      "title": "File System Settings",
+      "enabled": true,
+      "name": "file_system_settings",
+      "uri": "dib://docs/setup_dropinbase/file_system_settings",
+      "description": "File system permissions and layout recommendations for Dropinbase.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=File-System-Settings"
+    },
+    {
+      "title": "Settings Table",
+      "enabled": true,
+      "name": "settings_table",
+      "uri": "dib://docs/setup_dropinbase/settings_table",
+      "description": "Information about the Dropinbase settings table and how its values influence the application.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Settings-Table"
+    },
+    {
+      "title": "Connecting to Databases",
+      "enabled": true,
+      "name": "connecting_to_databases",
+      "uri": "dib://docs/setup_dropinbase/connecting_to_databases",
+      "description": "Instructions for configuring database connections for Dropinbase.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Connecting-to-Databases"
+    },
+    {
+      "title": "System Configuration Files",
+      "enabled": true,
+      "name": "system_configuration_files",
+      "uri": "dib://docs/setup_dropinbase/system_configuration_files",
+      "description": "Documentation for core configuration files used by Dropinbase.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=System-Configuration-Files"
+    },
+    {
+      "title": "Install Angular",
+      "enabled": true,
+      "name": "install_angular",
+      "uri": "dib://docs/setup_dropinbase/install_angular",
+      "description": "Guide on installing Angular for Dropinbase front-end functionality.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Install-Angular"
+    },
+    {
+      "title": "Shared Hosting Servers",
+      "enabled": true,
+      "name": "shared_hosting_servers",
+      "uri": "dib://docs/setup_dropinbase/shared_hosting_servers",
+      "description": "Tips and requirements for running Dropinbase on shared hosting environments.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Shared-Hosting-Servers"
+    },
+    {
+      "title": "Multi-Tenant Setup",
+      "enabled": true,
+      "name": "multi_tenant_setup",
+      "uri": "dib://docs/setup_dropinbase/multi_tenant_setup",
+      "description": "Setup guide for running Dropinbase in a multi-tenant environment.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Multi-Tenant-Setup"
+    },
+    {
+      "title": "Upgrade Dropinbase",
+      "enabled": true,
+      "name": "upgrade_dropinbase",
+      "uri": "dib://docs/setup_dropinbase/upgrade_dropinbase",
+      "description": "Learn how to safely upgrade your Dropinbase installation.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Upgrade-Dropinbase"
+    },
+    {
+      "title": "Optimize Performance",
+      "enabled": true,
+      "name": "optimize_performance",
+      "uri": "dib://docs/setup_dropinbase/optimize_performance",
+      "description": "Performance tuning tips for improving Dropinbase responsiveness and scalability.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Optimize-Performance"
+    },
+    {
+      "title": "Enable FontAwesome Pro Icons",
+      "enabled": true,
+      "name": "enable_fontawesome_pro_icons",
+      "uri": "dib://docs/setup_dropinbase/enable_fontawesome_pro_icons",
+      "description": "Instructions for enabling FontAwesome Pro icons inside Dropinbase.",
+      "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Enable-FontAwesome-Pro-Icons"
+    }
+  ]
+}

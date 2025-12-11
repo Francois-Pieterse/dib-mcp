@@ -1,0 +1,36 @@
+{
+    "resources": [
+        {
+            "title": "Goals of the Dropinbase Project",
+            "enabled": true,
+            "name": "goals_of_dropinbase",
+            "uri": "dib://docs/introduction/goals-of-dropinbase",
+            "description": "Learn about the goals and vision behind the Dropinbase project.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Goals-of-the-Dropinbase-Project"
+        },
+        {
+            "title": "Why use Dropinbase",
+            "enabled": true,
+            "name": "why_use_dropinbase",
+            "uri": "dib://docs/introduction/why-use-dropinbase",
+            "description": "Discover the benefits of using Dropinbase for your application development needs.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Why-Use-Dropinbase"
+        },
+        {
+            "title": "Dropinbase Features",
+            "enabled": true,
+            "name": "dropinbase_features",
+            "uri": "dib://docs/introduction/dropinbase-features",
+            "description": "Explore the key features that make Dropinbase a powerful platform.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Dropinbase-Features"
+        },
+        {
+            "title": "Origins of Dropinbase",
+            "enabled": true,
+            "name": "origins_of_dropinbase",
+            "uri": "dib://docs/introduction/origins-of-dropinbase",
+            "description": "Learn about the history and origins of the Dropinbase project.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Origins-of-Dropinbase"
+        }
+    ]
+}

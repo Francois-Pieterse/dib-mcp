@@ -1,0 +1,12 @@
+{
+    "resources": [
+        {
+            "title": "Support and Help",
+            "enabled": true,
+            "name": "support_and_help",
+            "uri": "dib://docs/start-here/support-and-help",
+            "description": "Get support and help resources for using DIB applications.",
+            "endpoint": "/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Support-and-Help"
+        }
+    ]
+}
