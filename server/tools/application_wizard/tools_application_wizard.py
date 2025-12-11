@@ -5,71 +5,10 @@ from mcp.types import ToolAnnotations
 
 from mcp_instance import mcp
 from tools.application_wizard.steps.steps_manager import StepManager
+from tools.application_wizard.steps.answer_validation import validate_step_answers
 from tools.application_wizard.state.state_model import WizardState
 
 STEPS_FILE = Path("server/tools/application_wizard/steps/new_base_wizard_steps.json")
-
-
-def _validate_step_answers(
-    step_cfg: dict[str, Any], answers: dict[str, Any]
-) -> list[dict[str, str]]:
-    """
-    Return a list of validation errors. Each error is a dict with 'field' and 'message'.
-    """
-    errors: list[dict[str, str]] = []
-
-    required_inputs = step_cfg.get("required_inputs") or []
-    for field in required_inputs:
-        name = field.get("name")
-        ftype = field.get("type")
-        value = answers.get(name)
-
-        # Required presence check
-        if value is None or value == "":
-            errors.append(
-                {"field": name, "message": f"'{name}' is required for this step."}
-            )
-            continue
-
-        # Basic type checks
-        if ftype == "string" and not isinstance(value, str):
-            errors.append(
-                {"field": name, "message": f"'{name}' must be a string value."}
-            )
-
-        if ftype == "enum":
-            options = field.get("options") or []
-            allowed_values = [
-                opt.get("value") for opt in options if isinstance(opt, dict)
-            ]
-            if allowed_values and value not in allowed_values:
-                errors.append(
-                    {
-                        "field": name,
-                        "message": (
-                            f"'{name}' must be one of: "
-                            + ", ".join(map(str, allowed_values))
-                        ),
-                    }
-                )
-
-        # Extra per-field rules
-        if name == "base_container_name" and isinstance(value, str):
-            # Alphanumeric, no spaces, first letter lowercase
-            import re
-
-            if not re.fullmatch(r"[a-z][a-zA-Z0-9]*", value):
-                errors.append(
-                    {
-                        "field": name,
-                        "message": (
-                            "Name must start with a lowercase letter and contain only "
-                            "letters and digits, with no spaces."
-                        ),
-                    }
-                )
-
-    return errors
 
 
 @mcp.tool(
@@ -160,7 +99,7 @@ def step_application_wizard(
 
     # Enrich with options before validation (for enum validation)
     enriched_step = steps.enrich(step_cfg, wizard_state=state.__dict__)
-    errors = _validate_step_answers(enriched_step, answers)
+    errors = validate_step_answers(enriched_step, answers)
 
     if errors:
         return {

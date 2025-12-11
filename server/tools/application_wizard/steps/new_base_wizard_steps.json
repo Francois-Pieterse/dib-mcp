@@ -39,7 +39,7 @@
       "required_inputs": [
         {
           "name": "base_container_name",
-          "type": "string",
+          "type": "identifier",
           "prompt": "Enter a name for your new base container. The name must be alphanumeric, no spaces and the first letter must be lowercase:"
         }
       ]
