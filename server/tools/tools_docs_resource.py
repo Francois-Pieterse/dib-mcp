@@ -12,7 +12,8 @@ from mcp_instance import mcp
     description=(
         "List all available Dropinbase documentation topics. "
         "Use this to see which topics exist before choosing one. "
-        "After getting the list, use `list_dib_docs` to see the docs in a specific topic."
+        "After getting the list, use `list_dib_docs` to see the docs in a specific topic." \
+        "This can be used if a user asks a question and you want to check if there is relevant documentation available."
     ),
     annotations=ToolAnnotations(
         readOnlyHint=True,
