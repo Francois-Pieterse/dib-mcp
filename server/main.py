@@ -10,9 +10,9 @@ from mcp_instance import mcp
 # Very important to import all tool/resource/prompt files so they get registered
 
 # Tools
+from tools.designer import tools_designer
 from tools import (
     tools_auth,
-    tools_designer,
 )
 
 from tools.application_wizard import tools_application_wizard
