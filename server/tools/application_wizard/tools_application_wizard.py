@@ -7,6 +7,13 @@ from mcp_instance import mcp
 from tools.application_wizard.steps.steps_manager import StepManager
 from tools.application_wizard.steps.answer_validation import validate_step_answers
 from tools.application_wizard.state.state_model import WizardState
+from tools.application_wizard.state.state_payload_mapping import (
+    load_wizard_payload,
+    load_wizard_db_table_payloads,
+)
+
+from env_variables import get_env
+from session_auth import dib_session_client
 
 STEPS_FILE = Path("server/tools/application_wizard/steps/new_base_wizard_steps.json")
 
@@ -50,6 +57,140 @@ def start_application_wizard(app_name: str | None = None) -> dict[str, Any]:
         "current_step": enriched_step,
         "meta": state.meta,
     }
+
+
+def _set_application_values():
+    """
+    Sets the application-level settings via Dropinbase API. Corresponds to the first two tabs of the GUI wizard.
+    """
+
+    url = (
+        f"{get_env('BASE_URL', 'https://localhost')}"
+        "/peff/Sync/updateAllAppSettings"
+        "?containerName=wizBuildAppSettings"
+    )
+
+    headers: dict[str, str] = {
+        "Content-Type": "application/json",
+        "RequestVerificationToken": get_env("REQUEST_VERIFICATION_TOKEN"),
+    }
+
+    payload = load_wizard_payload()
+
+    response = dib_session_client.request("POST", url, headers=headers, json=payload)
+
+    try:
+        return {"data": response.json()}
+    except ValueError:
+        return {
+            "status_code": response.status_code,
+            "response": response.text,
+        }
+
+
+def _set_table_settings():
+    """
+    Sets the table-level settings via Dropinbase API. Corresponds to the third tab containing the table list.
+    """
+
+    tables_settings = load_wizard_db_table_payloads()
+
+    responses = []
+    for table_payload in tables_settings:
+        table_id = table_payload["recordData"]["id"]
+
+        url = (
+            f"{get_env('BASE_URL', 'https://localhost')}"
+            "/peff/Crud/update/wizBuildAppGrid"
+            f"?primaryKeyData=%7B%22id%22:{table_id}%7D"
+        )
+
+        headers: dict[str, str] = {
+            "Content-Type": "application/json",
+            "RequestVerificationToken": get_env("REQUEST_VERIFICATION_TOKEN"),
+        }
+
+        response = dib_session_client.request(
+            "POST", url, headers=headers, json=table_payload
+        )
+
+        try:
+            responses.append({"data": response.json()})
+        except ValueError:
+            responses.append(
+                {
+                    "status_code": response.status_code,
+                    "response": response.text,
+                }
+            )
+
+    return responses
+
+
+def _execute_create_action(db_id: str, template_id: str, base_container_name: str):
+    """
+    Calls the Dropinbase API to execute the application creation action.
+    """
+    headers: dict[str, str] = {
+        "Content-Type": "application/json",
+        "RequestVerificationToken": get_env("REQUEST_VERIFICATION_TOKEN"),
+    }
+
+    # Step 1
+    url = (
+        f"{get_env('BASE_URL', 'https://localhost')}"
+        "/peff/Sync/executeTasks"
+        f"?containerName=wizBuildApp&queueUid=1765651576"
+    )
+
+    payload = {
+        "clientData": {
+            "alias_self": {
+                "id": db_id,
+                "tmplId": template_id,
+                "baseName": base_container_name,
+                "helpIndex": "tmpl",
+                "baseContainerOption": "createNew",
+                "baseContainerId": None,
+            },
+            "alias_parent": {},
+            "query_params": {},
+        },
+        "itemEventId": "ie23-dib",
+        "itemId": "342",
+        "containerName": "wizBuildApp",
+        "triggerType": "click",
+        "itemAlias": "btnBuildMyApp",
+    }
+
+    response1 = dib_session_client.request("POST", url, headers=headers, json=payload)
+
+    # Step 2
+    url2 = (
+        f"{get_env('BASE_URL', 'https://localhost')}"
+        "/peff/Queue/get/wizBuildApp"
+        "?queueItemId=1765645516918"
+    )
+
+    response2 = dib_session_client.request("POST", url2, headers=headers)
+
+    try:
+        return {"data": [response1.json(), response2.json()]}
+    except ValueError:
+        return {
+            "data": [
+                {
+                    "status_code": response1.status_code,
+                    "ok": response1.ok,
+                    "response": response1.text,
+                },
+                {
+                    "status_code": response2.status_code,
+                    "ok": response2.ok,
+                    "response": response2.text,
+                },
+            ]
+        }
 
 
 @mcp.tool(
@@ -116,19 +257,41 @@ def step_application_wizard(
     next_step_cfg = steps.next_after(step_id)
 
     if not next_step_cfg:
-        # Wizard is complete – perform final backend call here if needed.
+        # Call Dropinbase APIs to create the application
+        try:
+            app_settings_result = _set_application_values()
+        except Exception as e:
+            raise RuntimeError("Failed to set application values") from e
+        try:
+            table_settings_result = _set_table_settings()
+        except Exception as e:
+            raise RuntimeError("Failed to set table settings") from e
+        try:
+            db_id = state.answers.get("choose_db").get("db_name")
+            template_id = state.answers.get("choose_base_container_template").get(
+                "base_container_template"
+            )
+            base_container_name = state.answers.get("set_base_container_name").get(
+                "base_container_name"
+            )
+            create_action_result = _execute_create_action(
+                db_id, template_id, base_container_name
+            )
+        except Exception as e:
+            raise RuntimeError("Failed to execute create action") from e
+
+        # Wizard is complete
         state.current_step_id = None
         state.completed = True
         state.save()
-
-        # TODO: call your Dropinbase application creation endpoint here,
-        # using aggregated answers in state.answers.
-
+        
         return {
-            "status": "completed",
             "summary": {
                 "meta": state.meta,
                 "answers": state.answers,
+                "app_settings_result": app_settings_result,
+                "table_settings_result": table_settings_result,
+                "create_action_result": create_action_result,
             },
         }
 
