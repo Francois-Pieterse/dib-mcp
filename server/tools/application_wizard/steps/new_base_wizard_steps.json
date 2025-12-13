@@ -47,7 +47,7 @@
     {
       "id": "info_on_default_design_values",
       "title": "Information on Default Design Values",
-      "info": "In the next section you will edit the default design values for new containers."
+      "info": "In the next section you will edit the default design values for new containers. No input required from user - just continue to next step."
     },
     {
       "id": "grid_forms_for_all_tables",
@@ -130,7 +130,7 @@
     {
       "id": "info_on_regular_expressions",
       "title": "Regular Expression Conversions for Names and Captions.",
-      "prompt": "Dropinbase derives names and captions of new containers(pages) and their items, from database table and field names, using sets of regular expression replacements. \nSpecify a set of regular expression  replacements for each of the subsequent four fields. Either accept the defaults, or modify them as needed. \n More info on the format is available on request.",
+      "prompt": "Dropinbase derives names and captions of new containers(pages) and their items, from database table and field names, using sets of regular expression replacements. \nSpecify a set of regular expression  replacements for each of the subsequent four fields. Either accept the defaults, or modify them as needed. \n More info on the format is available on request. No input required from user - just provide info and continue to next step.",
       "info": "Note, the use of non-alphanumeric characters and spaces in database table and field names will cause problems. \n\n GUIDE \nA set contains one or more parts.\n Each part of a set contains a regular expression to match, and a replacement value.\nEg. #^tb_#i=>;#\\W#=>;#_#=> ;#.*#=>upwords;#\\s#=>;#^.#=>fit$0 means:\n- Replace tb_ at the start with nothing (case-insensitive match).\n- Then replace any non-\"word character\" (ie. not in [A-Za-z0-9_]) with nothing.\n- Then replace underscores(_) with a space.\n- Then match whatever is left and convert it to Sentence Case (see special functions below).\n- Then replace all spaces with nothing.\n- Finally match the first character and replace it with fit and itself.\n\nSpecial DIB functions (implemented via preg_replace_callback):\nlower => convert matched characters to lowercase\nupper => convert matched characters to UPPERCASE\nupwords => convert matched characters containing spaces\nto Sentence Case (eg hello my friend => Hello My Friend)\n\n SYNTAX:\n[REG EXPR 1]=>[REPLACE WITH CHARS 1];\n[REG EXPR 2]=>[REPLACE WITH CHARS 2];"
     },
     {
