@@ -1,4 +1,7 @@
 from tools.application_wizard.state.state_model import WizardState
+from tools.application_wizard.steps.option_providers_registration import (
+    get_tables_for_selected_db,
+)
 
 
 def load_wizard_payload() -> dict:
@@ -102,3 +105,87 @@ def load_wizard_payload() -> dict:
     }
 
     return payload
+
+
+def _to_01(v: object) -> int:
+    if isinstance(v, bool):
+        return 1 if v else 0
+    if isinstance(v, int):
+        return 1 if v != 0 else 0
+    if isinstance(v, str):
+        return 1 if v.strip().lower() in {"1", "true", "yes", "on"} else 0
+    return 0
+
+
+def load_wizard_db_table_payloads() -> list[dict]:
+
+    state = WizardState.load()
+    answers = state.answers
+
+    # Get the previous (default) table settings
+    db_id = answers.get("choose_db").get("db_name")
+    old_settings = get_tables_for_selected_db(db_id=db_id)
+
+    # Get the new table settings from the answers
+    new_settings = answers.get("configure_tables_for_db").get("table_settings", [])
+
+    # Some defaults
+    grids_for_all_tables = (
+        "1"
+        if answers.get("grid_forms_for_all_tables").get("grids_for_all_tables")
+        else "0"
+    )
+    forms_for_all_tables = (
+        "1"
+        if answers.get("grid_forms_for_all_tables").get("forms_for_all_tables")
+        else "0"
+    )
+
+    # Build payloads
+    table_payloads = []
+    for new_setting in new_settings:
+        if not isinstance(new_setting, dict):
+            continue
+
+        table_id_raw = new_setting.get("id")
+        if table_id_raw is None:
+            raise ValueError("Each table_setting must include 'id'")
+
+        table_id = int(table_id_raw)
+        old_setting = next((s for s in old_settings if s.get("id") == table_id), {})
+
+        # Fall back to old values if missing in new
+        name = new_setting.get("name") or old_setting.get("name")
+        caption = new_setting.get("caption", old_setting.get("caption"))
+        field_count = new_setting.get("field_count", old_setting.get("field_count", 0))
+
+        create_grid = _to_01(
+            new_setting.get(
+                "create_grid", old_setting.get("create_grid", grids_for_all_tables)
+            )
+        )
+        create_form = _to_01(
+            new_setting.get(
+                "create_form", old_setting.get("create_form", forms_for_all_tables)
+            )
+        )
+        ignore = _to_01(new_setting.get("ignore", old_setting.get("ignore", False)))
+
+        if not name:
+            raise ValueError(f"Table name missing for table id {table_id}")
+
+        table_payloads.append(
+            {
+                "recordData": {
+                    "id": table_id,
+                    "name": name,
+                    "caption": caption,
+                    "field_count": int(field_count) if field_count is not None else 0,
+                    "create_grid": create_grid,
+                    "create_form": create_form,
+                    "ignore": ignore,
+                }
+            }
+        )
+
+    return table_payloads
