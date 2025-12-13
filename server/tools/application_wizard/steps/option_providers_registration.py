@@ -341,16 +341,20 @@ def get_avail_grid_design_definitions(
 
 
 @register_option_provider("get_tables_for_selected_db")
-def get_tables_for_selected_db(*, context: dict[str, Any] | None = None) -> list:
-    wizard_state = (context or {}).get("wizard_state", {})
-    answers = wizard_state.get("answers", {})
+def get_tables_for_selected_db(
+    *, context: dict[str, Any] | None = None, db_id: int | None = None
+) -> list:
 
-    db_answer = answers.get("choose_db", {})
-    db_id_str = db_answer.get("db_name")
-    if not db_id_str:
-        raise ValueError("Database must be selected before configuring tables.")
+    if db_id is None:  # Extract from context if not provided
+        wizard_state = (context or {}).get("wizard_state", {})
+        answers = wizard_state.get("answers", {})
 
-    db_id = int(db_id_str)
+        db_answer = answers.get("choose_db", {})
+        db_id_str = db_answer.get("db_name")
+        if not db_id_str:
+            raise ValueError("Database must be selected before configuring tables.")
+
+        db_id = int(db_id_str)
 
     url = (
         f"{get_env('BASE_URL', 'https://localhost')}" "/peff/Crud/read/wizBuildAppGrid"
