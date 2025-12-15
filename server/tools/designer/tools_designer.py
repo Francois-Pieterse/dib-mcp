@@ -231,13 +231,15 @@ def update_node_info(
     Update a specific field of a node in the designer project tree.
     """
 
-    # TODO: Implement/expand validation of field name and subsequent value type. Currently no
-    # validation is done here or server-side, so invalid field names or value types
-    # may lead to silent failures or unexpected behavior.
+    # TODO: Implement/expand validation of field name and subsequent value type. Currently some validation is 
+    # done server-side, so invalid field names or value types are caught. However, the specific valid values of
+    # this value type are not checked. This may lead to silent failures or unexpected behavior.
     # For example, the width can be set to "test" without error. Whilst, this may not have
     # been a problem when fields were set via the UI, it could lead to issues when the LLM
     # is setting fields programmatically. This becomes especially relevant for fields which
     # no example values are available when the get_node_info_from_id tool is used.
+    # Another example is boolean fields which are checked for integer valeus server side, but the range is
+    # not checked. So setting a boolean field to "2" would be accepted by the server.
     valid_ok, validation_error = validator.validate(field_name, value)
 
     if not valid_ok:
