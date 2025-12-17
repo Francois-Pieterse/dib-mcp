@@ -1,0 +1,2234 @@
+{
+	"info": {
+		"_postman_id": "af8e721d-9291-4f32-b4cd-e97869c3aba0",
+		"name": "Dropinbase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31272448"
+	},
+	"item": [
+		{
+			"name": "Application Wizard",
+			"item": [
+				{
+					"name": "Get Available Databases",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							},
+							{
+								"key": "Requestverificationtoken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"clientData\": {\r\n    \"alias_self\": {\r\n      \"id\": null,\r\n      \"tmplId\": null,\r\n      \"baseName\": \"\",\r\n      \"helpIndex\": \"\",\r\n      \"baseContainerOption\": \"createNew\",\r\n      \"baseContainerId\": null\r\n    },\r\n    \"alias_parent\": {},\r\n    \"query_params\": {}\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/peff/Crud/componentlist?containerName=wizBuildApp&containerItemId=339&itemAlias=id&page=1&limit=40&activeFilter=null",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"peff",
+								"Crud",
+								"componentlist"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "wizBuildApp"
+								},
+								{
+									"key": "containerItemId",
+									"value": "339"
+								},
+								{
+									"key": "itemAlias",
+									"value": "id"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "40"
+								},
+								{
+									"key": "activeFilter",
+									"value": "null"
+								}
+							]
+						},
+						"description": "Retrieves list of possible databases to import tables from."
+					},
+					"response": [
+						{
+							"name": "Get Available Databases",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "{{PHPSESSID}}",
+										"type": "text"
+									},
+									{
+										"key": "Requestverificationtoken",
+										"value": "{{ReqVerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"clientData\": {\r\n    \"alias_self\": {\r\n      \"id\": null,\r\n      \"tmplId\": null,\r\n      \"baseName\": \"\",\r\n      \"helpIndex\": \"\",\r\n      \"baseContainerOption\": \"createNew\",\r\n      \"baseContainerId\": null\r\n    },\r\n    \"alias_parent\": {},\r\n    \"query_params\": {}\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost/peff/Crud/componentlist?containerName=wizBuildApp&containerItemId=339&itemAlias=id&page=1&limit=40&activeFilter=null",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"peff",
+										"Crud",
+										"componentlist"
+									],
+									"query": [
+										{
+											"key": "containerName",
+											"value": "wizBuildApp"
+										},
+										{
+											"key": "containerItemId",
+											"value": "339"
+										},
+										{
+											"key": "itemAlias",
+											"value": "id"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "40"
+										},
+										{
+											"key": "activeFilter",
+											"value": "null"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.28.0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Dec 2025 13:39:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src https: 'self' https://fonts.googleapis.com *.cloudflare.com *.google-analytics.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com/ *.googleapis.com *.cloudflare.com *.google-analytics.com https://cjshare.com *.cjshare.com *.cleverjump.org *.jsdelivr.net https://sharebutton.net *.sharebutton.net api.whichbrowser.net code.jquery.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' https://unpkg.com/ https://fonts.cdnfonts.com/css/poppins https://fonts.googleapis.com https://netdna.bootstrapcdn.com https://maxcdn.bootstrapcdn.com 'unsafe-inline' *.jsdelivr.net; img-src data: *; worker-src 'self' blob:; frame-ancestors 'self';"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "storage-access=(self), fullscreen=(self), autoplay=(), bluetooth=(), browsing-topics=(), camera=(), compute-pressure=(), display-capture=(), encrypted-media=(), gamepad=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), local-fonts=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-create=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 01 Jan 2026 13:39:53 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"actions\": [],\n    \"message\": null,\n    \"showType\": null,\n    \"messageDelay\": null,\n    \"clickOutsideToClose\": false,\n    \"restoreFocus\": true,\n    \"asyncInterval\": null,\n    \"asyncRetry\": null,\n    \"queueUid\": null,\n    \"records\": [\n        {\n            \"id\": 5,\n            \"id_display_value\": \"dib_mssql\"\n        },\n        {\n            \"id\": 3,\n            \"id_display_value\": \"dib_pgsql\"\n        },\n        {\n            \"id\": 4,\n            \"id_display_value\": \"dib_sqlite\"\n        },\n        {\n            \"id\": 6,\n            \"id_display_value\": \"test\"\n        }\n    ],\n    \"total\": 1,\n    \"filtertotal\": 1,\n    \"secureId\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Template Description",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							},
+							{
+								"key": "Requestverificationtoken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"clientData\": {\r\n    \"alias_self\": {\r\n      \"id\": null,\r\n      \"tmplId\": 2,\r\n      \"baseName\": \"\",\r\n      \"helpIndex\": \"tmpl\",\r\n      \"baseContainerOption\": \"createNew\",\r\n      \"baseContainerId\": null\r\n    },\r\n    \"alias_parent\": {},\r\n    \"query_params\": {}\r\n  },\r\n  \"itemEventId\": \"ie89-dib\",\r\n  \"itemId\": \"3039\",\r\n  \"containerName\": \"wizBuildApp\",\r\n  \"triggerType\": \"changed\",\r\n  \"itemAlias\": \"tmplId\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/peff/Sync/setBaseDescription?containerName=wizBuildApp",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"peff",
+								"Sync",
+								"setBaseDescription"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "wizBuildApp"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Base Templates",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							},
+							{
+								"key": "Requestverificationtoken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost/peff/Crud/componentlist?containerName=wizBuildApp&containerItemId=3039&itemAlias=tmplId&page=1&limit=40&activeFilter=null",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"peff",
+								"Crud",
+								"componentlist"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "wizBuildApp"
+								},
+								{
+									"key": "containerItemId",
+									"value": "3039"
+								},
+								{
+									"key": "itemAlias",
+									"value": "tmplId"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "40"
+								},
+								{
+									"key": "activeFilter",
+									"value": "null"
+								}
+							]
+						},
+						"description": "Get the base container template options to select from."
+					},
+					"response": [
+						{
+							"name": "Get Base Templates",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "{{PHPSESSID}}",
+										"type": "text"
+									},
+									{
+										"key": "Requestverificationtoken",
+										"value": "{{ReqVerToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://localhost/peff/Crud/componentlist?containerName=wizBuildApp&containerItemId=3039&itemAlias=tmplId&page=1&limit=40&activeFilter=null",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"peff",
+										"Crud",
+										"componentlist"
+									],
+									"query": [
+										{
+											"key": "containerName",
+											"value": "wizBuildApp"
+										},
+										{
+											"key": "containerItemId",
+											"value": "3039"
+										},
+										{
+											"key": "itemAlias",
+											"value": "tmplId"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "40"
+										},
+										{
+											"key": "activeFilter",
+											"value": "null"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.28.0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Dec 2025 13:41:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src https: 'self' https://fonts.googleapis.com *.cloudflare.com *.google-analytics.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com/ *.googleapis.com *.cloudflare.com *.google-analytics.com https://cjshare.com *.cjshare.com *.cleverjump.org *.jsdelivr.net https://sharebutton.net *.sharebutton.net api.whichbrowser.net code.jquery.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' https://unpkg.com/ https://fonts.cdnfonts.com/css/poppins https://fonts.googleapis.com https://netdna.bootstrapcdn.com https://maxcdn.bootstrapcdn.com 'unsafe-inline' *.jsdelivr.net; img-src data: *; worker-src 'self' blob:; frame-ancestors 'self';"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "storage-access=(self), fullscreen=(self), autoplay=(), bluetooth=(), browsing-topics=(), camera=(), compute-pressure=(), display-capture=(), encrypted-media=(), gamepad=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), local-fonts=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-create=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Expires",
+									"value": "Thu, 01 Jan 2026 13:41:51 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"actions\": [],\n    \"message\": null,\n    \"showType\": null,\n    \"messageDelay\": null,\n    \"clickOutsideToClose\": false,\n    \"restoreFocus\": true,\n    \"asyncInterval\": null,\n    \"asyncRetry\": null,\n    \"queueUid\": null,\n    \"records\": [\n        {\n            \"id\": 1,\n            \"id_display_value\": \"tmplBase1 (1)\"\n        },\n        {\n            \"id\": 2,\n            \"id_display_value\": \"tmplBase2 (2)\"\n        },\n        {\n            \"id\": 3,\n            \"id_display_value\": \"tmplBase3 (3)\"\n        }\n    ],\n    \"total\": 1,\n    \"filtertotal\": 1,\n    \"secureId\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Click Build",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "_ga=GA1.1.442581770.1733468087; _ga_JDFW4MZLGR=GS1.1.1734613925.5.1.1734614369.0.0.0; _ga_1HW1G90CDH=GS1.1.1734613925.27.1.1734614369.0.0.0; PHPSESSID=8ac9af7b48c43fb99155a6d349209355",
+								"type": "text"
+							},
+							{
+								"key": "Requestverificationtoken",
+								"value": "9f10746bd6899cd6eb0bf79fe233474c",
+								"type": "text"
+							},
+							{
+								"key": "origin",
+								"value": "https://localhost",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "referer",
+								"value": "https://localhost/nav/wizBuildApp/",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"clientData\": {\r\n    \"alias_self\": {\r\n      \"id\": 6,\r\n      \"tmplId\": 2,\r\n      \"baseName\": \"temp\",\r\n      \"helpIndex\": \"tmpl\",\r\n      \"baseContainerOption\": \"createNew\",\r\n      \"baseContainerId\": null\r\n    },\r\n    \"alias_parent\": {},\r\n    \"query_params\": {}\r\n  },\r\n  \"itemEventId\": \"ie23-dib\",\r\n  \"itemId\": \"342\",\r\n  \"containerName\": \"wizBuildApp\",\r\n  \"triggerType\": \"click\",\r\n  \"itemAlias\": \"btnBuildMyApp\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/peff/Sync/executeTasks?containerName=wizBuildApp&queueUid=1764773835848",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"peff",
+								"Sync",
+								"executeTasks"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "wizBuildApp"
+								},
+								{
+									"key": "queueUid",
+									"value": "1764773835848"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Form Design Definitions",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							},
+							{
+								"key": "Requestverificationtoken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost/peff/Crud/componentlist?containerName=wizBuildAppSettings&containerItemId=367&itemAlias=pef_form_design_id&page=1&limit=40&activeFilter=null",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"peff",
+								"Crud",
+								"componentlist"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "wizBuildAppSettings"
+								},
+								{
+									"key": "containerItemId",
+									"value": "367"
+								},
+								{
+									"key": "itemAlias",
+									"value": "pef_form_design_id"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "40"
+								},
+								{
+									"key": "activeFilter",
+									"value": "null"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "{{PHPSESSID}}",
+										"type": "text"
+									},
+									{
+										"key": "Requestverificationtoken",
+										"value": "{{ReqVerToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://localhost/peff/Crud/componentlist?containerName=wizBuildAppSettings&containerItemId=367&itemAlias=pef_form_design_id&page=1&limit=40&activeFilter=null",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"peff",
+										"Crud",
+										"componentlist"
+									],
+									"query": [
+										{
+											"key": "containerName",
+											"value": "wizBuildAppSettings"
+										},
+										{
+											"key": "containerItemId",
+											"value": "367"
+										},
+										{
+											"key": "itemAlias",
+											"value": "pef_form_design_id"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "40"
+										},
+										{
+											"key": "activeFilter",
+											"value": "null"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.28.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Dec 2025 17:07:29 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src https: 'self' https://fonts.googleapis.com *.cloudflare.com *.google-analytics.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com/ *.googleapis.com *.cloudflare.com *.google-analytics.com https://cjshare.com *.cjshare.com *.cleverjump.org *.jsdelivr.net https://sharebutton.net *.sharebutton.net api.whichbrowser.net code.jquery.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' https://unpkg.com/ https://fonts.cdnfonts.com/css/poppins https://fonts.googleapis.com https://netdna.bootstrapcdn.com https://maxcdn.bootstrapcdn.com 'unsafe-inline' *.jsdelivr.net; img-src data: *; worker-src 'self' blob:; frame-ancestors 'self';"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "storage-access=(self), fullscreen=(self), autoplay=(), bluetooth=(), browsing-topics=(), camera=(), compute-pressure=(), display-capture=(), encrypted-media=(), gamepad=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), local-fonts=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-create=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Expires",
+									"value": "Fri, 09 Jan 2026 17:07:29 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"actions\": [],\n    \"message\": null,\n    \"showType\": null,\n    \"messageDelay\": null,\n    \"clickOutsideToClose\": false,\n    \"restoreFocus\": true,\n    \"asyncInterval\": null,\n    \"asyncRetry\": null,\n    \"queueUid\": null,\n    \"records\": [\n        {\n            \"id\": 6,\n            \"id_display_value\": \"Form Equal Fieldsets\"\n        },\n        {\n            \"id\": 2,\n            \"id_display_value\": \"Form One Fieldset\"\n        },\n        {\n            \"id\": 1,\n            \"id_display_value\": \"Form OverFlow Fieldsets\"\n        }\n    ],\n    \"total\": 1,\n    \"filtertotal\": 1,\n    \"secureId\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Design Definitions for Grids based on Tables",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							},
+							{
+								"key": "Requestverificationtoken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost/peff/Crud/componentlist?containerName=wizBuildAppSettings&containerItemId=366&itemAlias=pef_grid_design_id&page=1&limit=40&activeFilter=wizBuildAppSettings_pef_grid_design_id",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"peff",
+								"Crud",
+								"componentlist"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "wizBuildAppSettings"
+								},
+								{
+									"key": "containerItemId",
+									"value": "366"
+								},
+								{
+									"key": "itemAlias",
+									"value": "pef_grid_design_id"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "40"
+								},
+								{
+									"key": "activeFilter",
+									"value": "wizBuildAppSettings_pef_grid_design_id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Design Definitions for Grids based on Tables",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "{{PHPSESSID}}",
+										"type": "text"
+									},
+									{
+										"key": "Requestverificationtoken",
+										"value": "{{ReqVerToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://localhost/peff/Crud/componentlist?containerName=wizBuildAppSettings&containerItemId=366&itemAlias=pef_grid_design_id&page=1&limit=40&activeFilter=wizBuildAppSettings_pef_grid_design_id",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"peff",
+										"Crud",
+										"componentlist"
+									],
+									"query": [
+										{
+											"key": "containerName",
+											"value": "wizBuildAppSettings"
+										},
+										{
+											"key": "containerItemId",
+											"value": "366"
+										},
+										{
+											"key": "itemAlias",
+											"value": "pef_grid_design_id"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "40"
+										},
+										{
+											"key": "activeFilter",
+											"value": "wizBuildAppSettings_pef_grid_design_id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.28.0"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 11 Dec 2025 08:45:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src https: 'self' https://fonts.googleapis.com *.cloudflare.com *.google-analytics.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com/ *.googleapis.com *.cloudflare.com *.google-analytics.com https://cjshare.com *.cjshare.com *.cleverjump.org *.jsdelivr.net https://sharebutton.net *.sharebutton.net api.whichbrowser.net code.jquery.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' https://unpkg.com/ https://fonts.cdnfonts.com/css/poppins https://fonts.googleapis.com https://netdna.bootstrapcdn.com https://maxcdn.bootstrapcdn.com 'unsafe-inline' *.jsdelivr.net; img-src data: *; worker-src 'self' blob:; frame-ancestors 'self';"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "storage-access=(self), fullscreen=(self), autoplay=(), bluetooth=(), browsing-topics=(), camera=(), compute-pressure=(), display-capture=(), encrypted-media=(), gamepad=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), local-fonts=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-create=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Expires",
+									"value": "Sat, 10 Jan 2026 08:45:11 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"actions\": [],\n    \"message\": null,\n    \"showType\": null,\n    \"messageDelay\": null,\n    \"clickOutsideToClose\": false,\n    \"restoreFocus\": true,\n    \"asyncInterval\": null,\n    \"asyncRetry\": null,\n    \"queueUid\": null,\n    \"records\": [\n        {\n            \"id\": 3,\n            \"id_display_value\": \"Grid Table Basic\"\n        },\n        {\n            \"id\": 4,\n            \"id_display_value\": \"Grid Table Edit\"\n        },\n        {\n            \"id\": 7,\n            \"id_display_value\": \"Grid Table Editable\"\n        }\n    ],\n    \"total\": 1,\n    \"filtertotal\": 1,\n    \"secureId\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Tables",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							},
+							{
+								"key": "RequestVerificationToken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientData\": {\r\n        \"alias_self\": {},\r\n        \"alias_parent\": {\r\n            \"id\": 6\r\n        },\r\n        \"query_params\": {},\r\n        \"activeFilter_self\": \"wizBuildAppGrid\"\r\n    },\r\n    \"activeFilter\": \"wizBuildAppGrid\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/peff/Crud/read/wizBuildAppGrid",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"peff",
+								"Crud",
+								"read",
+								"wizBuildAppGrid"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "{{PHPSESSID}}",
+										"type": "text"
+									},
+									{
+										"key": "RequestVerificationToken",
+										"value": "{{ReqVerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"clientData\": {\r\n        \"alias_self\": {},\r\n        \"alias_parent\": {\r\n            \"id\": 6\r\n        },\r\n        \"query_params\": {},\r\n        \"activeFilter_self\": \"wizBuildAppGrid\"\r\n    },\r\n    \"activeFilter\": \"wizBuildAppGrid\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost/peff/Crud/read/wizBuildAppGrid?sort=%5B%5D",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"peff",
+										"Crud",
+										"read",
+										"wizBuildAppGrid"
+									],
+									"query": [
+										{
+											"key": "sort",
+											"value": "%5B%5D"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.28.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Dec 2025 21:42:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src https: 'self' https://fonts.googleapis.com *.cloudflare.com *.google-analytics.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com/ *.googleapis.com *.cloudflare.com *.google-analytics.com https://cjshare.com *.cjshare.com *.cleverjump.org *.jsdelivr.net https://sharebutton.net *.sharebutton.net api.whichbrowser.net code.jquery.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' https://unpkg.com/ https://fonts.cdnfonts.com/css/poppins https://fonts.googleapis.com https://netdna.bootstrapcdn.com https://maxcdn.bootstrapcdn.com 'unsafe-inline' *.jsdelivr.net; img-src data: *; worker-src 'self' blob:; frame-ancestors 'self';"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "storage-access=(self), fullscreen=(self), autoplay=(), bluetooth=(), browsing-topics=(), camera=(), compute-pressure=(), display-capture=(), encrypted-media=(), gamepad=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), local-fonts=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-create=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Expires",
+									"value": "Fri, 09 Jan 2026 21:42:31 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"actions\": [],\n    \"message\": null,\n    \"showType\": null,\n    \"messageDelay\": null,\n    \"clickOutsideToClose\": false,\n    \"restoreFocus\": true,\n    \"asyncInterval\": null,\n    \"asyncRetry\": null,\n    \"queueUid\": null,\n    \"records\": [\n        {\n            \"name\": \"orders\",\n            \"create_grid\": 1,\n            \"create_form\": 1,\n            \"caption\": \"Orders\",\n            \"field_count\": 5,\n            \"id\": 185,\n            \"ignore\": 0,\n            \"notice\": null,\n            \"error_msg\": null\n        },\n        {\n            \"name\": \"products\",\n            \"create_grid\": 1,\n            \"create_form\": 1,\n            \"caption\": \"Products\",\n            \"field_count\": 5,\n            \"id\": 186,\n            \"ignore\": 1,\n            \"notice\": null,\n            \"error_msg\": null\n        },\n        {\n            \"name\": \"users\",\n            \"create_grid\": 1,\n            \"create_form\": 1,\n            \"caption\": \"Users\",\n            \"field_count\": 4,\n            \"id\": 187,\n            \"ignore\": 1,\n            \"notice\": null,\n            \"error_msg\": null\n        }\n    ],\n    \"total\": 3,\n    \"filtertotal\": 3,\n    \"secureId\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Table Properties",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							},
+							{
+								"key": "RequestVerificationToken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recordData\": {\r\n        \"name\": \"orders\",\r\n        \"create_grid\": 1,\r\n        \"create_form\": 1,\r\n        \"caption\": \"Orders\",\r\n        \"field_count\": 5,\r\n        \"id\": 185,\r\n        \"ignore\": 0\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/peff/Crud/update/wizBuildAppGrid?primaryKeyData=%7B%22id%22:185%7D",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"peff",
+								"Crud",
+								"update",
+								"wizBuildAppGrid"
+							],
+							"query": [
+								{
+									"key": "primaryKeyData",
+									"value": "%7B%22id%22:185%7D"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "{{PHPSESSID}}",
+										"type": "text"
+									},
+									{
+										"key": "RequestVerificationToken",
+										"value": "{{ReqVerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"recordData\": {\r\n        \"name\": \"products\",\r\n        \"create_grid\": 1,\r\n        \"create_form\": 0,\r\n        \"caption\": \"Products\",\r\n        \"field_count\": 5,\r\n        \"id\": 186,\r\n        \"ignore\": 0\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost/peff/Crud/update/wizBuildAppGrid?primaryKeyData=%7B%22id%22:186%7D",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"peff",
+										"Crud",
+										"update",
+										"wizBuildAppGrid"
+									],
+									"query": [
+										{
+											"key": "primaryKeyData",
+											"value": "%7B%22id%22:186%7D"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.28.0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Dec 2025 21:57:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src https: 'self' https://fonts.googleapis.com *.cloudflare.com *.google-analytics.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com/ *.googleapis.com *.cloudflare.com *.google-analytics.com https://cjshare.com *.cjshare.com *.cleverjump.org *.jsdelivr.net https://sharebutton.net *.sharebutton.net api.whichbrowser.net code.jquery.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' https://unpkg.com/ https://fonts.cdnfonts.com/css/poppins https://fonts.googleapis.com https://netdna.bootstrapcdn.com https://maxcdn.bootstrapcdn.com 'unsafe-inline' *.jsdelivr.net; img-src data: *; worker-src 'self' blob:; frame-ancestors 'self';"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "storage-access=(self), fullscreen=(self), autoplay=(), bluetooth=(), browsing-topics=(), camera=(), compute-pressure=(), display-capture=(), encrypted-media=(), gamepad=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), local-fonts=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-create=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Expires",
+									"value": "Fri, 09 Jan 2026 21:57:28 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"actions\": [],\n    \"message\": \"Record updated\",\n    \"showType\": \"success\",\n    \"messageDelay\": null,\n    \"clickOutsideToClose\": false,\n    \"restoreFocus\": true,\n    \"asyncInterval\": null,\n    \"asyncRetry\": null,\n    \"queueUid\": null,\n    \"records\": {\n        \"id\": 186\n    },\n    \"total\": 0,\n    \"filtertotal\": 0,\n    \"secureId\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Create App",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							},
+							{
+								"key": "RequestVerificationToken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"clientData\": {\r\n    \"alias_self\": {\r\n      \"id\": 6,\r\n      \"tmplId\": 1,\r\n      \"baseName\": \"base\",\r\n      \"helpIndex\": \"tmpl\",\r\n      \"baseContainerOption\": \"createNew\",\r\n      \"baseContainerId\": null\r\n    },\r\n    \"alias_parent\": {},\r\n    \"query_params\": {}\r\n  },\r\n  \"itemEventId\": \"ie23-dib\",\r\n  \"itemId\": \"342\",\r\n  \"containerName\": \"wizBuildApp\",\r\n  \"triggerType\": \"click\",\r\n  \"itemAlias\": \"btnBuildMyApp\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/peff/Sync/executeTasks?containerName=wizBuildApp&queueUid=1765651576",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"peff",
+								"Sync",
+								"executeTasks"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "wizBuildApp"
+								},
+								{
+									"key": "queueUid",
+									"value": "1765651576"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Designer",
+			"item": [
+				{
+					"name": "Adding Additional Components",
+					"item": [
+						{
+							"name": "Get Avail Components",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "{{PHPSESSID}}",
+										"type": "text"
+									},
+									{
+										"key": "RequestVerificationToken",
+										"value": "{{ReqVerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"clientData\": {\r\n        \"treeData\": {\r\n            \"containerId\": 412,\r\n            \"filterString\": \"\"\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost/dropins/dibAdmin/DDesignerComponentStore/read?containerName=dibDesignerHtml&node=root",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"dropins",
+										"dibAdmin",
+										"DDesignerComponentStore",
+										"read"
+									],
+									"query": [
+										{
+											"key": "containerName",
+											"value": "dibDesignerHtml"
+										},
+										{
+											"key": "node",
+											"value": "root"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Component",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "{{PHPSESSID}}",
+										"type": "text"
+									},
+									{
+										"key": "RequestVerificationToken",
+										"value": "{{ReqVerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"clientData\": {\r\n    \"alias_parent\": {},\r\n    \"selected\": []\r\n  },\r\n  \"sourceTreeId\": \"treeH\",\r\n  \"dropPosition\": \"after\",\r\n  \"dropNodeId\": \"9625\",\r\n  \"nodeId\": \"DataComponents^:22^:412^:22^:checkbox\",\r\n  \"parentId\": \"9623\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost/dropins/dibAdmin/DDesignerItemStore/drop?containerName=dibDesignerHtml",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"dropins",
+										"dibAdmin",
+										"DDesignerItemStore",
+										"drop"
+									],
+									"query": [
+										{
+											"key": "containerName",
+											"value": "dibDesignerHtml"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Component",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "{{PHPSESSID}}",
+										"type": "text"
+									},
+									{
+										"key": "RequestVerificationToken",
+										"value": "{{ReqVerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"clientData\": {\r\n    \"selected_self\": [\r\n      {\r\n        \"id\": \"10065\"\r\n      }\r\n    ]\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost/dropins/dibAdmin/DibTasks/dibDesignerDeleteItem?containerName=dibDesignerHtml&itemEventId=ie178-dib",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"dropins",
+										"dibAdmin",
+										"DibTasks",
+										"dibDesignerDeleteItem"
+									],
+									"query": [
+										{
+											"key": "containerName",
+											"value": "dibDesignerHtml"
+										},
+										{
+											"key": "itemEventId",
+											"value": "ie178-dib"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Component",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Cookie",
+												"value": "{{PHPSESSID}}",
+												"type": "text"
+											},
+											{
+												"key": "RequestVerificationToken",
+												"value": "{{ReqVerToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"clientData\": {\r\n    \"selected_self\": [\r\n      {\r\n        \"id\": \"10063\"\r\n      }\r\n    ]\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://localhost/dropins/dibAdmin/DibTasks/dibDesignerDeleteItem?containerName=dibDesignerHtml&itemEventId=ie178-dib",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"path": [
+												"dropins",
+												"dibAdmin",
+												"DibTasks",
+												"dibDesignerDeleteItem"
+											],
+											"query": [
+												{
+													"key": "containerName",
+													"value": "dibDesignerHtml"
+												},
+												{
+													"key": "itemEventId",
+													"value": "ie178-dib"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.28.0"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 07:09:10 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src https: 'self' https://fonts.googleapis.com *.cloudflare.com *.google-analytics.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com/ *.googleapis.com *.cloudflare.com *.google-analytics.com https://cjshare.com *.cjshare.com *.cleverjump.org *.jsdelivr.net https://sharebutton.net *.sharebutton.net api.whichbrowser.net code.jquery.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' https://unpkg.com/ https://fonts.cdnfonts.com/css/poppins https://fonts.googleapis.com https://netdna.bootstrapcdn.com https://maxcdn.bootstrapcdn.com 'unsafe-inline' *.jsdelivr.net; img-src data: *; worker-src 'self' blob:; frame-ancestors 'self';"
+										},
+										{
+											"key": "Permissions-Policy",
+											"value": "storage-access=(self), fullscreen=(self), autoplay=(), bluetooth=(), browsing-topics=(), camera=(), compute-pressure=(), display-capture=(), encrypted-media=(), gamepad=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), local-fonts=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-create=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, PUT, POST, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization, X-Requested-With"
+										},
+										{
+											"key": "Expires",
+											"value": "Sun, 04 Jan 2026 07:09:10 GMT"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=2592000"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"actions\": [\n        {\n            \"submitUrl\": \"dibAdmin.action.set-designer-container\",\n            \"waitForCompletion\": true,\n            \"dropinName\": \"dibAdmin\",\n            \"containerName\": \"dibDesignerHtml\",\n            \"params\": {\n                \"action\": \"refreshTreeDel\",\n                \"value\": 10061\n            }\n        }\n    ],\n    \"message\": \"Item deleted\",\n    \"showType\": \"success\",\n    \"messageDelay\": 4000,\n    \"clickOutsideToClose\": false,\n    \"restoreFocus\": true,\n    \"asyncInterval\": null,\n    \"asyncRetry\": null,\n    \"queueUid\": null,\n    \"records\": [],\n    \"total\": 0,\n    \"filtertotal\": 0,\n    \"secureId\": null\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Nested Components",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "{{PHPSESSID}}",
+										"type": "text"
+									},
+									{
+										"key": "RequestVerificationToken",
+										"value": "{{ReqVerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"clientData\": {\r\n    \"selected_self\": [\r\n      {\r\n        \"id\": \"10072\"\r\n      }\r\n    ]\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost/dropins/dibAdmin/DibTasks/dibDesignerDeleteItemMany?containerName=dibDesignerHtml&itemEventId=ie21-dib",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"dropins",
+										"dibAdmin",
+										"DibTasks",
+										"dibDesignerDeleteItemMany"
+									],
+									"query": [
+										{
+											"key": "containerName",
+											"value": "dibDesignerHtml"
+										},
+										{
+											"key": "itemEventId",
+											"value": "ie21-dib"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete Nested Components",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Cookie",
+												"value": "{{PHPSESSID}}",
+												"type": "text"
+											},
+											{
+												"key": "RequestVerificationToken",
+												"value": "{{ReqVerToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"clientData\": {\r\n    \"selected_self\": [\r\n      {\r\n        \"id\": \"10076\"\r\n      }\r\n    ]\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://localhost/dropins/dibAdmin/DibTasks/dibDesignerDeleteItemMany?containerName=dibDesignerHtml&itemEventId=ie21-dib",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"path": [
+												"dropins",
+												"dibAdmin",
+												"DibTasks",
+												"dibDesignerDeleteItemMany"
+											],
+											"query": [
+												{
+													"key": "containerName",
+													"value": "dibDesignerHtml"
+												},
+												{
+													"key": "itemEventId",
+													"value": "ie21-dib"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.28.0"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 07:05:06 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Cross-Origin-Resource-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src https: 'self' https://fonts.googleapis.com *.cloudflare.com *.google-analytics.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com/ *.googleapis.com *.cloudflare.com *.google-analytics.com https://cjshare.com *.cjshare.com *.cleverjump.org *.jsdelivr.net https://sharebutton.net *.sharebutton.net api.whichbrowser.net code.jquery.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' https://unpkg.com/ https://fonts.cdnfonts.com/css/poppins https://fonts.googleapis.com https://netdna.bootstrapcdn.com https://maxcdn.bootstrapcdn.com 'unsafe-inline' *.jsdelivr.net; img-src data: *; worker-src 'self' blob:; frame-ancestors 'self';"
+										},
+										{
+											"key": "Permissions-Policy",
+											"value": "storage-access=(self), fullscreen=(self), autoplay=(), bluetooth=(), browsing-topics=(), camera=(), compute-pressure=(), display-capture=(), encrypted-media=(), gamepad=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), local-fonts=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-create=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, PUT, POST, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Content-Type, Authorization, X-Requested-With"
+										},
+										{
+											"key": "Expires",
+											"value": "Sun, 04 Jan 2026 07:05:06 GMT"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "max-age=2592000"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=31536000; includeSubDomains"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"actions\": [],\n    \"message\": \"Items deleted\",\n    \"showType\": \"success\",\n    \"messageDelay\": 4000,\n    \"clickOutsideToClose\": false,\n    \"restoreFocus\": true,\n    \"asyncInterval\": null,\n    \"asyncRetry\": null,\n    \"queueUid\": null,\n    \"records\": [],\n    \"total\": 0,\n    \"filtertotal\": 0,\n    \"secureId\": null\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get Component Info",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							},
+							{
+								"key": "Requestverificationtoken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost/dropins/dibAdmin/DDesignerAddOn/designerGetRecords?containerName=dibDesignerHtml&table=pef_item&id=9546",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"dropins",
+								"dibAdmin",
+								"DDesignerAddOn",
+								"designerGetRecords"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "dibDesignerHtml"
+								},
+								{
+									"key": "table",
+									"value": "pef_item"
+								},
+								{
+									"key": "id",
+									"value": "9546"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project Tree",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							},
+							{
+								"key": "Requestverificationtoken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientData\": {\r\n        \"treeData\": {\r\n            \"containerId\": 412,\r\n            \"filterString\": \"\",\r\n            \"groupId\": 2\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/dropins/dibAdmin/DDesignerItemStore/read?containerName=dibDesignerHtml&node=root",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"dropins",
+								"dibAdmin",
+								"DDesignerItemStore",
+								"read"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "dibDesignerHtml"
+								},
+								{
+									"key": "node",
+									"value": "root"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Group IDs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							},
+							{
+								"key": "Requestverificationtoken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost/peff/Crud/componentlist?containerName=dibDesigner&containerItemId=3901&itemAlias=groupId&page=1&limit=40&activeFilter=null",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"peff",
+								"Crud",
+								"componentlist"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "dibDesigner"
+								},
+								{
+									"key": "containerItemId",
+									"value": "3901"
+								},
+								{
+									"key": "itemAlias",
+									"value": "groupId"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "40"
+								},
+								{
+									"key": "activeFilter",
+									"value": "null"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Containers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							},
+							{
+								"key": "Requestverificationtoken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost/peff/Crud/componentlist?containerName=dibDesigner&containerItemId=3900&itemAlias=containerId&page=1&limit=40&activeFilter=null",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"peff",
+								"Crud",
+								"componentlist"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "dibDesigner"
+								},
+								{
+									"key": "containerItemId",
+									"value": "3900"
+								},
+								{
+									"key": "itemAlias",
+									"value": "containerId"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "40"
+								},
+								{
+									"key": "activeFilter",
+									"value": "null"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Move Node Before",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "RequestVerificationToken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientData\": {\r\n        \"alias_parent\": {\r\n            \"containerId\": 374,\r\n            \"groupId\": \"1\"\r\n        },\r\n        \"selected\": []\r\n    },\r\n    \"sourceTreeId\": \"tree\",\r\n    \"dropPosition\": \"before\",\r\n    \"dropNodeId\": \"9265\",\r\n    \"nodeId\": \"9264\",\r\n    \"parentId\": \"c374\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/dropins/dibAdmin/DDesignerItemStore/drop?containerName=dibDesignerHtml",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"dropins",
+								"dibAdmin",
+								"DDesignerItemStore",
+								"drop"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "dibDesignerHtml"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Move Node After",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "RequestVerificationToken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							},
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"clientData\": {\r\n    \"alias_parent\": {\r\n      \"containerId\": 412,\r\n      \"groupId\": 2\r\n    },\r\n    \"selected\": []\r\n  },\r\n  \"sourceTreeId\": \"tree\",\r\n  \"dropPosition\": \"after\",\r\n  \"dropNodeId\": \"9721\",\r\n  \"nodeId\": \"9717\",\r\n  \"parentId\": \"9714\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/dropins/dibAdmin/DDesignerItemStore/drop?containerName=dibDesignerHtml",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"dropins",
+								"dibAdmin",
+								"DDesignerItemStore",
+								"drop"
+							],
+							"query": [
+								{
+									"key": "containerName",
+									"value": "dibDesignerHtml"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Field",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							},
+							{
+								"key": "RequestVerificationToken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"clientData\": {\r\n    \"table\": \"item\",\r\n    \"field\": \"width\",\r\n    \"id\": \"9726\",\r\n    \"value\": \"120\",\r\n    \"encode\": true,\r\n    \"selectedContainerId\": 399\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/dropins/dibAdmin/DDesignerAddOn/designerUpdates/dibDesignerHtml",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"dropins",
+								"dibAdmin",
+								"DDesignerAddOn",
+								"designerUpdates",
+								"dibDesignerHtml"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Docs",
+			"item": [
+				{
+					"name": "Example Docs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							},
+							{
+								"key": "RequestVerificationToken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"parentContainerName\": \"dibexComponentsCheck\",\r\n    \"containerName\": \"dibDocsExampleHtml\",\r\n    \"itemEventId\": \"ie451-dib\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/dropins/dibDocs/Template/exampleContent",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"dropins",
+								"dibDocs",
+								"Template",
+								"exampleContent"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example Doc",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Cookie",
+										"value": "{{PHPSESSID}}",
+										"type": "text"
+									},
+									{
+										"key": "RequestVerificationToken",
+										"value": "{{ReqVerToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"parentContainerName\": \"dibexComponentsCheck\",\r\n    \"containerName\": \"dibDocsExampleHtml\",\r\n    \"itemEventId\": \"ie451-dib\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost/dropins/dibDocs/Template/exampleContent",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"dropins",
+										"dibDocs",
+										"Template",
+										"exampleContent"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.28.0"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 08 Dec 2025 06:54:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src https: 'self' https://fonts.googleapis.com *.cloudflare.com *.google-analytics.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com/ *.googleapis.com *.cloudflare.com *.google-analytics.com https://cjshare.com *.cjshare.com *.cleverjump.org *.jsdelivr.net https://sharebutton.net *.sharebutton.net api.whichbrowser.net code.jquery.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' https://unpkg.com/ https://fonts.cdnfonts.com/css/poppins https://fonts.googleapis.com https://netdna.bootstrapcdn.com https://maxcdn.bootstrapcdn.com 'unsafe-inline' *.jsdelivr.net; img-src data: *; worker-src 'self' blob:; frame-ancestors 'self';"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "storage-access=(self), fullscreen=(self), autoplay=(), bluetooth=(), browsing-topics=(), camera=(), compute-pressure=(), display-capture=(), encrypted-media=(), gamepad=(), gyroscope=(), hid=(), identity-credentials-get=(), idle-detection=(), local-fonts=(), magnetometer=(), microphone=(), midi=(), otp-credentials=(), payment=(), picture-in-picture=(), publickey-credentials-create=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Expires",
+									"value": "Wed, 07 Jan 2026 06:54:10 GMT"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"actions\": [],\n    \"message\": \"\",\n    \"showType\": \"notice\",\n    \"messageDelay\": 4000,\n    \"clickOutsideToClose\": false,\n    \"restoreFocus\": true,\n    \"asyncInterval\": null,\n    \"asyncRetry\": null,\n    \"queueUid\": null,\n    \"records\": {\n        \"heading\": \"Data Components - Check\",\n        \"id\": 51,\n        \"info1\": \"<p>These inputs are used to reflect boolean values, although additional attributes can change this behaviour.</p>\\n<p>See the References-tab for more info.</p>\\n<div>\\n<div>&nbsp;</div>\\n</div>\",\n        \"info2\": \"<font face=\\\"Arial\\\">checkbox:&#160;</font><a href=\\\"https://material.angular.io/components/checkbox/overview\\\" target=\\\"_blank\\\">https://material.angular.io/components/checkbox/overview</a><p><font face=\\\"Arial\\\">slideToggle:&#160;</font><a href=\\\"https://material.angular.io/components/slide-toggle/overview\\\" target=\\\"_blank\\\">https://material.angular.io/components/slide-toggle/overview</a></p><p><font face=\\\"Arial\\\">radioButton, radioGroup, inputRadio:&#160;</font><a href=\\\"https://material.angular.io/components/radio/overview\\\" target=\\\"_blank\\\">https://material.angular.io/components/radio/overview</a></p>\",\n        \"info3\": \"\",\n        \"caption1\": \"General\",\n        \"caption2\": \"References\",\n        \"caption3\": null,\n        \"design\": false\n    },\n    \"total\": 0,\n    \"filtertotal\": 0,\n    \"secureId\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Other Docs",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "{{PHPSESSID}}",
+								"type": "text"
+							},
+							{
+								"key": "RequestVerificationToken",
+								"value": "{{ReqVerToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost/dropins/dibDocs/Template/content/dibDocs/dib/?area=docs&id=Origins-of-Dropinbase",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"dropins",
+								"dibDocs",
+								"Template",
+								"content",
+								"dibDocs",
+								"dib",
+								""
+							],
+							"query": [
+								{
+									"key": "area",
+									"value": "docs"
+								},
+								{
+									"key": "id",
+									"value": "Origins-of-Dropinbase"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "PHPSESSID",
+			"value": "",
+			"description": "In the form 'PHPSESSID=xxxxxxx'"
+		},
+		{
+			"key": "ReqVerToken",
+			"value": "",
+			"description": "Default 'Tg1Ja2_yKwQIQfi02iJ0vrlL'"
+		}
+	]
+}
