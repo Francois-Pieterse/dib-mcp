@@ -284,7 +284,7 @@ def step_application_wizard(
         state.current_step_id = None
         state.completed = True
         state.save()
-        
+
         return {
             "summary": {
                 "meta": state.meta,

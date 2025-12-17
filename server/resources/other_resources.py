@@ -2,6 +2,7 @@ from mcp_instance import mcp
 
 # To expose these resources, import this module in main.py
 
+
 @mcp.resource(
     uri="dib://example/resource",
     name="example_resource",

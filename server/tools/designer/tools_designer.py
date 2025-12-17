@@ -231,7 +231,7 @@ def update_node_info(
     Update a specific field of a node in the designer project tree.
     """
 
-    # TODO: Implement/expand validation of field name and subsequent value type. Currently some validation is 
+    # TODO: Implement/expand validation of field name and subsequent value type. Currently some validation is
     # done server-side, so invalid field names or value types are caught. However, the specific valid values of
     # this value type are not checked. This may lead to silent failures or unexpected behavior.
     # For example, the width can be set to "test" without error. Whilst, this may not have
