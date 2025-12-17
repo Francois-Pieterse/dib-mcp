@@ -4,7 +4,7 @@ from typing import Any
 from mcp.types import ToolAnnotations
 
 from mcp_instance import mcp
-from tools.application_wizard.steps.steps_manager import StepManager
+from server.tools.wizard_engine.steps_manager import StepManager
 from tools.application_wizard.steps.answer_validation import validate_step_answers
 from tools.application_wizard.state.state_model import WizardState
 from tools.application_wizard.state.state_payload_mapping import (
