@@ -4,9 +4,9 @@ from typing import Any
 from mcp.types import ToolAnnotations
 
 from mcp_instance import mcp
-from server.tools.wizard_engine.steps_manager import StepManager
-from tools.application_wizard.steps.answer_validation import validate_step_answers
-from tools.application_wizard.state.state_model import WizardState
+from server.tools.wizard_base.steps_manager import StepManager
+from tools.wizard_base.validation_base import validate_step_answers
+from server.tools.wizard_base.state_model import WizardState
 from tools.application_wizard.state.state_payload_mapping import (
     load_wizard_payload,
     load_wizard_db_table_payloads,

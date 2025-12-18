@@ -1,4 +1,4 @@
-from tools.application_wizard.state.state_model import WizardState
+from server.tools.wizard_base.state_model import WizardState
 from tools.application_wizard.steps.option_providers_registration import (
     get_tables_for_selected_db,
 )
