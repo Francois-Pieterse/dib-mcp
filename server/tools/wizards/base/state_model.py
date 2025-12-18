@@ -7,7 +7,10 @@ from typing import Any
 
 
 class StateFile(Enum):
-    APPLICATION_WIZARD = Path("server/tools/wizards/application_wizard/state/wizard_state.json")
+    APPLICATION_WIZARD = Path(
+        "server/tools/wizards/application_wizard/state/wizard_state.json"
+    )
+    EVENT_WIZARD = Path("server/tools/wizards/event_wizard/state/wizard_state.json")
 
 
 @dataclass
@@ -48,7 +51,9 @@ class WizardState:
             )
 
     @classmethod
-    def reset(cls, state_file: StateFile, meta: dict[str, Any] | None = None) -> "WizardState":
+    def reset(
+        cls, state_file: StateFile, meta: dict[str, Any] | None = None
+    ) -> "WizardState":
         state = cls(meta=meta or {})
         state.save(state_file)
         return state

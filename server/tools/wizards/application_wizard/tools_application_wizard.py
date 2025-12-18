@@ -5,7 +5,9 @@ from mcp.types import ToolAnnotations
 
 from mcp_instance import mcp
 from tools.wizards.base.steps_manager import StepManager
-from tools.wizards.application_wizard.steps.answer_validation_app_wiz import validate_step_answers
+from tools.wizards.application_wizard.steps.answer_validation_app_wiz import (
+    validate_step_answers,
+)
 from tools.wizards.base.state_model import WizardState, StateFile
 from tools.wizards.application_wizard.state.payload_mapping_app_wiz import (
     load_wizard_payload,
@@ -15,7 +17,9 @@ from tools.wizards.application_wizard.state.payload_mapping_app_wiz import (
 from env_variables import get_env
 from session_auth import dib_session_client
 
-STEPS_FILE = Path("server/tools/wizards/application_wizard/steps/new_base_wizard_steps.json")
+STEPS_FILE = Path(
+    "server/tools/wizards/application_wizard/steps/new_base_wizard_steps.json"
+)
 
 
 @mcp.tool(
