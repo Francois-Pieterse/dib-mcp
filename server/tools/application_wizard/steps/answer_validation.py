@@ -6,8 +6,9 @@ from server.tools.wizard_base.validation_base import (
     FieldCfg,
     ValidationError,
     _add_error,
-    validate_step_answers as base_validate
+    validate_step_answers as base_validate,
 )
+
 
 # Application Wizard specific validators
 def _validate_identifier(

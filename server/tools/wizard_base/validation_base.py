@@ -9,13 +9,17 @@ def _add_error(errors: list[ValidationError], field: str, message: str) -> None:
     errors.append({"field": field, "message": message})
 
 
-def _validate_string(field: FieldCfg, value: Any, errors: list[ValidationError]) -> None:
+def _validate_string(
+    field: FieldCfg, value: Any, errors: list[ValidationError]
+) -> None:
     name = field["name"]
     if not isinstance(value, str):
         _add_error(errors, name, f"'{name}' must be a string value.")
 
 
-def _validate_boolean(field: FieldCfg, value: Any, errors: list[ValidationError]) -> None:
+def _validate_boolean(
+    field: FieldCfg, value: Any, errors: list[ValidationError]
+) -> None:
     # Allow bools and 0/1 integers
     name = field["name"]
     if not isinstance(value, bool) and value not in (0, 1):
