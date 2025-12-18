@@ -1,4 +1,13 @@
+import logging
+
 from typing import Any, Callable, Mapping
+
+from env_variables import get_env
+
+
+logger = logging.getLogger(__name__)
+logger.setLevel(get_env("LOG_LEVEL", "INFO"))
+
 
 ValidationError = dict[str, str]
 FieldCfg = dict[str, Any]
@@ -82,5 +91,9 @@ def validate_step_answers(
         validator = merged_type_validators.get(ftype)
         if validator:
             validator(field, value, errors)
+        else:
+            logger.warning(
+                f"No validator found for field '{name}' with type '{ftype}'."
+            )
 
     return errors
