@@ -4,9 +4,9 @@ from typing import Any
 from mcp.types import ToolAnnotations
 
 from mcp_instance import mcp
-from server.tools.wizard_base.steps_manager import StepManager
+from tools.wizard_base.steps_manager import StepManager
 from tools.wizard_base.validation_base import validate_step_answers
-from server.tools.wizard_base.state_model import WizardState
+from tools.wizard_base.state_model import WizardState, StateFile
 from tools.application_wizard.state.state_payload_mapping import (
     load_wizard_payload,
     load_wizard_db_table_payloads,
@@ -38,7 +38,9 @@ def start_application_wizard(app_name: str | None = None) -> dict[str, Any]:
     including dynamic options.
     """
     steps = StepManager.load(STEPS_FILE)
-    state = WizardState.reset(meta={"app_name": app_name})
+    state = WizardState.reset(
+        meta={"app_name": app_name}, state_file=StateFile.APPLICATION_WIZARD
+    )
 
     first_step = steps.first()
     if not first_step:
@@ -48,7 +50,7 @@ def start_application_wizard(app_name: str | None = None) -> dict[str, Any]:
         }
 
     state.current_step_id = first_step["id"]
-    state.save()
+    state.save(StateFile.APPLICATION_WIZARD)
 
     enriched_step = steps.enrich(first_step, wizard_state=state.__dict__)
 
@@ -216,7 +218,7 @@ def step_application_wizard(
     and return the next step (or a completion summary).
     """
     steps = StepManager.load(STEPS_FILE)
-    state = WizardState.load()
+    state = WizardState.load(StateFile.APPLICATION_WIZARD)
 
     current_step_id = state.current_step_id
     if not current_step_id:
@@ -283,7 +285,7 @@ def step_application_wizard(
         # Wizard is complete
         state.current_step_id = None
         state.completed = True
-        state.save()
+        state.save(StateFile.APPLICATION_WIZARD)
 
         return {
             "summary": {
@@ -297,7 +299,7 @@ def step_application_wizard(
 
     # Move on to the next step
     state.current_step_id = next_step_cfg["id"]
-    state.save()
+    state.save(StateFile.APPLICATION_WIZARD)
 
     next_step_enriched = steps.enrich(next_step_cfg, wizard_state=state.__dict__)
 
@@ -329,7 +331,7 @@ def get_application_wizard_state() -> dict[str, Any]:
     the enriched definition of that step.
     """
     steps = StepManager.load(STEPS_FILE)
-    state = WizardState.load()
+    state = WizardState.load(StateFile.APPLICATION_WIZARD)
     current_step_id = state.current_step_id
 
     current_step = None

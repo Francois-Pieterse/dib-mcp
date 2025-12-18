@@ -1,11 +1,11 @@
-from server.tools.wizard_base.state_model import WizardState
+from tools.wizard_base.state_model import WizardState, StateFile
 from tools.application_wizard.steps.option_providers_registration import (
     get_tables_for_selected_db,
 )
 
 
 def load_wizard_payload() -> dict:
-    state = WizardState.load()
+    state = WizardState.load(StateFile.APPLICATION_WIZARD)
 
     answers = state.answers
 
@@ -119,7 +119,7 @@ def _to_01(v: object) -> int:
 
 def load_wizard_db_table_payloads() -> list[dict]:
 
-    state = WizardState.load()
+    state = WizardState.load(StateFile.APPLICATION_WIZARD)
     answers = state.answers
 
     # Get the previous (default) table settings
