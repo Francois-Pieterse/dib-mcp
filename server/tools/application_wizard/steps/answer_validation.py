@@ -1,31 +1,15 @@
-from typing import Any, Callable
 import re
-
-ValidationError = dict[str, str]
-FieldCfg = dict[str, Any]
+from typing import Any, Callable
 
 
-def _add_error(errors: list[ValidationError], field: str, message: str) -> None:
-    errors.append({"field": field, "message": message})
+from server.tools.wizard_base.validation_base import (
+    FieldCfg,
+    ValidationError,
+    _add_error,
+    validate_step_answers as base_validate
+)
 
-
-def _validate_string(
-    field: FieldCfg, value: Any, errors: list[ValidationError]
-) -> None:
-    name = field["name"]
-    if not isinstance(value, str):
-        _add_error(errors, name, f"'{name}' must be a string value.")
-
-
-def _validate_enum(field: FieldCfg, value: Any, errors: list[ValidationError]) -> None:
-    name = field["name"]
-    options = field.get("options") or []
-    allowed_values = [opt.get("value") for opt in options if isinstance(opt, dict)]
-    if allowed_values and value not in allowed_values:
-        allowed = ", ".join(map(str, allowed_values))
-        _add_error(errors, name, f"'{name}' must be one of: {allowed}.")
-
-
+# Application Wizard specific validators
 def _validate_identifier(
     field: FieldCfg, value: Any, errors: list[ValidationError]
 ) -> None:
@@ -88,36 +72,22 @@ def _validate_table_settings(
                 return
 
 
-TYPE_VALIDATORS: dict[str, Callable] = {
-    "string": _validate_string,
-    "enum": _validate_enum,
+WIZARD_SPECIFIC_TYPE_VALIDATORS: dict[str, Callable] = {
     "table_settings": _validate_table_settings,
     "identifier": _validate_identifier,
 }
 
 
+# Wrapper function to combine base validation with wizard-specific validators
 def validate_step_answers(
     step_cfg: dict[str, Any], answers: dict[str, Any]
 ) -> list[ValidationError]:
     """
     Return a list of validation errors. Each error is a dict with 'field' and 'message'.
     """
-    errors: list[ValidationError] = []
 
-    required_inputs = step_cfg.get("required_inputs") or []
-    for field in required_inputs:
-        name = field.get("name")
-        ftype = field.get("type")
-        value = answers.get(name)
-
-        # Required presence check
-        if value is None or value == "":
-            _add_error(errors, name, f"'{name}' is required for this step.")
-            continue
-
-        # Type specific validation
-        validator = TYPE_VALIDATORS.get(ftype)
-        if validator:
-            validator(field, value, errors)
-
-    return errors
+    return base_validate(
+        step_cfg,
+        answers,
+        type_validators=WIZARD_SPECIFIC_TYPE_VALIDATORS,
+    )
