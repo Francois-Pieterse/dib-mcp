@@ -93,6 +93,25 @@ class OptionSource:
         raise ValueError(f"Unknown options_source.type '{src_type}'")
 
 
+def _get_by_path(data: dict[str, Any], path: str) -> Any:
+    cur: Any = data.get("wizard_state", {})
+    for part in path.split("."):
+        if not isinstance(cur, dict):
+            return None
+        cur = cur.get(part)
+    return cur
+
+
+def resolve_dynamic_args(args: dict[str, Any], ctx: dict[str, Any]) -> dict[str, Any]:
+    resolved: dict[str, Any] = {}
+    for key, val in (args or {}).items():
+        if isinstance(val, dict) and "$from" in val:
+            resolved[key] = _get_by_path(ctx, str(val["$from"]))
+        else:
+            resolved[key] = val
+    return resolved
+
+
 def resolve_options(
     source_cfg: dict[str, Any] | None,
     *,
@@ -122,7 +141,7 @@ def resolve_options(
         provider = OPTIONS_REGISTRY.get(source.name)
         if provider is None:
             raise KeyError(f"No option provider registered with name '{source.name}'")
-        kwargs = dict(source.args or {})
+        kwargs = resolve_dynamic_args(dict(source.args or {}), ctx)
         return provider(context=ctx, **kwargs)
 
     raise ValueError(f"Unsupported options_source.type '{source.type}'")
