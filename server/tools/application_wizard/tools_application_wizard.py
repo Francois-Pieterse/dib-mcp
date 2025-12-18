@@ -5,9 +5,9 @@ from mcp.types import ToolAnnotations
 
 from mcp_instance import mcp
 from tools.wizard_base.steps_manager import StepManager
-from tools.wizard_base.validation_base import validate_step_answers
+from tools.application_wizard.steps.answer_validation_app_wiz import validate_step_answers
 from tools.wizard_base.state_model import WizardState, StateFile
-from tools.application_wizard.state.state_payload_mapping import (
+from tools.application_wizard.state.payload_mapping_app_wiz import (
     load_wizard_payload,
     load_wizard_db_table_payloads,
 )
