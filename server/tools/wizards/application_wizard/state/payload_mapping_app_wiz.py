@@ -1,5 +1,5 @@
-from tools.wizard_base.state_model import WizardState, StateFile
-from tools.application_wizard.steps.option_providers_registration_app_wiz import (
+from tools.wizards.base.state_model import WizardState, StateFile
+from tools.wizards.application_wizard.steps.option_providers_registration_app_wiz import (
     get_tables_for_selected_db,
 )
 

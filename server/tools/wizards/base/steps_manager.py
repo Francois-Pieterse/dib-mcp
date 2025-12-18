@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from tools.wizard_base.option_provider_base import (
+from tools.wizards.base.option_provider_base import (
     enrich_step_with_options,
 )
 

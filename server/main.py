@@ -15,8 +15,8 @@ from tools import (
     tools_auth,
 )
 
-from tools.application_wizard import tools_application_wizard
-from tools.application_wizard.steps import option_providers_registration_app_wiz
+from tools.wizards.application_wizard import tools_application_wizard
+from tools.wizards.application_wizard.steps import option_providers_registration_app_wiz
 
 if get_env("EXPOSE_DIB_DOCS_VIA_TOOLS", False, _to_bool):
     from tools import tools_docs_resource

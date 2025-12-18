@@ -2,7 +2,7 @@ import re
 
 from typing import Any
 
-from tools.wizard_base.option_provider_base import register_option_provider
+from tools.wizards.base.option_provider_base import register_option_provider
 from env_variables import get_env
 from session_auth import dib_session_client
 

@@ -2,7 +2,7 @@ import re
 from typing import Any, Callable
 
 
-from tools.wizard_base.validation_base import (
+from tools.wizards.base.validation_base import (
     FieldCfg,
     ValidationError,
     _add_error,

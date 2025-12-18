@@ -7,7 +7,7 @@ from typing import Any
 
 
 class StateFile(Enum):
-    APPLICATION_WIZARD = Path("server/tools/application_wizard/state/wizard_state.json")
+    APPLICATION_WIZARD = Path("server/tools/wizards/application_wizard/state/wizard_state.json")
 
 
 @dataclass
