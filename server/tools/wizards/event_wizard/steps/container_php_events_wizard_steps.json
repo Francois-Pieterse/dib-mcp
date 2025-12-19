@@ -121,7 +121,7 @@
       "required_inputs": [
         {
           "name": "new_class_name",
-          "type": "string",
+          "type": "class_name",
           "prompt": "Enter the name for the new class:"
         }
       ]
