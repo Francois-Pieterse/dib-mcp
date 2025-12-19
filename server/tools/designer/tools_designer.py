@@ -178,13 +178,14 @@ def get_project_tree(
 )
 def get_node_info_from_id(
     node_id: str,
+    node_type: Literal['item', 'container'],
     request_verification_token: str = get_env("REQUEST_VERIFICATION_TOKEN"),
 ):
 
     url = (
         f"{get_env('BASE_URL', 'https://localhost')}"
         f"/dropins/dibAdmin/DDesignerAddOn/designerGetRecords"
-        f"?containerName=dibDesignerHtml&table=pef_item&id={node_id}"
+        f"?containerName=dibDesignerHtml&table=pef_{node_type}&id={node_id}"
     )
 
     headers: dict[str, str] = {
