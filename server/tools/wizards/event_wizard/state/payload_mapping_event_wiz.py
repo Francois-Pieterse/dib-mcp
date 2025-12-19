@@ -40,7 +40,9 @@ def load_wizard_payload() -> dict:
     container_trigger = answers.get("select_event_trigger", {}).get(
         "event_trigger", ""
     )  # Not always included - hence defaults
-    event_trigger = ""
+    event_trigger = answers.get("select_event_trigger", {}).get(
+        "item_event_trigger", ""
+    )  # Not always included - hence defaults
 
     meta = state.meta
     event_type = meta.get("event_type", "")

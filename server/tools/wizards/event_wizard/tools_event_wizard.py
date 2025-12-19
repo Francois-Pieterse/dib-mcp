@@ -61,7 +61,9 @@ def _check_node_existance(
 
     # Extract relevant information
     try:
-        pef_item = node_info.get("data").get("records").get("data").get(f"pef_{event_type}")
+        pef_item = (
+            node_info.get("data").get("records").get("data").get(f"pef_{event_type}")
+        )
 
         if pef_item is None or pef_item == {} or pef_item == []:
             return False

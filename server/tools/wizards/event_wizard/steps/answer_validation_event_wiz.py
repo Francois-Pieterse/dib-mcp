@@ -9,6 +9,7 @@ from tools.wizards.base.validation_base import (
     validate_step_answers as base_validate,
 )
 
+
 # Event Wizard specific validators
 def _validate_class_name(
     field: FieldCfg, value: Any, errors: list[ValidationError]
