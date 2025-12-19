@@ -19,7 +19,7 @@ def _validate_class_name(
         return
 
     # Ensure the class name starts with a letter, preferably uppercase, and contains only valid characters
-    pattern = r"^[A-Z][A-Za-z0-9_]*$"
+    pattern = r"^[A-Z][A-Za-z0-9_.]*$"
     if not re.match(pattern, value):
         _add_error(
             errors,
