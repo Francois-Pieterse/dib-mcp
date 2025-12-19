@@ -162,12 +162,13 @@ def get_project_tree(
 
 
 @mcp.tool(
-    name="get_node_info_from_id",
-    title="Get Node Info from ID",
+    name="get_node_info_from_id_and_type",
+    title="Get Node Info from ID and Type",
     description=(
-        "Retrieve detailed information about a specific node in the designer project tree using its node ID."
+        "Retrieve detailed information about a specific node in the designer project tree using its node ID and type."
         "This tool returns all available data for the specified node, which can include properties, settings"
         "and other metadata associated with that node."
+        "The node type must be specified as either 'item' or 'container' to accurately fetch the relevant data."
     ),
     annotations=ToolAnnotations(
         readOnlyHint=True,
@@ -176,11 +177,16 @@ def get_project_tree(
         openWorldHint=False,
     ),
 )
-def get_node_info_from_id(
+def get_node_info_from_id_and_type(
     node_id: str,
-    node_type: Literal['item', 'container'],
+    node_type: Literal["item", "container"] | None = None,
     request_verification_token: str = get_env("REQUEST_VERIFICATION_TOKEN"),
 ):
+    # Workaround for agent not reliably adding node_type
+    if node_type is None:
+        raise RuntimeError(
+            "node_type is a required parameter and must be specified as either 'item' or 'container'"
+        )
 
     url = (
         f"{get_env('BASE_URL', 'https://localhost')}"
