@@ -15,11 +15,15 @@ from tools import (
     tools_auth,
 )
 
+if get_env("EXPOSE_DIB_DOCS_VIA_TOOLS", False, _to_bool):
+    from tools import tools_docs_resource
+
+# Wizards
 from tools.wizards.application_wizard import tools_application_wizard
 from tools.wizards.application_wizard.steps import option_providers_registration_app_wiz
 
-if get_env("EXPOSE_DIB_DOCS_VIA_TOOLS", False, _to_bool):
-    from tools import tools_docs_resource
+from tools.wizards.event_wizard import tools_event_wizard
+from tools.wizards.event_wizard.steps import option_providers_registration_event_wiz
 
 # Resources
 from resources.dib_docs.docs_resource_factory import register_dib_docs
