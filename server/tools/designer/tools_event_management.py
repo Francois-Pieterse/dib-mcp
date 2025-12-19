@@ -23,9 +23,7 @@ logger.setLevel(get_env("LOG_LEVEL", "INFO"))
 @mcp.tool(
     name="delete_event_by_id",
     title="Delete Event by ID",
-    description=(
-        "Delete an event in the designer by its unique ID."
-    ),
+    description=("Delete an event in the designer by its unique ID."),
     annotations=ToolAnnotations(
         readOnlyHint=False,
         destructiveHint=True,

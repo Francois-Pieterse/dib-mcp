@@ -1,5 +1,6 @@
 from tools.wizards.base.state_model import WizardState, StateFile
 
+
 def load_wizard_payload() -> dict:
     state = WizardState.load(StateFile.EVENT_WIZARD)
 
@@ -36,7 +37,9 @@ def load_wizard_payload() -> dict:
         "confirmation_message", ""
     )
 
-    container_trigger = answers.get("select_event_trigger", {}).get("event_trigger", "") # Not always included - hence defaults
+    container_trigger = answers.get("select_event_trigger", {}).get(
+        "event_trigger", ""
+    )  # Not always included - hence defaults
     event_trigger = ""
 
     meta = state.meta

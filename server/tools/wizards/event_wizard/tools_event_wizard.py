@@ -50,7 +50,9 @@ def _get_steps_file(
         raise ValueError("Invalid event_type or event_side")
 
 
-def _check_node_existance(node_id: str, event_type: Literal["item", "container"]) -> bool:
+def _check_node_existance(
+    node_id: str, event_type: Literal["item", "container"]
+) -> bool:
     """
     Check if a node with the given ID exists in Dropinbase.
     """
@@ -145,7 +147,9 @@ def _execute_event_creation(wizard_payload: dict[str, Any]) -> str:
         "RequestVerificationToken": get_env("REQUEST_VERIFICATION_TOKEN"),
     }
 
-    response = dib_session_client.request("POST", url, headers=headers, json=wizard_payload)
+    response = dib_session_client.request(
+        "POST", url, headers=headers, json=wizard_payload
+    )
 
     try:
         data = response.json()
@@ -156,7 +160,7 @@ def _execute_event_creation(wizard_payload: dict[str, Any]) -> str:
                 "success": False,
                 "message": data.get("message", "Event creation failed without message"),
             }
-        
+
         return {
             "success": True,
             "message": data.get("message", "No message provided"),
@@ -248,7 +252,7 @@ def step_event_wizard(
                 "status": "error",
                 "message": f"Event creation failed: {creation_results.get('message')}",
             }
-        
+
         # Wizard is complete
         state.current_step_id = None
         state.completed = True
@@ -256,8 +260,7 @@ def step_event_wizard(
 
         return {
             "summary": {
-                "success"
-                "meta": state.meta,
+                "success" "meta": state.meta,
                 "answers": state.answers,
                 "message": creation_results.get("message"),
             },
