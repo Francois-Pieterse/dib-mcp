@@ -15,6 +15,18 @@
               "container_id": {"$from": "meta.node_id"}
             }
           }
+        },
+        {
+          "name": "type",
+          "type": "enum",
+          "info": "No user input is required here. This answer is based on the selected event trigger's description. It is suffixed with (client) or (crud).",
+          "options_source": {
+            "type": "static",
+            "values": [
+              {"value": "client", "label": "Client"},
+              {"value": "crud", "label": "CRUD"}
+            ]
+          }
         }
       ]
     },
@@ -106,7 +118,8 @@
             "args": {
               "dropin": {"$from": "answers.choose_existing_dropin.existing_dropin"},
               "node_id": {"$from": "meta.node_id"},
-              "event_type": {"$from": "meta.event_type"}
+              "event_type": {"$from": "meta.event_type"},
+              "container_trigger": {"$from": "answers.select_event_trigger.event_trigger"}
             }
           }
         }
@@ -139,6 +152,9 @@
     },
     {
       "id": "response_type",
+      "include_if": {
+        "select_event_trigger.type": "client"
+      },
       "title": "Select Response Type",
       "info": "Response Type informs the browser how it must handle the response it gets from the server. Note, this is only applicable when the client calls server-side code.",
       "required_inputs": [
@@ -155,6 +171,9 @@
     },
     {
       "id": "add_confirmation_message",
+      "include_if": {
+        "select_event_trigger.type": "client"
+      },
       "title": "Add Confirmation Message",
       "required_inputs": [
         {
