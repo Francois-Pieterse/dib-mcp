@@ -32,8 +32,8 @@ def load_wizard_payload() -> dict:
 
     function_name = answers.get("function_name").get("function_name")
 
-    response_type = answers.get("response_type").get("response_type")
-    confirmation_message = answers.get("add_confirmation_message").get(
+    response_type = answers.get("response_type", {}).get("response_type", "actions")
+    confirmation_message = answers.get("add_confirmation_message", {}).get(
         "confirmation_message", ""
     )
 
