@@ -213,3 +213,63 @@ def enrich_step_with_options(
         enrich_field_with_options(f, context=context) for f in inputs
     ]
     return new_step
+
+
+def extract_options_from_records(
+    records: list
+) -> list:
+    """
+    Extract options from records fetched from the server.
+    
+    Records should be a list of dictionaries, each containing 'id' and 'id_display_value' keys.
+    """
+    options = []
+    for record in records:
+        db_id = record.get("id")
+        db_name = record.get("id_display_value")
+
+        if db_id is not None and db_name is not None:
+            options.append({"value": str(db_id), "label": db_name})
+    return options
+
+def extract_records_from_response(
+    response: Any,
+    topic: str = "data",
+) -> list:
+    """
+    Extract records from a server response.
+
+    Expects the response to have a JSON body with 'success' and 'records' fields.
+    Raises ValueError if the response is unsuccessful or malformed.
+    """
+    try:
+        data = response.json()
+
+        # Check for success
+        if not data.get("success"):
+            raise ValueError(f"Failed to fetch {topic}: Unsuccessful response")
+
+        records = data.get("records", [])
+
+        if records is None:
+            raise ValueError(f"Failed to fetch {topic}: No records field found")
+
+    except ValueError:
+        raise ValueError(f"Failed to parse response JSON for {topic}")
+
+    return records
+
+
+def extract_options_from_response(
+    response: Any,
+    topic: str = "data",
+) -> list:
+    """
+    Extract options from a server response.
+
+    Expects the response to have a JSON body with 'success' and 'records' fields.
+    Raises ValueError if the response is unsuccessful or malformed.
+    """
+    records = extract_records_from_response(response, topic=topic)  
+    options = extract_options_from_records(records)
+    return options
