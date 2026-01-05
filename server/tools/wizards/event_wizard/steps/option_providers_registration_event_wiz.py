@@ -115,6 +115,7 @@ def get_existing_classes_php(
     dropin: str,
     node_id: str,
     event_type: str,
+    container_trigger: str,
     context: dict[str, Any] | None = None,
 ) -> list:
 
@@ -138,7 +139,7 @@ def get_existing_classes_php(
                 "newClass": "",
                 "functionName": "",
                 "trigger": "",
-                "containerTrigger": None,
+                "containerTrigger": container_trigger,
                 "eventType": event_type,
                 "responseType": "",
                 "confirmationMsg": "",
