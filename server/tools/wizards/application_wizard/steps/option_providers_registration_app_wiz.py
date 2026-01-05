@@ -2,7 +2,7 @@ import re
 
 from typing import Any
 
-from tools.wizards.base.option_provider_base import register_option_provider
+from tools.wizards.base.option_provider_base import register_option_provider, extract_records_from_response, extract_options_from_response
 from env_variables import get_env
 from session_auth import dib_session_client
 
@@ -41,29 +41,9 @@ def get_avail_databases(
 
     response = dib_session_client.request("POST", url, headers=headers, json=payload)
 
-    try:
-        data = response.json()
-
-        # Check for success
-        if not data.get("success"):
-            raise ValueError("Failed to fetch databases: Unsuccessful response")
-
-        records = data.get("records", [])
-
-        if records is None:
-            raise ValueError("Failed to fetch databases: No records field found")
-
-    except ValueError:
-        raise ValueError("Failed to parse response JSON for databases")
-
-    options = []
-
-    for record in records:
-        db_id = record.get("id")
-        db_name = record.get("id_display_value")
-
-        if db_id is not None and db_name is not None:
-            options.append({"value": str(db_id), "label": db_name})
+    options = extract_options_from_response(
+        response=response, topic="fetch databases"
+    )
 
     return options
 
@@ -87,24 +67,9 @@ def get_avail_base_container_templates(
 
         response = dib_session_client.request("POST", url, headers=headers)
 
-        try:
-            data = response.json()
-
-            # Check for success
-            if not data.get("success"):
-                raise ValueError(
-                    "Failed to fetch container templates: Unsuccessful response"
-                )
-
-            records = data.get("records", [])
-
-            if records is None:
-                raise ValueError(
-                    "Failed to fetch container templates: No records field found"
-                )
-
-        except ValueError:
-            raise ValueError("Failed to parse response JSON for container templates")
+        records = extract_records_from_response(
+            response=response, topic="container templates"
+        )
 
         return records
 
@@ -208,24 +173,9 @@ def get_avail_form_design_definitions(
 
     response = dib_session_client.request("POST", url, headers=headers)
 
-    try:
-        data = response.json()
-
-        # Check for success
-        if not data.get("success"):
-            raise ValueError(
-                "Failed to fetch form design definitions: Unsuccessful response"
-            )
-
-        records = data.get("records", [])
-
-        if records is None:
-            raise ValueError(
-                "Failed to fetch form design definitions: No records field found"
-            )
-
-    except ValueError:
-        raise ValueError("Failed to parse response JSON for form design definitions")
+    records = extract_records_from_response(
+        response=response, topic="form design definitions"
+    )
 
     options = []
 
@@ -283,24 +233,9 @@ def get_avail_grid_design_definitions(
 
     response = dib_session_client.request("POST", url, headers=headers)
 
-    try:
-        data = response.json()
-
-        # Check for success
-        if not data.get("success"):
-            raise ValueError(
-                "Failed to fetch grid design definitions: Unsuccessful response"
-            )
-
-        records = data.get("records", [])
-
-        if records is None:
-            raise ValueError(
-                "Failed to fetch grid design definitions: No records field found"
-            )
-
-    except ValueError:
-        raise ValueError("Failed to parse response JSON for grid design definitions")
+    records = extract_records_from_response(
+        response=response, topic="grid design definitions"
+    )
 
     options = []
 
@@ -379,19 +314,9 @@ def get_tables_for_selected_db(
 
     response = dib_session_client.request("POST", url, headers=headers, json=payload)
 
-    try:
-        data = response.json()
-
-        # Check for success
-        if not data.get("success"):
-            raise ValueError("Failed to fetch tables for DB: Unsuccessful response")
-
-        records = data.get("records", [])
-
-        if records is None:
-            raise ValueError("Failed to fetch tables for DB: No records field found")
-    except ValueError:
-        raise ValueError("Failed to parse response JSON for tables for DB")
+    records = extract_records_from_response(
+        response=response, topic="tables for DB"
+    )
 
     options: list[dict[str, Any]] = []
     for record in records:
