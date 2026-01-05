@@ -1,6 +1,6 @@
 from typing import Any
 
-from tools.wizards.base.option_provider_base import register_option_provider
+from tools.wizards.base.option_provider_base import register_option_provider, extract_options_from_response
 from env_variables import get_env
 from session_auth import dib_session_client
 
@@ -43,29 +43,9 @@ def get_avail_event_triggers_php(
 
     response = dib_session_client.request("POST", url, headers=headers, json=payload)
 
-    try:
-        data = response.json()
-
-        # Check for success
-        if not data.get("success"):
-            raise ValueError("Failed to fetch event triggers: Unsuccessful response")
-
-        records = data.get("records", [])
-
-        if records is None:
-            raise ValueError("Failed to fetch event triggers: No records field found")
-
-    except ValueError:
-        raise ValueError("Failed to parse response JSON for event triggers")
-
-    options = []
-
-    for record in records:
-        db_id = record.get("id")
-        db_name = record.get("id_display_value")
-
-        if db_id is not None and db_name is not None:
-            options.append({"value": str(db_id), "label": db_name})
+    options = extract_options_from_response(
+        response=response, topic="event triggers"
+    )
 
     return options
 
@@ -99,28 +79,10 @@ def get_existing_dropins_php(
 
     response = dib_session_client.request("POST", url, headers=headers)
 
-    try:
-        data = response.json()
+    options = extract_options_from_response(
+        response=response, topic="existing dropins"
+    )
 
-        # Check for success
-        if not data.get("success"):
-            raise ValueError("Failed to fetch existing dropins: Unsuccessful response")
-
-        records = data.get("records", [])
-
-        if records is None:
-            raise ValueError("Failed to fetch existing dropins: No records field found")
-
-    except ValueError:
-        raise ValueError("Failed to parse response JSON for existing dropins")
-
-    options = []
-    for record in records:
-        db_id = record.get("id")
-        db_name = record.get("id_display_value")
-
-        if db_id is not None and db_name is not None:
-            options.append({"value": str(db_id), "label": db_name})
     return options
 
 
@@ -187,28 +149,9 @@ def get_existing_classes_php(
 
     response = dib_session_client.request("POST", url, headers=headers, json=payload)
 
-    try:
-        data = response.json()
-
-        # Check for success
-        if not data.get("success"):
-            raise ValueError("Failed to fetch existing classes: Unsuccessful response")
-
-        records = data.get("records", [])
-
-        if records is None:
-            raise ValueError("Failed to fetch existing classes: No records field found")
-
-    except ValueError:
-        raise ValueError("Failed to parse response JSON for existing classes")
-
-    options = []
-    for record in records:
-        db_id = record.get("id")
-        db_name = record.get("id_display_value")
-
-        if db_id is not None and db_name is not None:
-            options.append({"value": str(db_id), "label": db_name})
+    options = extract_options_from_response(
+        response=response, topic="existing classes"
+    )
 
     return options
 
