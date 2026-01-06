@@ -1,0 +1,172 @@
+{
+  "steps": [
+    {
+      "id": "select_dropin_or_new_dropin",
+      "title": "Select Drop-in or Create a New Drop-in Folder",
+      "required_inputs": [
+        {
+          "name": "dropin_choice",
+          "type": "enum",
+          "prompt": "Would you like to use an existing drop-in folder or create a new one?",
+          "options": [
+            {"value": "existing", "label": "Use Existing Drop-in Folder"},
+            {"value": "new", "label": "Create New Drop-in Folder"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "choose_existing_dropin",
+      "include_if": {
+        "select_dropin_or_new_dropin.dropin_choice": "existing"
+      },
+      "title": "Choose Existing Drop-in Folder",
+      "required_inputs": [
+        {
+          "name": "existing_dropin",
+          "type": "enum",
+          "prompt": "Select an existing drop-in folder to use:",
+          "options_source": {
+            "type": "function",
+            "name": "get_existing_dropins_php",
+            "args": {
+              "container_id": {"$from": "meta.node_id"}
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "create_new_dropin",
+      "include_if": {
+        "select_dropin_or_new_dropin.dropin_choice": "new"
+      },
+      "title": "Create New Drop-in Folder",
+      "required_inputs": [
+        {
+          "name": "new_dropin_name",
+          "type": "string",
+          "prompt": "Enter the name for the new drop-in folder:"
+        }
+      ]
+    },
+    {
+      "id": "select_class_or_new_class",
+      "include_if": {
+        "select_dropin_or_new_dropin.dropin_choice": "existing"
+      },
+      "title": "Select Existing Class or Create New Class",
+      "required_inputs": [
+        {
+          "name": "class_choice",
+          "type": "enum",
+          "prompt": "Would you like to use an existing class or create a new one?",
+          "options_source": {
+            "type": "function",
+            "name": "get_class_choice_php",
+            "args": {
+              "dropin_choice": {"$from": "answers.select_dropin_or_new_dropin.dropin_choice"}
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "choose_existing_class",
+      "include_if": {
+        "select_class_or_new_class.class_choice": "existing"
+      },
+      "title": "Choose Existing Class",
+      "required_inputs": [
+        {
+          "name": "existing_class",
+          "type": "enum",
+          "prompt": "Select an existing class to use for the event:",
+          "options_source": {
+            "type": "function",
+            "name": "get_existing_classes_php",
+            "args": {
+              "dropin": {"$from": "answers.choose_existing_dropin.existing_dropin"},
+              "node_id": {"$from": "meta.node_id"},
+              "event_type": {"$from": "meta.event_type"}
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "create_new_class",
+      "include_if": {
+        "select_class_or_new_class.class_choice": "new"
+      },
+      "title": "Create New Class",
+      "required_inputs": [
+        {
+          "name": "new_class_name",
+          "type": "class_name",
+          "prompt": "Enter the name for the new class:"
+        }
+      ]
+    },
+    {
+      "id": "select_event_trigger",
+      "title": "Select Event Trigger",
+      "required_inputs": [
+        {
+          "name": "item_event_trigger",
+          "type": "string",
+          "prompt": "Which event trigger would you like to use? (e.g. click)"
+        }
+      ]
+    },
+    {
+      "id": "function_name",
+      "title": "Specify Event Function Name",
+      "required_inputs": [
+        {
+          "name": "function_name",
+          "type": "string",
+          "prompt": "Enter the name of the function to handle the event:"
+        }
+      ]
+    },
+    {
+      "id": "response_type",
+      "title": "Select Response Type",
+      "info": "Response Type informs the browser how it must handle the response it gets from the server. Note, this is only applicable when the client calls server-side code.",
+      "required_inputs": [
+        {
+          "name": "response_type",
+          "type": "enum",
+          "prompt": "Select the response type for the event:",
+          "options_source": {
+            "type": "function",
+            "name": "get_static_response_types"
+          }
+        }
+      ]
+    },
+    {
+      "id": "add_confirmation_message",
+      "title": "Add Confirmation Message",
+      "required_inputs": [
+        {
+          "name": "confirmation_message",
+          "type": "string",
+          "prompt": "If not empty, this message will be displayed with options to proceed or cancel the execution. The text for the proceed and cancel buttons can be customized.\nSpecify a title using => as delimiter, eg:\nMy Title=>This could change the world. Continue?"
+        }
+      ]
+    },
+    {
+      "id": "confirm_creation",
+      "title": "Confirm Event Creation",
+      "required_inputs": [
+        {
+          "name": "confirm_creation",
+          "type": "boolean",
+          "prompt": "Do you want to create the event with the provided settings?"
+        }
+      ]
+    }
+  ]
+}
