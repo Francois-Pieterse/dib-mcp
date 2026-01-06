@@ -1,4 +1,23 @@
 from tools.wizards.base.state_model import WizardState, StateFile
+from tools.designer.tools_designer import get_node_info_from_id_and_type
+
+
+def _get_container_id_for_item(item_id: str) -> str:
+
+    node_info = get_node_info_from_id_and_type(item_id, "item")
+    if not node_info:
+        return ""
+
+    # Container ID path: data -> records -> data -> pef_item -> pef_container_id
+    container_id = (
+        node_info.get("data", {})
+        .get("records", {})
+        .get("data", {})
+        .get("pef_item", {})
+        .get("pef_container_id", "")
+    )
+
+    return str(container_id)
 
 
 def load_wizard_payload() -> dict:
@@ -38,7 +57,7 @@ def load_wizard_payload() -> dict:
     )
 
     container_trigger = answers.get("select_event_trigger", {}).get(
-        "event_trigger", ""
+        "event_trigger", None
     )  # Not always included - hence defaults
     event_trigger = answers.get("select_event_trigger", {}).get(
         "item_event_trigger", ""
@@ -47,8 +66,26 @@ def load_wizard_payload() -> dict:
     meta = state.meta
     event_type = meta.get("event_type", "")
     node_id = str(meta.get("node_id", ""))
+    event_side = meta.get("event_side", "")
 
     # Construct the payload dictionary
+    query_params = (
+        {
+            "dibDesignerAddEventPhp.eventType": event_type,
+            "dibDesignerAddEventPhp.objectId": node_id,
+        }
+        if event_side == "php"
+        else {}
+    )
+
+    alias_dibDesigner = (
+        {
+            "containerId": _get_container_id_for_item(node_id),
+        }
+        if event_type == "item"
+        else {}
+    )
+
     payload = {
         "clientData": {
             "alias_self": {
@@ -63,7 +100,9 @@ def load_wizard_payload() -> dict:
                 "responseType": response_type,
                 "confirmationMsg": confirmation_message,
                 "objectId": node_id,
-            }
+            },
+            "query_params": query_params,
+            "alias_dibDesigner": alias_dibDesigner,
         },
         "itemEventId": "ie3-dib",
         "itemId": "63",
