@@ -215,12 +215,10 @@ def enrich_step_with_options(
     return new_step
 
 
-def extract_options_from_records(
-    records: list
-) -> list:
+def extract_options_from_records(records: list) -> list:
     """
     Extract options from records fetched from the server.
-    
+
     Records should be a list of dictionaries, each containing 'id' and 'id_display_value' keys.
     """
     options = []
@@ -231,6 +229,7 @@ def extract_options_from_records(
         if db_id is not None and db_name is not None:
             options.append({"value": str(db_id), "label": db_name})
     return options
+
 
 def extract_records_from_response(
     response: Any,
@@ -270,6 +269,6 @@ def extract_options_from_response(
     Expects the response to have a JSON body with 'success' and 'records' fields.
     Raises ValueError if the response is unsuccessful or malformed.
     """
-    records = extract_records_from_response(response, topic=topic)  
+    records = extract_records_from_response(response, topic=topic)
     options = extract_options_from_records(records)
     return options

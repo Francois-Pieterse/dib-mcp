@@ -2,7 +2,11 @@ import re
 
 from typing import Any
 
-from tools.wizards.base.option_provider_base import register_option_provider, extract_records_from_response, extract_options_from_response
+from tools.wizards.base.option_provider_base import (
+    register_option_provider,
+    extract_records_from_response,
+    extract_options_from_response,
+)
 from env_variables import get_env
 from session_auth import dib_session_client
 
@@ -41,9 +45,7 @@ def get_avail_databases(
 
     response = dib_session_client.request("POST", url, headers=headers, json=payload)
 
-    options = extract_options_from_response(
-        response=response, topic="fetch databases"
-    )
+    options = extract_options_from_response(response=response, topic="fetch databases")
 
     return options
 
@@ -314,9 +316,7 @@ def get_tables_for_selected_db(
 
     response = dib_session_client.request("POST", url, headers=headers, json=payload)
 
-    records = extract_records_from_response(
-        response=response, topic="tables for DB"
-    )
+    records = extract_records_from_response(response=response, topic="tables for DB")
 
     options: list[dict[str, Any]] = []
     for record in records:

@@ -1,6 +1,9 @@
 from typing import Any
 
-from tools.wizards.base.option_provider_base import register_option_provider, extract_options_from_response
+from tools.wizards.base.option_provider_base import (
+    register_option_provider,
+    extract_options_from_response,
+)
 from env_variables import get_env
 from session_auth import dib_session_client
 
@@ -43,9 +46,7 @@ def get_avail_event_triggers_php(
 
     response = dib_session_client.request("POST", url, headers=headers, json=payload)
 
-    options = extract_options_from_response(
-        response=response, topic="event triggers"
-    )
+    options = extract_options_from_response(response=response, topic="event triggers")
 
     return options
 
@@ -79,9 +80,7 @@ def get_existing_dropins_php(
 
     response = dib_session_client.request("POST", url, headers=headers)
 
-    options = extract_options_from_response(
-        response=response, topic="existing dropins"
-    )
+    options = extract_options_from_response(response=response, topic="existing dropins")
 
     return options
 
@@ -115,7 +114,7 @@ def get_existing_classes_php(
     dropin: str,
     node_id: str,
     event_type: str,
-    container_trigger: str,
+    container_trigger: str = "",
     context: dict[str, Any] | None = None,
 ) -> list:
 
@@ -150,9 +149,7 @@ def get_existing_classes_php(
 
     response = dib_session_client.request("POST", url, headers=headers, json=payload)
 
-    options = extract_options_from_response(
-        response=response, topic="existing classes"
-    )
+    options = extract_options_from_response(response=response, topic="existing classes")
 
     return options
 
