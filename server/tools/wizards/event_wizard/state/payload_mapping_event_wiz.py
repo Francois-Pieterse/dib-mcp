@@ -20,7 +20,7 @@ def _get_container_id_for_item(item_id: str) -> str:
     return str(container_id)
 
 
-def load_wizard_payload() -> dict:
+def load_php_wizard_payload() -> dict:
     state = WizardState.load(StateFile.EVENT_WIZARD)
 
     answers = state.answers
@@ -110,4 +110,82 @@ def load_wizard_payload() -> dict:
         "triggerType": "click",
         "itemAlias": "buttonCreateEvent",
     }
+    return payload
+
+
+def load_js_wizard_payload() -> dict:
+
+    state = WizardState.load(StateFile.EVENT_WIZARD)
+
+    answers = state.answers
+
+    # Extract relevant fields from the answers
+    dropin_type = answers.get("select_dropin_or_new_dropin").get("dropin_choice")
+
+    if dropin_type == "existing":
+        dropin_choice = answers.get("choose_existing_dropin").get("existing_dropin")
+        new_dropin_name = ""
+    elif dropin_type == "new":
+        dropin_choice = ""
+        new_dropin_name = answers.get("create_new_dropin").get("new_dropin_name")
+    else:
+        dropin_choice = ""
+        new_dropin_name = ""
+
+    action_type = answers.get("select_action_or_new_action").get("action_choice")
+    if action_type == "existing":
+        action_choice = answers.get("choose_existing_action").get("existing_action")
+        new_action_name = ""
+    elif action_type == "new":
+        action_choice = ""
+        new_action_name = answers.get("create_new_action").get("new_action_name")
+    else:
+        action_choice = ""
+        new_action_name = ""
+
+    meta = state.meta
+    event_type = meta.get("event_type", "")
+    node_id = str(meta.get("node_id", ""))
+    event_side = meta.get("event_side", "")
+
+    # Construct the payload dictionary
+    query_params = (
+        {
+            "dibDesignerAddEventJs.eventType": event_type,
+            "dibDesignerAddEventJs.objectId": node_id,
+        }
+        if event_side == "javascript"
+        else {}
+    )
+
+    alias_dibDesigner = (
+        {
+            "containerId": _get_container_id_for_item(node_id),
+        }
+        if event_type == "item"
+        else {}
+    )
+
+    payload = {
+        "clientData": {
+            "alias_self": {
+                "dropin": dropin_choice,
+                "newDropin": new_dropin_name,
+                "class": action_choice,
+                "newClass": new_action_name,
+                "trigger": "click",
+                "eventType": event_type,
+                "objectId": node_id,
+                "containerTrigger": None,
+            },
+            "query_params": query_params,
+            "alias_dibDesigner": alias_dibDesigner,
+        },
+        "itemEventId": "ie120-dib",
+        "itemId": "3503",
+        "containerName": "dibDesignerAddEventJs",
+        "triggerType": "click",
+        "itemAlias": "buttonCreateEvent",
+    }
+
     return payload

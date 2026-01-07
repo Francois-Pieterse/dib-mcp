@@ -85,6 +85,31 @@ def get_existing_dropins_php(
     return options
 
 
+@register_option_provider("get_existing_dropins_js")
+def get_existing_dropins_js(
+    *,
+    node_id: str,
+    context: dict[str, Any] | None = None,
+) -> list:
+
+    url = (
+        f"{get_env('BASE_URL', 'https://localhost')}"
+        "/peff/Crud/componentlist"
+        "?containerName=dibDesignerAddEventJs&containerItemId=3497&itemAlias=dropin&page=1&limit=40&activeFilter=null"
+    )
+
+    headers: dict[str, str] = {
+        "Content-Type": "application/json",
+        "RequestVerificationToken": get_env("REQUEST_VERIFICATION_TOKEN"),
+    }
+
+    response = dib_session_client.request("POST", url, headers=headers)
+
+    options = extract_options_from_response(response=response, topic="existing dropins")
+
+    return options
+
+
 @register_option_provider("get_class_choice_php")
 def get_class_choice_php(
     *,
@@ -102,6 +127,29 @@ def get_class_choice_php(
                 "value": "new",
                 "label": "Create New Class",
                 "additional_info": "Since a new dropin folder is being created, a new class must also be created.",
+            },
+        ]
+    else:
+        return []
+
+
+@register_option_provider("get_action_choice_js")
+def get_action_choice_js(
+    *,
+    dropin_choice: str,
+    context: dict[str, Any] | None = None,
+) -> list:
+    if dropin_choice == "existing":
+        return [
+            {"value": "existing", "label": "Use Existing Action"},
+            {"value": "new", "label": "Create New Action"},
+        ]
+    elif dropin_choice == "new":
+        return [
+            {
+                "value": "new",
+                "label": "Create New Action",
+                "additional_info": "Since a new dropin folder is being created, a new action must also be created.",
             },
         ]
     else:
@@ -150,6 +198,49 @@ def get_existing_classes_php(
     response = dib_session_client.request("POST", url, headers=headers, json=payload)
 
     options = extract_options_from_response(response=response, topic="existing classes")
+
+    return options
+
+
+@register_option_provider("get_existing_actions_js")
+def get_existing_actions_js(
+    *,
+    dropin: str,
+    node_id: str,
+    event_type: str,
+    container_trigger: str = "",
+    context: dict[str, Any] | None = None,
+) -> list:
+
+    url = (
+        f"{get_env('BASE_URL', 'https://localhost')}"
+        "/peff/Crud/componentlist"
+        "?containerName=dibDesignerAddEventJs&containerItemId=3500&itemAlias=class&page=1&limit=40&activeFilter=null"
+    )
+
+    headers: dict[str, str] = {
+        "Content-Type": "application/json",
+        "RequestVerificationToken": get_env("REQUEST_VERIFICATION_TOKEN"),
+    }
+
+    payload = {
+        "clientData": {
+            "alias_self": {
+                "dropin": dropin,
+                "newDropin": "",
+                "class": None,
+                "newClass": "",
+                "trigger": "",
+                "eventType": event_type,
+                "objectId": node_id,
+                "containerTrigger": container_trigger,
+            }
+        }
+    }
+
+    response = dib_session_client.request("POST", url, headers=headers, json=payload)
+
+    options = extract_options_from_response(response=response, topic="existing actions")
 
     return options
 

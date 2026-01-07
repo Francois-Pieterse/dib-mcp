@@ -10,7 +10,8 @@ from tools.wizards.event_wizard.steps.answer_validation_event_wiz import (
 )
 from tools.wizards.base.state_model import WizardState, StateFile
 from tools.wizards.event_wizard.state.payload_mapping_event_wiz import (
-    load_wizard_payload,
+    load_php_wizard_payload,
+    load_js_wizard_payload,
 )
 
 from tools.designer.tools_designer import get_node_info_from_id_and_type
@@ -133,15 +134,23 @@ def start_event_wizard(
     }
 
 
-def _execute_event_creation(wizard_payload: dict[str, Any]) -> str:
+def _execute_event_creation(
+    wizard_payload: dict[str, Any], event_side: Literal["php", "javascript"]
+) -> str:
     """
     Call Dropinbase APIs to create the event based on the wizard payload.
     """
 
+    query_string: str = (
+        "type=js&containerName=dibDesignerAddEventJs"
+        if event_side == "javascript"
+        else "containerName=dibDesignerAddEventPhp"
+    )
+
     url = (
         f"{get_env('BASE_URL', 'https://localhost')}"
         "/dropins/dibAdmin/DDesignerAddOn/createEvent"
-        "?containerName=dibDesignerAddEventPhp"
+        f"?{query_string}"
     )
 
     headers: dict[str, str] = {
@@ -241,11 +250,17 @@ def step_event_wizard(
     if not next_step_cfg:
         # Call Dropinbase APIs to create the event
         try:
-            wizard_payload = load_wizard_payload()
+            event_side = state.meta.get("event_side")
+            if event_side == "php":
+                wizard_payload = load_php_wizard_payload()
+            elif event_side == "javascript":
+                wizard_payload = load_js_wizard_payload()
+            else:
+                raise RuntimeError(f"Unsupported event side: {event_side}")
         except Exception as e:
             raise RuntimeError(f"Failed to load wizard payload: {e}")
         try:
-            creation_results = _execute_event_creation(wizard_payload)
+            creation_results = _execute_event_creation(wizard_payload, event_side)
         except Exception as e:
             raise RuntimeError(f"Failed to execute create action: {e}")
 
