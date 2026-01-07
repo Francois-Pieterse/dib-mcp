@@ -95,16 +95,16 @@
       ]
     },
     {
-      "id": "create_new_class",
+      "id": "create_new_action",
       "include_if": {
-        "select_class_or_new_class.class_choice": "new"
+        "select_action_or_new_action.action_choice": "new"
       },
-      "title": "Create New Class",
+      "title": "Create New Action",
       "required_inputs": [
         {
-          "name": "new_class_name",
-          "type": "class_name",
-          "prompt": "Enter the name for the new class:"
+          "name": "new_action_name",
+          "type": "action_name",
+          "prompt": "Enter the name for the new action (e.g. set-item):"
         }
       ]
     },
