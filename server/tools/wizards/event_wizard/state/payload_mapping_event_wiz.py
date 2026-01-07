@@ -148,6 +148,8 @@ def load_js_wizard_payload() -> dict:
     node_id = str(meta.get("node_id", ""))
     event_side = meta.get("event_side", "")
 
+    trigger = answers.get("select_event_trigger", {}).get("event_trigger", "click")
+
     # Construct the payload dictionary
     query_params = (
         {
@@ -173,10 +175,10 @@ def load_js_wizard_payload() -> dict:
                 "newDropin": new_dropin_name,
                 "class": action_choice,
                 "newClass": new_action_name,
-                "trigger": "click",
+                "trigger": trigger if event_type == "item" else "",
                 "eventType": event_type,
                 "objectId": node_id,
-                "containerTrigger": None,
+                "containerTrigger": trigger if event_type == "container" else None,
             },
             "query_params": query_params,
             "alias_dibDesigner": alias_dibDesigner,

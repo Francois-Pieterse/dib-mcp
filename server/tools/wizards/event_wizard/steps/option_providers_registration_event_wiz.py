@@ -57,7 +57,38 @@ def get_avail_event_triggers_js(
     container_id: str,
     context: dict[str, Any] | None = None,
 ) -> list:
-    return []
+
+    url = (
+        f"{get_env('BASE_URL', 'https://localhost')}"
+        "/peff/Crud/componentlist"
+        "?containerName=dibDesignerAddEventJs&containerItemId=8334&itemAlias=containerTrigger&page=1&limit=40&activeFilter=null"
+    )
+
+    headers: dict[str, str] = {
+        "Content-Type": "application/json",
+        "RequestVerificationToken": get_env("REQUEST_VERIFICATION_TOKEN"),
+    }
+
+    payload = {
+        "clientData": {
+            "alias_self": {
+                "dropin": None,
+                "newDropin": "",
+                "class": None,
+                "newClass": "",
+                "trigger": "",
+                "eventType": "container",
+                "objectId": container_id,
+                "containerTrigger": None,
+            }
+        }
+    }
+
+    response = dib_session_client.request("POST", url, headers=headers, json=payload)
+
+    options = extract_options_from_response(response=response, topic="event triggers")
+
+    return options
 
 
 @register_option_provider("get_existing_dropins_php")
