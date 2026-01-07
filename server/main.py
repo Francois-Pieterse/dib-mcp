@@ -44,6 +44,14 @@ logger.setLevel(get_env("LOG_LEVEL", "INFO"))
 def debug_main() -> None:
     """Run a debug sequence of operations."""
 
+    # Example: directly invoke a wizard step for debugging
+
+    # from tools.wizards.event_wizard.tools_event_wizard import step_event_wizard
+
+    # results = step_event_wizard(
+    #     step_id="confirm_creation", answers={"confirm_creation": True}
+    # )
+
     # Additional debug operations can be before this
     # ----------------------------------------------
 
