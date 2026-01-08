@@ -32,6 +32,9 @@ def auth_with_other_credentials(
     """
     Authenticate to Dropinbase with provided credentials instead of those in environment.
     """
+    # Clear any existing session
+    dib_session_client.session.cookies.clear()
+
     dib_session_client.username = username
     dib_session_client.password = password
     dib_session_client.login()
@@ -60,6 +63,9 @@ def auth_with_env_credentials():
     """
     Authenticate to Dropinbase with credentials from the environment.
     """
+    # Clear any existing session
+    dib_session_client.session.cookies.clear()
+
     dib_session_client.username = get_env("DIB_USERNAME", "admin")
     dib_session_client.password = get_env("DIB_PASSWORD", "test")
     dib_session_client.login()
