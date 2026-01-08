@@ -255,6 +255,15 @@ def step_application_wizard(
             "errors": errors,
         }
 
+    # Test if confirmation was given
+    if step_id == "confirm_creation" and "confirm_creation" in answers:
+        confirmation = answers.get("confirm_creation", False)
+        if not confirmation:
+            return {
+                "status": "error",
+                "message": "Wizard cannot be completed without confirmation.",
+            }
+
     # Persist answers
     state.answers[step_id] = answers
     if step_id not in state.completed_step_ids:
