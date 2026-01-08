@@ -239,7 +239,7 @@ def step_event_wizard(
             "step": enriched_step,
             "errors": errors,
         }
-    
+
     # Test if confirmation was given
     if step_id == "confirm_creation" and "confirm_creation" in answers:
         confirmation = answers.get("confirm_creation", False)
