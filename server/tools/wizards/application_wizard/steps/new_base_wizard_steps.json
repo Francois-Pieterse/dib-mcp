@@ -153,7 +153,7 @@
           "name": "regex_for_item_names",
           "type": "string",
           "prompt": "Enter the set of regular expression replacements to be used for deriving item names from database field names (leave \"as is\" excpet to remove spaces etc.):",
-          "default": ""
+          "default": " "
         },
         {
           "name": "regex_for_field_captions",
